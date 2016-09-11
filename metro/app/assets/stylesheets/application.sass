@@ -1,0 +1,394 @@
+/****************** GENERAL *****************/
+img
+  border: none
+.fl
+  float: left
+.fr
+  float: right
+.cl
+  clear: both
+.hidden
+  display: none
+
+.center
+  text-align: center
+.right
+  text-align: right
+
+/****************** DESIGN *****************/
+@font-face
+  :font-family 'Abel'
+  :font-style normal
+  :font-weight 400
+  :src local('Abel'), local('Abel-Regular'), url(/fonts/default.woff) format('woff')
+
+body
+  margin: 0px
+  padding: 0px
+  background: white
+  font-family: 'Abel', sans-serif
+  font-size: 14px
+  color: #969493
+
+h1, h2, h3
+  margin: 0
+  padding: 0
+  font-family: 'Abel', sans-serif
+  font-weight: normal
+  color: #000000
+
+h1
+  font-size: 2em
+
+h2
+  font-size: 2.8em
+
+h3
+  font-size: 1.6em
+
+a
+  text-decoration: none
+  color: #474747
+  &:hover!
+
+#wrapper!, #wrapper2!
+
+.container
+  width: 1000px
+  margin: 0px auto
+
+/* Header */
+
+#headerC
+  overflow: hidden
+  width: 1060px
+  height: 105px
+  margin: 0px auto 0px auto
+  padding: 0px 0px
+  background: none
+
+/* Logo */
+
+#logo
+  float: left
+  width: 320px
+  margin: 0px
+  padding: 0px 0px 0px 0px
+  background: #000000
+  color: #FFFFFF
+  h1!, p!
+  h1
+    display: block
+    padding: 10px 0px 0px 0px
+    letter-spacing: -3px
+    text-align: center
+    text-transform: lowercase
+    font-size: 3.8em
+    a
+      color: #FFFFFF
+  p
+    margin-top: 0px
+    padding: 0px 0 0 0px
+    letter-spacing: 1px
+    text-transform: uppercase
+    text-align: center
+    font-size: 10px
+    color: #FFFFFF
+    a
+      color: #FFFFFF
+  a
+    border: none
+    background: none
+    text-decoration: none
+    color: #000000
+
+/* Menu */
+
+#menu
+  float: left
+  height: 90px
+  margin: 5px 0px 0px 10px
+  color: black
+  .image
+    img
+      height: 100px
+    margin-right: 5px
+  h1
+    :margin 15px 0px 0px 40px
+  .fares
+    :margin 0px 0px 0px 30px
+/* Page */
+
+#page
+  width: 100%
+  margin: 0px auto
+
+/* Content */
+
+#content
+  float: left
+  width: 640px
+  padding: 0px 0px 0px 0px
+
+/* Three Column Footer Content */
+
+#footer-content
+  overflow: hidden
+  width: 1060px
+  margin: 0px auto
+  padding: 22px 0px 20px 0px
+  .popular, .all
+    margin-left: 10px
+    a
+      letter-spacing: 1px
+      text-align: left
+      text-transform: uppercase
+      font-size: 24px
+      font-weight: normal
+      color: #000000
+      &:hover
+        :text-decoration underline
+  .all
+    a
+      :color red
+  .othercities
+    margin-left: 120px
+    
+#footer-content-wrapper
+  overflow: hidden
+  background: #F3F3F3
+  border-top: 1px dotted #E6E6E6
+
+
+#footer
+  width: 1060x
+  margin: 0px auto
+  height: 40px
+  margin: 0 auto
+  padding: 0px 0 15px 0
+  background: #000000
+  p
+    margin: 0
+    padding-top: 20px
+    line-height: normal
+    letter-spacing: 1px
+    text-align: center
+    text-decoration: none
+    text-transform: uppercase
+    font-weight: normal
+    color: #FFFFFF
+  a
+    color: #FFFFFF
+
+
+/****************** MAIN PAGE *****************/
+
+.autocomplete
+  :background-image url('/images/bg_map.jpg')
+  :background-repeat no-repeat
+  background-position: right
+  :margin 20px 0px 10px 20px
+  padding: 10px
+  border-radius: 5px
+  border: 1px solid gray
+  
+  #ac
+    outline: none
+    :background-color transparent
+    :width 610px
+    :height 30px
+    :margin-left 10px
+    :font-size 16px
+    
+    border: none
+    
+    padding: 5px
+
+
+
+.mainpage
+  :width 1060px
+  :margin 0px auto
+  :padding 30px 0px 30px 0px
+  .fulllist
+    .item
+      :float left
+      :width 310px
+      :margin-right 10px
+      :font-size 14px
+      a:hover
+        :color black
+        :text-decoration underline
+  #worldmap
+    width: 1060px
+    height: 700px   
+    path
+      :fill #383f47
+    circle
+      :cursor pointer 
+  
+/****************** ADMIN *****************/
+
+.linesort
+  :padding 10px 
+  .button
+    :background-color #fff
+    :width 40px
+    :height 15px
+    :overflow hidden
+    :margin 1px
+    :padding 2px
+    :cursor pointer
+    :float left
+    :color black
+  #text
+    :color black
+    :width 800px
+  .rotate
+    :color white
+    :width 40px
+    :border 3px dotted green
+    :margin 1px
+    :padding 2px
+    :cursor pointer
+    :float left
+
+/****************** STICKY (NAVIGATION) LINE *****************/
+.popularroutes
+  :height 18px
+  :margin-bottom 5px
+  :overflow hidden
+  :text-align center
+  a
+    :margin 0px 2px
+    &:hover
+      :text-decoration underline
+      
+#stickyline
+  z-index: 999999
+  position: absolute
+  &.stick
+    position: fixed
+    top: 0
+  width: 100%
+  :background-color #000
+  :color black
+  #sticky
+    :width 1060px
+    :margin 0px auto
+  .fl
+    margin-left: 5px
+  #from
+    margin-left: 50px
+  #to
+    margin-left: 10px
+  #from, #to
+    padding: 2px
+    font-size: 20px
+    color: #fff
+    text-transform: uppercase
+    input
+      border: 1px solid #eee
+  #src, #dst
+    width: 390px
+    font-size: 16px
+    padding: 2px
+    margin: 5px
+  #time
+    width: 100px
+    color: #eee
+    font-size: 24px
+    font-weight: bold
+    margin: 3px 0px 0px 10px
+    text-align: center
+  #status-container
+    :background-color #F3F3F3
+    :border-bottom 1px solid #E6E6E6
+    :font-size 16px
+    :padding-bottom 5px
+    #status
+      padding: 5px
+      color: black
+      width: 1060px
+      margin: 0px auto
+      .close
+        margin-right: 22px
+        cursor: pointer
+        font-size: 20px
+        color: gray
+        &:hover
+          text-decoration: underline
+  .hl
+    width: 30px
+    height: 10px
+    border: 1px solid #F0F0F0
+  .hs
+    color: black
+    border-bottom: 1px dotted black
+    &:hover
+      border-bottom: 1px solid black  
+        
+/****************** SVG *****************/
+.svgcontainer
+  height: 1060px
+
+  path
+    fill: none
+    stroke-width: 3
+
+  rect
+    cursor: pointer
+    stroke-width: 1
+    opacity: 0.4
+    fill: #fff
+
+  circle
+    fill: white
+    cursor: pointer
+  
+  text
+    font-family: Arial, Helvetica, sans-serif
+    cursor: pointer
+    pointer-events: none
+    &.nl
+      font-size: 9
+      fill: gray
+    &.ng
+      font-size: 11
+      fill: #333
+    &.high
+      font-weight: bold
+
+/****************** Map *****************/
+
+#themap
+  width: 100%
+  height: 80%
+  overflow: hidden
+  text-align: center
+  margin: 0px auto
+  img
+    width: 100%
+    
+.themap_placeholder
+  height: 80%
+  width: 100%
+  background-image: url(/images/bg_themap_ph.jpg)
+
+/****************** Social *****************/
+#like-panel
+  :margin 10px 0px 0px 10px
+  :float left
+  :width 100px
+  :overflow hidden 
+  .item
+    :overflow hidden
+    :padding 3px
+    
+#like-panel-horizontal
+  float: right
+  .item
+    :overflow hidden
+    :float left
+    :margin-left 10px
+    :width 110px

@@ -1,0 +1,9 @@
+- if @user.persisted?
+  sign_up_success('#{raw escape_javascript(render('shared/header_links'))}');
+  $('#sign_in_dialog').remove();
+- else
+  sign_up_error('#{escape_javascript(@user.errors.full_messages.first)}');
+- if @relation_message
+  $('#alerts_container .notice').text('#{@relation_message}');
+- if @relation_error
+  $('#alerts_container .alert').text('#{@relation_error}');

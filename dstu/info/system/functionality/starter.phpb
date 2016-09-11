@@ -1,0 +1,67 @@
+<body onload="hide()">
+<table align="center"  valign="top" width="100%" height="100%">
+<tr>
+<td style="color:gray">
+Вас приветствует система предоставления информации ВЦ ДГТУ.<br>
+Здесь собрана вся документация, регулирующая учебный процесс нашего университета.<br>
+Система функционирует с 8:00 до 21:00<br>
+Войти в систему с привилегиями редактора вы можетеe <a href="javascript:show()"><b>здесь</b></a>
+<br>
+<br>
+Уважаемые пользователи, для именования файлов и папок <br>
+не допускается использование специальных символов "\","/",".","*","?",","<br>
+Возможно использования символов "-" и "_". 
+<br>
+Максимальный объём загружаемых файлов - 2Мб.
+<br>
+<br>
+В разделе <a href="news" style="color:555555"><b>Новости</b></a> вы можете ознакомится с информацией о функционировании ЛВС ДГТУ.
+<br>
+<br>
+<a href="/lastfiles" style="color:555555"><b>Последние пятнадцать документов</b></a>
+<br><br>
+<a href="/note" style="color:555555"><b>Реестр служебных записок</b></a><br>
+Предназначен для более полного и оперативного информирования структурных <br>
+подразделений ДГТУ о ходе выполнения работ по служебным запискам, <br>
+поступающим в ВЦ ДГТУ.
+<br>
+<br>
+<br>
+<br>
+<script language=javascript type='text/javascript'>
+function hide() {
+	if (document.getElementById) { 
+	document.getElementById('auth').style.visibility = 'hidden';
+	}
+	else {
+		if (document.layers) { 
+		document.hideshow.visibility = 'hidden';
+		}
+		else {
+		document.all.hideshow.style.visibility = 'hidden';
+		}
+		}
+		}
+		function show() {
+			if (document.getElementById) {
+			document.getElementById('auth').style.visibility = 'visible';
+			}
+			else {
+				if (document.layers) { 
+				document.hideshow.visibility = 'visible';
+				}
+				else { 
+				document.all.hideshow.style.visibility = 'visible';
+				}
+				}
+				}
+				</script> 
+				<div id="auth" >
+<?php
+include 'auth.php';
+?>
+</div>
+</td>
+</tr>
+</table>
+</body>

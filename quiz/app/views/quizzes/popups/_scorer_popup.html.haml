@@ -1,0 +1,19 @@
+#quiz_scorer_popup.popup.hidden
+  .wrapper
+    .pointer.right
+    .close
+    .content
+      %h3 Time bonuses
+      = image_tag 'quiz/bonus1_picture.png'
+      %p
+        %b
+          Fastest time:
+        You answered faster than the previous fastest time set by anybody for this question, so you are awarded #{current_tournament.best_time_bonus} bonus points.
+      = image_tag 'quiz/bonus2_picture.png' 
+      %p
+        %b
+          Average time:
+        You also beat the time it took everyone on average to answer this time, so you got 250 points for beating the average answer time. 
+      %a.next_step.fr{:href => '#'}
+        Next
+      .clear

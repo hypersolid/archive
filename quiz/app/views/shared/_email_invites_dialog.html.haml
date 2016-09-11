@@ -1,0 +1,42 @@
+#email_invites_dialog.hidden
+  %p
+    Carefully choose your brightest friend to join the ladder and their score will count towards yours. 
+    - if current_user.can_get_bonus?
+      %span#can_get_bonus
+        You’ll also get 2 free credits straight away, for the first two wingman invitations sent. 
+    You can't ask someone to be a wingman who is already on the ladder.
+  .form
+    = form_tag(email_invites_path(:page => current_page), :remote => true) do
+      - if signed_in?
+        .row
+          .column1.first
+            From
+          .column2
+            = raw "<b>#{current_user.name}</b>, #{current_user.email}"
+          .clear
+      .row.wingman1
+        .column1
+          Wingman
+        .column2
+          = text_field_tag :email1, '', :class => 'clean'
+          %br
+          = text_field_tag :name1, '', :class => 'clean'
+        .clear
+      / .row.wingman2
+      /   .column1
+      /     Wingman 2
+      /   .column2
+      /     = text_field_tag :email2, '', :class => 'clean'
+      /     %br
+      /     = text_field_tag :name2, '', :class => 'clean'
+      /   .clear
+      .row
+        .column1
+          Message
+        .column2
+          %textarea{:rows => 4, :cols => 45, :name => :message}
+        .clear
+      .facebook_invite
+        .fr
+          = link_to 'Continue', '#', :id => 'email_invite_button'
+        .clear

@@ -1,0 +1,13 @@
+//$('#user_variables').data('invites_left', #{current_user.invites_left});
+//push_wingmen_panel('#{raw escape_javascript(render(@page + '/blocks/wingmen_panel'))}');
+
+- unless current_user.can_get_bonus?
+  $("#pay_dialog .line:first").hide();
+
+$('.creditsBox .visible').fadeOut(500);
+setTimeout("$('.creditsBox .visible').html('#{pluralize(current_user.reload.credits, 'credit')}')",500);
+$('.creditsBox .visible').fadeIn(500, function(){$(this).css("display", "");});
+
+$("#wingmen_panel.ladder").html('#{raw escape_javascript(render('/ladders/blocks/wingmen_panel'))}');
+$("#wingmen_panel.quiz").html('#{raw escape_javascript(render('/ladders/blocks/game_over_wingmen_panel'))}');
+update_sent_invites_dialog('#{raw escape_javascript(render('shared/invites_were_sent_content'))}');

@@ -1,0 +1,59 @@
+.itable_head
+{
+	background-color:#00ccFF;
+	font-size:12px;
+	color:#FFFFFF;
+	text-align:center;
+}
+.msg
+{
+text-decoration:none;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+}
+.trspacer
+{
+	height:2px;
+	background-color:#FFFFFF;
+}
+.apage:link,.apage:visited
+{
+font-family:"Times New Roman", Times, serif;
+font-size:14px;
+text-decoration:none;
+color:#FFFFFF;
+background-color:#00ccFF;
+}
+.apage:hover
+{
+font-size:14px;
+text-decoration:underline;
+color:#00ccFF;
+background-color:#FFFFFF;
+}
+.achoose:link,.achoose:visited,.achoose2
+{
+font-family:"Times New Roman", Times, serif;
+font-size:14px;
+text-decoration:none;
+color:#ffffff;
+background-color:#00ccFF;
+}
+.achoose:hover
+{
+text-decoration:underline;
+}
+.achoosesp
+{
+font-family:"Times New Roman", Times, serif;
+font-size:14px;
+text-decoration:none;
+color:#ffffff;
+background-color:#00ccFF;
+}
+.vmtable
+{
+cursor:pointer;
+text-align:center;
+}
+

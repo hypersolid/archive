@@ -1,0 +1,7 @@
+default: &default
+  adapter: postgresql
+  database: mining2
+  user: sol
+
+development:
+  <<: *default

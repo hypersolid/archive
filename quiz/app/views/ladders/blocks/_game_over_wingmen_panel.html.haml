@@ -1,0 +1,75 @@
+- wingman1, wingman2 = current_user.reload.all_wingmen
+
+.caption
+  Your wingmen
+.photos
+  .wingmen_column1
+    .blob_medium
+      .white_label{:class => blob_label_class(current_user)}
+        = current_user.name
+      .avatar_results
+        = image_tag user_foto_url(current_user)
+  .wingmen_column2
+    - if wingman1.is_a? User
+      .blob_medium
+        .white_label{:class => blob_label_class(wingman1)}
+          = wingman1.name
+        .avatar_results
+          = image_tag user_foto_url(wingman1)
+    - elsif wingman1.is_a? Relation
+      .blob_medium.pending
+        .white_label{:class => blob_label_class(wingman1)}
+          = wingman1.name || wingman1.email
+        .avatar_results
+    - else
+      .blob_medium{:class => (current_tournament.deploy_average_scoring ? 'avg' : '')}
+  .wingmen_column3  
+    - if wingman2.is_a? User
+      .blob_medium
+        .white_label{:class => blob_label_class(wingman2)}
+          = wingman2.name
+        .avatar_results
+          = image_tag user_foto_url(wingman2)
+    - elsif wingman2.is_a? Relation
+      .blob_medium.pending
+        .white_label{:class => blob_label_class(wingman2)}
+          = wingman2.name || wingman2.email
+        .avatar_results
+    - else
+      .blob_medium{:class => (current_tournament.deploy_average_scoring ? 'avg' : '')}
+  .wingmen_column4 
+    .total
+      Total
+  .clear
+
+.stats
+  .wingmen_column1
+    = score(current_user.ladder ? current_user.ladder.score : 0)
+  .wingmen_column2
+    - if wingman1
+      - if wingman1.is_a? User
+        = score(wingman1.score)  rescue 0
+      - else
+        0
+    - else 
+      = score(current_tournament.avg_score)
+  .wingmen_column3
+    - if wingman2
+      - if wingman2.is_a? User
+        = score(wingman2.score)  rescue 0
+      - else
+        0
+    - else 
+      = score(current_tournament.avg_score)  
+  .wingmen_column4
+    = score(current_user.ladder ? current_user.ladder.count_combined_score : current_tournament.avg_score * 2) 
+  .clear
+
+.buttons
+  .wingmen_column1 &nbsp;
+  .wingmen_column2
+    = render 'ladders/blocks/game_over_wingmen_panel_button', :wingman => wingman1
+  .wingmen_column3
+    = render 'ladders/blocks/game_over_wingmen_panel_button', :wingman => wingman2
+  .wingmen_column4
+  .clear

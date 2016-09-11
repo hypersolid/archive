@@ -1,0 +1,10 @@
+development:
+  adapter: mysql2
+  database: controversial
+  encoding: utf8
+
+production:
+  adapter: mysql2
+  database: s74_cm
+  username: s74_cm
+  password: coolapple5

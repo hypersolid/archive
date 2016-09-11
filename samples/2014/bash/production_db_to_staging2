@@ -1,0 +1,6 @@
+#!/bin/sh
+ssh deploy@162.13.122.143 'mysqldump -h1d31d3cdaa4c0dea42c946411de6f3d34e6a019c.rackspaceclouddb.com -udeploy --ignore-table=luxfix.pages --ignore-table=luxfix.configurables luxfix > luxfix.dump; tar -czf luxfix.dump.gz --remove-files luxfix.dump'
+scp deploy@162.13.122.143:/home/deploy/luxfix.dump.gz .
+scp luxfix.dump.gz deploy@staging2.lux-fix.com:/home/deploy/luxfix.dump.gz
+ssh deploy@staging2.lux-fix.com 'tar -xzf luxfix.dump.gz; mysql -udeploy luxfix < luxfix.dump; rm luxfix.dump*'
+#rm luxfix.dump*

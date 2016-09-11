@@ -1,0 +1,109 @@
+source 'https://rubygems.org'
+
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '4.0.0'
+# gem 'actionpack-action_caching'
+gem 'rails-observers', '~> 0.1.2'
+
+gem 'rspec-rails'
+gem 'mysql2'
+gem 'nokogiri'
+gem 'haml-rails'
+gem 'active_model_serializers'
+gem 'devise', :git => "git://github.com/plataformatec/devise.git", :branch => "rails4"
+gem 'newrelic_rpm'
+# gem 'airbrake'
+gem 'delayed_job', :git => 'git://github.com/collectiveidea/delayed_job.git', :branch => 'master'
+gem 'delayed_job_active_record', :git => 'git://github.com/collectiveidea/delayed_job_active_record.git', :branch => 'master'
+gem 'daemons'
+gem 'state_machine'
+gem 'simple_roles'
+
+gem 'money'
+gem 'google_currency'
+gem 'activemerchant'
+
+gem 'barby'
+gem 'chunky_png'
+
+gem 'therubyracer'
+gem 'less-rails'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+gem 'twitter-bootstrap-rails'
+gem 'bootstrap-datetimepicker-rails'
+
+gem 'carmen-rails', '~> 1.0.0'
+gem 'jquery-rails'
+gem 'turbolinks'
+
+gem 'rails-i18n', '~> 4.0.0'
+# gem 'localeapp'
+gem 'ru_propisju', '~> 2.2.1'
+gem 'best_in_place', github: 'bernat/best_in_place', branch: 'rails-4'
+gem 'simple_form'
+gem 'carrierwave', '~> 0.9.0'
+gem "jquery-fileupload-rails", github: 'fomichov/jquery-fileupload-rails', :ref => 'stable'
+gem 'has_scope', '~> 0.5.1'
+gem 'fancybox2-rails', github: 'fomichov/fancybox2-rails', :ref => 'stable'
+gem "mini_magick", "~> 3.6.0"
+gem 'axlsx', '~> 2.0.0' # Excel reports generator
+
+# Visual enhancements
+gem 'bootstrap-datetimepicker-rails'
+
+group :development do
+  gem 'g'
+  gem 'terminal-notifier'
+  gem 'quiet_assets'
+  gem 'git-deploy', :require => false
+  gem 'zeus'
+  gem 'letter_opener'
+end
+
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails',   '~> 4.0.0.beta1'
+  gem 'coffee-rails', '~> 4.0.0.beta1'
+
+  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+  # gem 'therubyracer', platforms: :ruby
+
+  gem 'uglifier', '>= 1.0.3'
+end
+
+group :test do
+  gem 'vcr'
+  gem 'webmock'
+  gem 'json_spec'
+
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+
+  gem 'capybara'
+
+  gem 'capybara-webkit'
+  gem 'selenium-webdriver'
+
+  gem 'launchy'
+  gem 'shoulda', '~> 3.5.0'
+
+  gem 'thin'
+  gem 'its'
+end
+
+group :development, :test do
+  gem 'factory_girl_rails', '~> 4.2.1'
+  gem 'pry-rails'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
+  gem 'growl'
+end
+
+# To use ActiveModel has_secure_password
+# gem 'bcrypt-ruby', '~> 3.0.0'
+
+# To use debugger
+# gem 'debugger'

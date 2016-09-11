@@ -1,0 +1,32 @@
+<?php 
+$srchrq = $_POST['name'];
+if ($srchrq==""){
+	echo "Вы не ввели запрос поиска!"; 
+	die;
+}
+$slink = mysql_connect("127.0.0.1", "root", "vbhjndjhtw")
+      or die ("EPIC FAIL COULD NOT CONNECT MYSQL:" . mysql_error());
+mysql_select_db("mdoc") or die ("EPIC FAIL COULD NOT SELECT DATABASE");
+$fname = "SELECT fname FROM ddm_files WHERE fname LIKE '%{$srchrq}%'";
+$result = mysql_query($fname);
+	  print "<table>\n";
+	  print "\t\t<td><b>Найденные файлы </b></td>\n";
+		      
+	      while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+	              print "\t<tr>\n";
+	              foreach ($line as $col_value) {
+$flocate = "SELECT flocate FROM ddm_files WHERE fname  LIKE '%{$col_value}%'";
+$result_loc = mysql_query($flocate);
+	      while ($line1 = mysql_fetch_array($result_loc, MYSQL_ASSOC)) {
+	              foreach ($line1 as $col_value1) {
+		      }
+		      }
+			    $URL = str_replace('%2F', '/', rawurlencode($col_value1));
+			      print "\t\t<td><a href=\"http://info.dstu.local/$URL\"> $col_value<a></td>\n";
+				          }
+			          print "\t</tr>\n";
+					      }
+			          print "</table>\n";
+              		          mysql_free_result($result);
+				  mysql_free_result($result_loc);
+			          mysql_close($link); 

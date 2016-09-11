@@ -1,0 +1,7 @@
+%h3#title
+  .floatleft
+    Battle of the week: #{@fight.title_vs  rescue ''} &nbsp;
+  .floatleft
+    %g:plusone{:href=>(@fight.url rescue '')}
+
+=render 'fights/full'  rescue ''

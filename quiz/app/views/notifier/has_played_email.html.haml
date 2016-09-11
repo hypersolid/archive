@@ -1,0 +1,16 @@
+- content_for :greetings do
+  Hey #{@you.name},
+  %br
+  %br
+  Congratulations! Your wingman #{@wingman.name} has just joined and played his first game. 
+  / # If he scored AND moved you up a position:
+  - if @wingman.ladder.score > 0 && @wingman.ladder.position_changed_at == @ladder.position_changed_at
+    They scored #{@wingman.ladder.score} points moving you up to #{@ladder.position} place,
+    - if @ladder.prize > 0
+      currently winning #{pounds @ladder.prize}.
+
+  We have awarded you 2 complementary credits to celebrate them joining the ladder.
+  %br
+  There are #{@time_left[:days]} days #{@time_left[:hours]} hours #{@time_left[:mins]} mins to set your best score possible before the tournament ends and you win the money attached to your position. 
+  - if @ladder.next_prize
+    The next prize position above you on the ladder wins #{pounds @ladder.next_prize.amount}.

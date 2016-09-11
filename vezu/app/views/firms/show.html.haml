@@ -1,0 +1,131 @@
+- content_for :title do
+  Доставка #{@all ? 'еды' : @category.downcase2} > Меню ресторана "#{@firm.name}"
+  
+- content_for :head do 
+  %script
+    $(function(){
+    $('#cardtabs').tabs({
+    cache:true,
+    load: function (e, ui) {
+    $(ui.panel).find(".tab-loading").remove();
+    },
+    select: function (e, ui) {
+    var $panel = $(ui.panel);
+    if ($panel.is(":empty")) {
+    $panel.append("<div class='tab-loading'></div>")
+    }},
+    fx: {opacity: 'toggle'}
+    });
+    - if @category
+      $('#cardtabs').tabs("select","#tabs-#{@category.id}");
+    });
+
+  %meta{:name=>"description", :content=>"#{@firm.name} - доставка #{@all ? 'еды' : @category.downcase2} по Ростову  #{@firm.openinghours}. Заказать #{@all ? 'еду' : @category.downcase} от #{@firm.name} онлайн!"}
+
+#card
+  .fl
+    %h1.font= "Меню доставки от ресторана #{@firm.name}"
+    .breadcrumbs
+      %a.crumb.font{:href=>'/', :title => 'Вся доставка еды в Ростове'}="ПривезуЕду"
+      >
+      %a.crumb.font{:href=>'/' + @category.name, :title => "Доставка #{@category.downcase2} по Ростову"}=@category.name
+      >
+      %span.crumb.font
+        =@firm.name
+  .fl.state{:style=>"display: #{@firm.opened ? 'none' : 'block'}"}
+    = image_tag '/design/closed.jpg', :alt => 'Ресторан закрыт'
+  .fl
+    - if SOCIAL
+      .social
+        .fl
+          .vklike{:id => "vk_like#{@firm.id}"}
+          %script{:type=>"text/javascript"}
+            VK.Widgets.Like("#{"vk_like#{@firm.id}"}", {type: "button", width: 160}, #{@firm.id});
+      - if false
+        .fl
+          <div class="fb-like" data-href="#{HOST}#{@firm.url}" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false"></div>
+        .cl  
+  .fr
+    %a#comments_trigger.font{:href=>'#', :rel=>'nofollow'} Показать отзывы
+  .cl
+
+  #comments
+    #vk_comments
+    %script{:type=>"text/javascript"}
+      VK.Widgets.Comments("vk_comments", {limit: 5, width: "900", attach: "*"}, #{@firm.id});
+
+  #info.std
+    .fl.phones
+      = @firm.phones
+      %span{:style => 'color:#aaa'}='|'
+      Часы работы:
+      = @firm.openinghours
+    
+    .fr
+      - if @firm.social_fb
+        %noindex
+          = link_to "Facebook", @firm.social_fb, :rel=>"nofollow", :title => "Страница #{@firm.name} на Facebook", :class=>'font'
+        %span{:style => 'color:#aaa'}='|'
+      - if @firm.social_vk
+        %noindex
+          = link_to "ВКонтакте", @firm.social_vk, :rel=>"nofollow", :title => "Страница #{@firm.name} ВКонтакте", :class=>'font'
+        %span{:style => 'color:#aaa'}='|'
+      - if @firm.site
+        %noindex
+          = link_to "Сайт",  @firm.site, :rel=>"nofollow", :title => "Сайт #{@firm.name}", :class=>'font'
+    .cl     
+    .description
+      = @firm.description
+    - if @firm.conditions
+      .conditions
+        .conditionsheader
+          .fl
+          .fl
+            Условия доставки:
+          .cl
+        .conditions
+          =raw @firm.conditions.split("\n").join('<br/>')
+
+  #cardtabs
+    %ul
+      - @categories.each do |c|
+        %li
+          - if c == @category
+            %a.font{:href=>"#tabs-#{c.id}", :rel=>'nofollow'}=c.name
+          - else
+            %a.font{:href=>"/categories/#{c.id}/#{@firm.id}", :rel=>'nofollow'}=c.name
+      .cl
+    .border
+
+    .tabs{:id => "tabs-#{@category.id}"}
+      = render @category
+      
+
+  - if @firm.opened
+    #order
+      .ordertrigger
+        %a#ordertrigger{:href=>'#',:rel=>'nofollow'}
+          убрать&darr;
+      .cl 
+      .fl
+        = image_tag @firm.img(:tiny)
+      .fl.yourorder
+        Ваш заказ:
+      .cl
+      .border
+      #list
+        Вы ещё ничего не добавили
+      .sum
+        Итого
+        %span#total
+          0 
+        %del P
+      #makeorder.font1
+        Готово
+      #phonescontainer
+        - if @firm.phones
+          .border
+          Позвоните оператору и продиктуйте заказ.
+          .phones 
+            =raw @firm.phones.split(',').join('<br/>')
+          Приятного аппетита!

@@ -1,0 +1,38 @@
+#thebattle
+  #thebattleid.hidden=@fight.id
+  #brand1.hidden=@fight.brand1.id
+  #brand2.hidden=@fight.brand2.id
+  #url1.hidden=@paths[1]
+  #url2.hidden=@paths[2]
+  #rating1.hidden=0
+  #rating2.hidden=0
+  
+  =render 'scale', :n=>1
+  =render 'battle', :n=>1, :brand=>@fight.brand1      
+
+  #dashboard
+    .label1
+      =@fight.brand1.verb.upcase rescue 'YES'
+    .clearboth
+    #human1
+      %img{:src=>"#{MEDIA_HOST}/images/human_green.png"}
+    #votes1=0
+    .or
+      vs
+    #human2
+      %img{:src=>"#{MEDIA_HOST}/images/human_red.png"}
+    #votes2=0
+    .clearboth
+    .label2
+      =@fight.brand2.verb.upcase rescue 'NO'      
+
+  =render 'battle', :n=>2, :brand=>@fight.brand2
+  =render 'scale', :n=>2
+  
+  .clearboth
+
+  .forms.hidden
+    = form_for :vote, :remote => true, :url=>votes_path,:html=>{:id=>'battle_form'} do |f|
+      =f.hidden_field :count, :value=>@fight.id, :name=>"fight_id"
+      =f.hidden_field :brand_id, :value=>'', :id=>"brand_id"
+      =f.hidden_field :total_votes, :value=>'', :id=>"total_votes"

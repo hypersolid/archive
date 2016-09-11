@@ -1,0 +1,31 @@
+- content_for :title do
+  Alphabetic list of all world's metro/subway systems maps
+
+- content_for :desc do
+  Select your city and view fully interactive metro/subway map with routes and time estimation 
+
+- content_for :top do
+  .autocomplete
+    %input#ac{:value => "New York, London, Paris, etc.", :tabindex => 1}
+
+.mainpage
+  .fulllist
+    - first_letter = ''
+    - @cities.each do |c|
+      - if first_letter != c.city_name.first
+        .cl
+        .caption
+          = c.city_name.first
+        .cl
+        - first_letter = c.city_name.first
+      .item
+        = link_to "#{c.city_name}, #{c.country} (#{c.metro_name} Map)", c.city_name, :title => "View map of #{c.metro_name}"
+    .cl
+    
+- content_for :footer do
+  - @popular_cities.each do |c|
+    .popular.fl
+      = link_to c.city_name, c.city_name, :title => "View map of #{c.metro_name}"
+  .all.fr
+    = link_to 'Show Map', '/', :title => 'All subway/metro maps'
+  .cl

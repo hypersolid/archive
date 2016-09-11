@@ -1,0 +1,31 @@
+#pay_dialog.hidden
+  %h2 Please choose the amount:
+  .lines
+    - if current_user.can_get_bonus?
+      .line
+        .star.fl
+        .free-credits.fl
+          2 CREDITS
+        / .note.fl
+        .free-amount.fl
+          FREE
+        .invite-button.fl
+          = link_to 'Invite a wingman', '#', :class => 'pay_invite_button'
+        .clear
+
+    - amounts = [0.99, 10, 15]
+    - amounts.each do |amount|
+      .line
+        .star.fl
+        .credits.fl
+          = pluralize(Payment.credits_by_amount(amount), "Credit").upcase
+        / .note.fl
+        .amount.fl
+          = pounds(amount)
+        .button.fl
+          = link_to 'Buy', '#', :class => 'pay_credits_button',
+          'data-mode' => (amount == amounts.first ? "pay_and_play" : "pay"),
+          'data-amountdesc' => pluralize(Payment.credits_by_amount(amount), 'Credit'), 
+          'data-amount' => "#{cost_pounds(amount)}",
+          'data-hash' => Playspan.hash(current_user.id, "GBP", cost_pounds(amount), "#{current_user.id}-#{current_user.payments.count}")
+        .clear

@@ -1,0 +1,12 @@
+- content_for :header do
+  Update from GameShow:
+- content_for :greetings do
+  Hey #{@row.user.name},
+
+%p
+  Your score has just been overtaken by #{@ladder.user.name} who have just moved from position #{@ladder.position_old} 
+  to position #{@ladder.position} on the Game Show ladder, while you are currently on position number #{@row.position}.
+%p
+  Let them know how you feel about this by writing on their #{link_to "wall", root_url + "#ladders/#{@ladder.id}/overlay"}.
+  %br
+  To set a higher score, while there’s time, and beat #{@ladder.user.name},

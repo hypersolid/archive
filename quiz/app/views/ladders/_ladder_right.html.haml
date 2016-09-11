@@ -1,0 +1,31 @@
+#overlay_panel.hidden
+  .overlay_header
+    .fr
+      =link_to '', '#', :id => 'overlay_close'
+    .fr
+      Close
+    .clear
+  .overlay_wrapper
+    .overlay_content
+
+.relative
+  = render 'ladders/popups/nudge' if @show_nudge_popup
+  = # render 'ladders/popups/take_tour'
+
+- unless signed_in?
+  = image_tag '/images/ladder_right/how_to_play.jpg'
+  .relative
+    %a.playnow#howtoplay_playnow{:href => "#", :class => (current_tournament.active? ? 'active' : 'inactive')} PLAY NOW
+
+- if signed_in?
+  - if @ladder
+    %h1
+      How your score breaks down
+    #wingmen_panel.ladder
+      = render 'ladders/blocks/wingmen_panel'
+    .relative
+      #wingmen_highlight.ladder
+    = render 'ladders/blocks/wingman_for'
+  - else
+    .center
+      You haven't played in this tournament yet

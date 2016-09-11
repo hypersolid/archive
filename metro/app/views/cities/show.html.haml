@@ -1,0 +1,52 @@
+- content_for :title do
+  The map of #{@city.metro_name} | SubwayMetro.com
+
+- content_for :head do
+  = javascript_include_tag "app", "map", "jquery.zoom"
+ 
+- content_for :top do
+  .image.fl
+    %a{:href => @city.url}
+      =image_tag @city.url_logo, :alt => "#{@city.metro_name} logo", :title => "#{@city.metro_name} map"
+    .cl
+
+  .fl
+    %h3 
+      #{@city.metro_name} Map (#{@city.city_name}, #{@city.country})
+    .fl
+      =image_tag "/images/ad.jpg"
+      
+
+  .fl
+    - if SOCIAL
+      #like-panel
+        .item
+          <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="trebuchet ms"></div>
+        .item
+          <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+        .item
+          <g:plusone size="medium"></g:plusone>
+  .cl
+
+- if @city.public  
+  #themap
+    %img{:src=>"/images/maptest.jpg"}
+- else
+  .themap_placeholder
+   
+- content_for :footer do
+  - if SOCIAL 
+    .fl.fbcomments
+      %div{:class=>"fb-comments", "data-num-posts"=>"5", "data-width"=>"600", "data-href"=>"http://subwaymetro.com#{@city.url}"}
+  - unless @other_cities.empty?
+    - @other_cities.each do |city|
+      .popular.fl
+        = link_to city.city_name, '/' + city.city_name
+  .all.fr
+    =link_to 'All cities', root_path, :title => 'All subway/metro maps'
+  .cl
+   
+
+- content_for :footer_copyright do
+  |
+  =@city.updated_at.strftime("%B %Y")

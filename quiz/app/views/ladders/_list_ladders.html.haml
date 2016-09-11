@@ -1,0 +1,22 @@
+- if @filter == 1
+  #ladders_scroller
+    %a.bt_show_more_up.disabled
+      .text
+        .fl Show more
+        .icon
+    .scroller
+      = render @ladders
+    %a.bt_show_more_down.disabled
+      .text
+        .fl Show more
+        .icon
+- elsif @filter == 2 && email_signed_in?
+  .wingmen_link_your_account
+    To see a ladder with just people you know on,
+    %br
+    .signFacebook
+      .iconFacebook
+      = link_to 'Link Your Facebook Account Now', user_omniauth_authorize_path(:facebook), :class => 'button'
+  = render @ladders
+- else 
+  = render @ladders

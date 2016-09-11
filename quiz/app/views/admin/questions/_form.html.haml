@@ -1,0 +1,50 @@
+= form_for(@question, :url => (@question.new_record? ? admin_questions_path : admin_question_path(@question))) do |f|
+  - if @question.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@question.errors.count, 'error')} prohibited this user from being saved:"
+      %ul
+      - @question.errors.full_messages.each do |msg|
+        %li= msg
+  
+  .field
+    = f.label :category_id
+    %br
+    = f.collection_select :category_id, Category.all, :id, :name, :prompt => true
+  .field
+    = f.label :difficulty
+    %br
+    1
+    = f.radio_button :difficulty, 1
+    2
+    = f.radio_button :difficulty, 2
+    3
+    = f.radio_button :difficulty, 3
+    4
+    = f.radio_button :difficulty, 4
+    5
+    = f.radio_button :difficulty, 5
+
+  .field
+    = f.label :best_time
+    %br
+    = f.text_field :best_time, :size => 4
+  .field
+    = f.label :avg_time, "Average time"
+    %br
+    = f.text_field :avg_time, :size => 4
+
+  .field
+    = f.label :question
+    %br
+    = f.text_field :question, :size => 120
+  .field
+    = f.label :correct_answer
+    %br
+    = f.text_field :correct_answer
+  .field
+    Wrong answers, each answer from a new line, at least 2 answers:
+    %br
+    %textarea{:rows => 10, :cols => 100, :name => 'question[wrong_answers]'}= @question.wrong_answers_text
+
+  .actions
+    = f.submit

@@ -1,0 +1,20 @@
+.message{"data-id" => wall_message.id}
+  %href{:name => "message#{wall_message.id}"}
+  .fl.photo
+    = image_tag user_foto_url(wall_message.sender)
+  .fl
+    .fl.name
+      - if wall_message.sender.ladder && (!signed_in? || current_user != wall_message.sender)
+        =link_to wall_message.sender.name, '#', :class => 'wall_user_link', 'data-id' => wall_message.sender.ladder.id 
+      - else
+        = wall_message.sender.name
+    - if current_user && current_user.admin?
+      .fr.delete
+        = link_to "x", wall_message_path(wall_message), :method => :delete, :remote => true
+    .fr.time
+      = time_ago_in_words(wall_message.created_at)
+      ago
+    .clear    	
+    .text
+      = truncate(wall_message.text, :length => 300)
+  .clear

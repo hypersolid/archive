@@ -1,0 +1,4 @@
+- Entry.distinct(:source).pluck(:source).each do |source|
+  h1 = source
+  - Entry.where(source: source).limit(100).each do |entry|
+    p = entry.title

@@ -1,0 +1,14 @@
+var defaults = {
+points_total: #{current_tournament.points_total},
+points_left: #{current_tournament.points_total},
+best_time_bonus: #{current_tournament.best_time_bonus},
+avg_time_bonus: #{current_tournament.avg_time_bonus},
+bonus: #{current_tournament.best_time_bonus + current_tournament.avg_time_bonus},
+popups: #{(signed_in? && current_user.has_played_only_one_quiz?).to_s},
+
+game_over_url: '#{game_over_ladders_url}',
+answer_url:  '#{answer_quiz_url}',
+hourglass_height: 260,
+scorer_height: 360,
+debug: false,
+};

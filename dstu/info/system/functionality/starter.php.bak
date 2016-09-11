@@ -1,0 +1,63 @@
+<body onload="hide()">
+<table align="center"  valign="top" width="100%" height="100%">
+<tr>
+<td style="color:gray">
+      .<br>
+   ,     .<br>
+   8:00  21:00<br>
+       e <a href="javascript:show()"><b></b></a>
+<br>
+<br>
+ ,      <br>
+     "\","/",".","*","?",","<br>
+   "-"  "_". 
+<br>
+    - 2.
+<br>
+<br>
+  <a href="news" style="color:555555"><b></b></a>         .
+<br>
+<br>
+<a href="/lastfiles" style="color:555555"><b>  </b></a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<script language=javascript type='text/javascript'>
+function hide() {
+	if (document.getElementById) { 
+	document.getElementById('auth').style.visibility = 'hidden';
+	}
+	else {
+		if (document.layers) { 
+		document.hideshow.visibility = 'hidden';
+		}
+		else {
+		document.all.hideshow.style.visibility = 'hidden';
+		}
+		}
+		}
+		function show() {
+			if (document.getElementById) {
+			document.getElementById('auth').style.visibility = 'visible';
+			}
+			else {
+				if (document.layers) { 
+				document.hideshow.visibility = 'visible';
+				}
+				else { 
+				document.all.hideshow.style.visibility = 'visible';
+				}
+				}
+				}
+				</script> 
+				<div id="auth" >
+<?php
+include 'auth.php';
+?>
+</div>
+</td>
+</tr>
+</table>
+</body>

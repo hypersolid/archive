@@ -1,0 +1,143 @@
+Algiers	Algiers Metro	2011	10	9.2	Algeria
+Buenos Aires	Buenos Aires Metro	1913	68	48.5	Argentina
+Yerevan	Yerevan Metro	1981	10	13.4	Armenia
+Vienna	Vienna U-Bahn	1976	101	75	Austria
+Baku	Baku Metro	1967	23	34.6	Azerbaijan
+Minsk	Minsk Metro	1984	25	30.3	Belarus
+Brussels	Brussels Metro	1976	59	49.9	Belgium
+Belo Horizonte	Belo Horizonte Metro	1986	19	28.2	Brazil
+Brasilia	Brasilia Metro	2001	24	42.4	Brazil
+Porto Alegre	Porto Alegre Metro	1985	20	33.8	Brazil
+Recife	Recife Metro	1985	28	39.5	Brazil
+Rio de Janeiro	Metro Rio	1979	35	40.9	Brazil
+Sao Paulo	Sao Paulo Metro	1974	64	74.3	Brazil
+Teresina	Teresina Metro	1989	9	14.5	Brazil
+Sofia	Sofia Metro	1998	27	30.5	Bulgaria
+Montreal	Montreal Metro	1966	68	69.2	Canada
+Toronto	Toronto Subway and RT	1954	69	68.3	Canada
+Vancouver	SkyTrain	1985	47	68.7	Canada
+Santiago	Santiago Metro	1975	108	103	Chile
+Beijing	Beijing Subway	1969	218	372.0	China
+Chengdu	Chengdu Metro	2010	36	40.8	China
+Chongqing	Chongqing Rail Transit	2005	59	87.8	China
+Dalian	Dalian Metro	2003	20	63.0	China
+Foshan	FMetro	2010	14	20.4	China
+Guangzhou	Guangzhou Metro	1997	120	215.0	China
+Hong Kong	Mass Transit Railway	1979	82	174.4	China
+Kunming	Kunming Rail Transit	2012	2	18.1	China
+Nanjing	Nanjing Metro	2005	55	87.0	China
+Shanghai	Shanghai Metro	1995	285	425	China
+Shenyang	Shenyang Metro	2010	41	49.7	China
+Shenzhen	Shenzhen Metro	2004	137	178.4	China
+Suzhou	Suzhou Rail Transit	2012	24	25.7	China
+Tianjin	Tianjin Metro	1984	76	128.6	China
+Wuhan	Wuhan Metro	2004	25	28.8	China
+Xian	Xian Metro	2011	17	20.5	China
+Medellin	Medellin Metro	1995	34	32	Colombia
+Prague	Prague Metro	1974	57	59.3	Czech Republic
+Copenhagen	S-train	1934	84	170	Denmark
+Santo Domingo	Santo Domingo Metro	2009	30	27.5	Dominican Republic
+Cairo	Cairo Metro	1987	60	69.8	Egypt
+Helsinki	Helsinki Metro	1982	17	21.1	Finland
+Lille	Lille Metro	1983	60	45.2	France
+Lyon	Lyon Metro	1978	42	30.5	France
+Marseille	Marseille Metro	1977	30	22	France
+Paris	Paris Metro	1900	301	215	France
+Rennes	Rennes Metro	2002	15	9.4	France
+Toulouse	Toulouse Metro	1993	37	27.5	France
+Tbilisi	Tbilisi Metro	1966	22	26.4	Georgia
+Berlin	Berlin U-Bahn	1902	173	147	Germany
+Frankfurt	Frankfurt U-Bahn	1968	85	58.6	Germany
+Hamburg	Hamburg U-Bahn	1912	89	100.7	Germany
+Munich	Munich U-Bahn	1971	100	103.1	Germany
+Nuremberg	Nuremberg U-Bahn	1972	44	34.6	Germany
+Greater Athens	Athens Metro	1904	54	74.1	Greece
+Budapest	Budapest Metro	1896	42	31.7	Hungary
+Bangalore	Namma Metro	2011	6	6.7	India
+Chennai	Chennai Mass Rapid Transit System	1997	17	19	India
+Delhi	Delhi Metro	2002	145	193	India
+Kolkata	Kolkata Metro	1984	23	25.55	India
+Mashhad	Mashhad Metro	2011	22	19	Iran
+Tehran	Tehran Metro	1999	80	74.5	Iran
+Catania	Catania Metro	1999	6	3.8	Italy
+Genoa	Genoa Metro	1990	7	5.3	Italy
+Milan	Milan Metro	1964	94	88	Italy
+Naples	Naples Metro	1993	28	28	Italy
+Rome	Rome Metro	1955	51	41.5	Italy
+Turin	Metrotorino	2006	21	13.2	Italy
+Fukuoka	Fukuoka City Subway	1981	35	29.8	Japan
+Kobe	Kobe Municipal Subway	1977	25	30.6	Japan
+Kyoto	Kyoto Municipal Subway	1981	29	28.8	Japan
+Nagoya	Nagoya Municipal Subway	1957	83	89.1	Japan
+Osaka	Osaka Municipal Subway	1933	101	137.8	Japan
+Sapporo	Sapporo Municipal Subway	1971	46	48	Japan
+Tokyo	Tokyo Metro	1927	179	195.1	Japan
+Yokohama	Yokohama Municipal Subway	1972	32	40.4	Japan
+Almaty	Almaty Metro	2011	7	8.5	Kazakhstan
+Pyongyang	Pyongyang Metro	1973	17	22	North Korea
+Busan	Busan Subway	1985	128	130.2	South Korea
+Daegu	Daegu Subway	1997	56	53.9	South Korea
+Daejeon	Daejeon Subway	2006	22	22.7	South Korea
+Gwangju	Gwangju Subway	2004	20	20.1	South Korea
+Incheon	Incheon Subway	1999	29	29.4	South Korea
+Seoul	Seoul Metropolitan Subway	1974	314	389.3	South Korea
+Kuala Lumpur	Kuala Lumpur Rail Transit System	1996	48	56	 Malaysia
+Mexico City	Mexico City Metro	1969	195	226	Mexico
+Casablanca	Al Bidaoui	2002	11	32.0	Morocco
+Amsterdam	Amsterdam Metro	1977	33	32.7	Netherlands
+Rotterdam	Rotterdam Metro	1968	62	78.3	Netherlands
+Oslo	Oslo Metro	1966	105	84.2	Norway
+Lima	Lima Metro	2011	16	21.4	Peru
+Manila	Manila Metro Rail Transit System	1999	13	17.0	Philippines
+Warsaw	Warsaw Metro	1995	21	23.1	Poland
+Lisbon	Lisbon Metro	1959	55	45.5	Portugal
+Bucharest	Bucharest Metro	1979	51	69.3	Romania
+Kazan	Kazan Metro	2005	7	10.9	Russia
+Moscow	Moscow Metro	1935	186	308.7	Russia
+Nizhny Novgorod	Nizhny Novgorod Metro	1985	13	15.3	Russia
+Novosibirsk	Novosibirsk Metro	1986	13	15.9	Russia
+Saint Petersburg	Saint Petersburg Metro	1955	65	110.2	Russia
+Samara	Samara Metro	1987	9	10.2	Russia
+Yekaterinburg	Yekaterinburg Metro	1991	9	12.7	Russia
+Mecca	Mecca Metro	2010	15	18.1	Saudi Arabia
+Singapore	Mass Rapid Transit	1987	89	146.5	Singapore
+Barcelona	Barcelona Metro	1924	166	125	Spain
+Bilbao	Bilbao Metro	1995	41	43.31	Spain
+Madrid	Metro de Madrid	1919	300	293	Spain
+Palma de Mallorca	Palma de Mallorca Metro	2007	9	8.3	Spain
+Seville	Seville Metro	2009	22	18.2	Spain
+Valencia	Metrovalencia	1988	169	175	Spain
+Stockholm	Stockholm Metro	1950	100	110.0	 Sweden
+Lausanne	Lausanne Metro	2008	28	15.0	 Switzerland
+Taipei	Taipei Metro	1996	102	112.8	 Taiwan
+Kaohsiung	Kaohsiung Mass Rapid Transit	2008	36	40.4	25.1
+Bangkok	Bangkok Metro	2004	18	21	 Thailand
+Adana	Adana Metro	2009	13	13.5	 Turkey
+Ankara	Ankara Metro	1997	23	23.4	 Turkey
+Bursa	Bursa Metro	2002	26	31	 Turkey
+Istanbul	Istanbul Metro	2000	28	39.2	 Turkey
+Izmir	Izmir Metro	2000	10	11.6	 Turkey
+Dnipropetrovsk	Dnipropetrovsk Metro	1995	6	7.8	 Ukraine
+Kharkiv	Kharkiv Metro	1975	29	38.1	 Ukraine
+Kiev	Kiev Metro	1960	51	66.1	 Ukraine
+Dubai	Dubai Metro	2009	47	75	 United Arab Emirates
+Glasgow	Glasgow Subway	1896	15	10.4	 United Kingdom
+London	London Underground	1863	270	402	 United Kingdom
+Newcastle	Tyne & Wear Metro	1980	60	77.7	 United Kingdom
+Atlanta	MARTA	1979	38	77	 United States
+Baltimore	Metro Subway	1983	14	24.5	 United States
+Boston	MBTA	1897	51	61	 United States
+Chicago	Chicago 'L'	1897	145	173	 United States
+Cleveland	RTA Rapid Transit	1955	18	31	 United States
+Los Angeles	Los Angeles County Metro Rail	1993	16	28.0	 United States
+Miami	Metrorail	1984	23	40.1	 United States
+New York	New York City Subway	1904	421	337	 United States
+Philadelphia	SEPTA	1907	53	38.5	 United States
+San Francisco Bay Area	BART	1972	44	167	 United States
+San Juan	Tren Urbano	2004	16	17.2	 United States
+Washington, D.C.	Washington Metro	1976	86	171	 United States
+Tashkent	Tashkent Metro	1977	29	37.5	 Uzbekistan
+Caracas	Caracas Metro	1983	47	54.2	 Venezuela
+Los Teques	Los Teques Metro	2006	2	9.5	 Venezuela
+Maracaibo	Maracaibo Metro	2006	6	6.5	 Venezuela
+Valencia	Valencia Metro	2007	7	6.2	 Venezuela

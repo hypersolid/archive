@@ -1,0 +1,10 @@
+%h1 Tournaments Admin
+%p
+  = link_to t('back'), admin_tournaments_path
+  = link_to t('edit'), edit_admin_tournament_path(@tournament)
+
+%dl
+  %dt= Tournament.human_attribute_name :starts_at
+  %dd= @tournament.starts_at
+  %dt= Tournament.human_attribute_name :ends_at
+  %dd= @tournament.ends_at

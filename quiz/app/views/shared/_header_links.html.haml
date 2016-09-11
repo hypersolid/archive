@@ -1,0 +1,29 @@
+- if signed_in?
+  %li
+    %span.username
+      Welcome, #{truncate(current_user.name, :length => 15)}
+    %span.delimiter
+      |
+%li
+  %span
+    = header_link_to 'The Ladder', root_path
+
+- if signed_in?
+  - if current_tournament.active?
+    %li
+      %span.delimiter
+        |
+      = link_to 'Play the game', '#', :class => "playnow active"
+
+  %li
+    %span.delimiter
+      |
+    = header_link_to 'My Account', edit_user_path(current_user)
+
+%li
+  %span.delimiter
+    |
+  - if signed_in?
+    %a{:href => destroy_user_session_path} Log Out
+  - else
+    %a{:href => user_omniauth_authorize_path(:facebook)} Log In

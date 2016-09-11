@@ -1,0 +1,12 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+test/
+.DS_Store
+Thumbs.db
+public/system/
+.project
+.sass-cache/
+public/stylesheets/*.css
+chromedriver.log

@@ -1,0 +1,65 @@
+%html
+  %head
+    %title #{yield(:title) != '' ? yield(:title) : "Maps of subway/metro transport systems"} 
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}
+    %meta{:content => "subway maps, metro maps, mta maps,  high resolution maps, download maps", :name => "keywords"}
+    %meta{:content => (yield(:desc) != '' ? yield(:desc) : "Subway/metro maps of all world's cities"), :name => "description"}
+    
+    = csrf_meta_tags
+        
+    = stylesheet_link_tag  "application", "jquery-ui-1.9.1.custom.min", "jquery-jvectormap-1.1.1.css", :media => "all"
+    = javascript_include_tag "jquery-1.8.2.min", "jquery-ui-1.9.1.custom.min"
+    
+    /SERVICES
+    - if SOCIAL
+      / Google plus
+      %script{:type=>"text/javascript", :src=>"https://apis.google.com/js/plusone.js"}
+      / Twitter
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      / Facebook
+      :javascript
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=467903106595976";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        
+      / Adsense
+      :javascript
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-27895687-2']);
+        _gaq.push(['_trackPageview']);
+      
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    
+    = yield :head
+
+  %body
+    %div{:id=>"fb-root"}
+    
+    #wrapper
+      #wrapper2
+        #headerC.container
+          #logo
+            %h1
+              %a{:href => "/", :title => "All subway/metro maps"} subway/metro
+            %p underground transport maps
+          #menu
+            = yield :top
+
+        #page
+          = yield
+
+    #footer-content-wrapper
+      #footer-content
+        = yield :footer
+    #footer
+      %p
+        Copyright subwaymetro.com
+        = yield(:footer_copyright).blank? ? Date.today.year : yield(:footer_copyright)

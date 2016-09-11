@@ -1,0 +1,16 @@
+#nudge_friend_dialog.hidden
+  = form_tag(pay_wingman_ladders_path, :remote => true) do
+    .row
+      Send 
+      = text_field_tag :amount, '5'
+      credits,
+      and send a message to
+      %span.name
+    .row
+      %textarea{:rows => 4, :cols => 45, :name => :message}
+    .row
+      = hidden_field_tag :id, ''    
+    .row
+      .fr
+        = link_to 'Send', '#', :id => 'nudge_friend_buy_credits'
+      .clear

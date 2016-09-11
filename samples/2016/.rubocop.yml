@@ -1,0 +1,45 @@
+AllCops:
+  RunRailsCops: true
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+    - 'test/test_helper.rb'
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+    # gazeta-specific
+    - 'lib/gazeta/import/**/*'
+
+Rails/DefaultScope:
+  Enabled: false
+
+AlignParameters:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 100
+
+Metrics/MethodLength:
+  Max: 20
+
+Style/IndentHash:
+  EnforcedStyle: consistent
+
+Style/CaseIndentation:
+  IndentWhenRelativeTo: end
+  IndentOneStep: true
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/SpaceInsideHashLiteralBraces:
+  Enabled: true
+  Exclude:
+    - spec/**/*
+
+Style/BlockComments:
+  Enabled: false
+
+Documentation:
+  Enabled: false

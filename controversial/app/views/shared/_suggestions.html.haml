@@ -1,0 +1,6 @@
+#suggestions.active
+  Suggest a topic
+  - form_for :suggestion, :update => 'suggestions2', :remote => true, :url => 'suggestions' do |f|
+    = f.text_field :text, :id => 'suggestions_input'
+    = submit_tag 'Send'
+    

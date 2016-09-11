@@ -1,0 +1,14 @@
+- content_for :greetings do
+  Hey #{@row.user.name},
+
+%p
+  You've just moved up from position #{@row.position_old} 
+  to position #{@row.position} on the Game Show ladder 
+  [because #{@ladder.user.name} improved his score].
+  Say thank you  on their #{link_to "wall", root_url + "#ladders/#{@ladder.id}/overlay"}.
+%p
+  - if @row.prize > 0
+    You are currently on a prize position of #{pounds(@row.prize)}.
+  There are #{@time_left[:days]} days #{@time_left[:hours]} hours #{@time_left[:mins]} mins 
+  remaining till this tournament ends – if you're on a prize position at that point, 
+  you will win that amount.

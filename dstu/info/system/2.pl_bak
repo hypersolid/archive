@@ -1,0 +1,49 @@
+
+#!/usr/bin/perl
+
+use strict;
+
+my $path = '/var/www/html/files';
+chdir($path.'../system');
+my @alls = `tail -n -100 /var/www/html/system/log.txt | tac`;
+my (@upl, @delFold, @delFile, @madeFold, @renFile, @last);
+
+for(@alls){
+	if(/^([^ ]+)\s\/\s([^ ]+).*uploaded\sfile\s([^\n]+)/gmi){
+		$upl[$#upl+1] = {'path' => $3, 'time' => $1, 'date' => $2};
+	}elsif(/^([^ ]+)\s\/\s([^ ]+).*deleted\sfolder\s([^\n]+)/gmi){
+		$delFold[$#delFold+1] = {'path' => $3, 'time' => $1, 'date' => $2};
+	}elsif(/^([^ ]+)\s\/\s([^ ]+).*deleted\sfile\s([^\n]+)/gmi){
+		$delFile[$#delFile+1] = {'path' => $3, 'time' => $1, 'date' => $2};
+	}elsif(/^([^ ]+)\s\/\s([^ ]+).*renamed\sfile\s(.+)\sto\s([^\n]+)/gmi){
+		$renFile[$#renFile+1] = {'path' => $3.'|'.$4, 'time' => $1, 'date' => $2};
+	}elsif(/^([^ ]+)\s\/\s([^ ]+).*made\sfolder\s([^\n]+)/gmi){
+		$madeFold[$#madeFold+1] = {'path' => $3, 'time' => $1, 'date' => $2};
+	}
+}
+
+#print $renFile[2]->{'path'}, "\n"; die; 
+
+my $curPos = 0;
+
+W: for(0..9){
+	B: for($curPos..$#upl){
+		my $tmp = $upl[$_];
+		$curPos = $_+1;
+		for(@delFile){
+			if($tmp->{'path'} eq $_->{'path'}){
+				next B;
+			}
+		}
+		$last[$#last+1] = $tmp;
+		next W;
+	}
+}
+$curPos = 0;
+
+
+
+for(@last){
+	($_->{'path'}) = $_->{'path'} =~ /\/var\/www\/html([^\n]+)/g;
+	print $_->{'date'}."|".$_->{'time'}."|".$_->{'path'}."!~!";
+}

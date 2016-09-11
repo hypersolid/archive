@@ -1,0 +1,16 @@
+*.pyc
+tmp/
+.project
+.pydevproject
+workdir/
+*.lgw
+.settings
+mesh.zip
+ann/
+old/
+data.txt
+*~
+*.zip
+params.txt
+draw/
+results/

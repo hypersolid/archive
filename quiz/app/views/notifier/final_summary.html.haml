@@ -1,0 +1,17 @@
+- content_for :header do
+  Game has ended:
+- content_for :greetings do
+  Congratulations,
+
+The GameShow tournament has ended.
+Your final position is #{@user.ladder.position.ordinalize} 
+with #{number_with_delimiter(@user.ladder.combined_score)} points. 
+%br
+- if @user.ladder.prize > 0
+  You won #{pounds(@user.ladder.prize)}!
+  - if @user.real_name.blank? || @user.address.blank? || @user.post_code.blank?
+    %br
+    You need to update your address in the 
+    %br
+    = link_to "My account", edit_user_url(@user)
+    section to receive your prize

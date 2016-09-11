@@ -1,0 +1,35 @@
+.question_top
+  .question_number.fl
+    Results after #{pluralize(@questions_answered, 'question')}:
+  .fr
+    = link_to 'PLAY AGAIN', new_quiz_path, :id => 'play_again'
+  .clear
+.question
+  .achievements
+    - i = -1
+    - @achievements.each do |a|
+      - i += 1
+      .item{:class => (i % 2 == 0 ? 'dark' : '')}
+        - case a[:type]
+          - when 'move_up'
+            You have moved up #{pluralize(a[:places], 'places')}!
+          - when 'retain'
+            You scored less than your previous best, so
+            %br 
+            you retain your original score and position on the ladder
+          - when 'prize'
+            You are currently winning 
+            %span.pounds
+              = pounds a[:amount] 
+            \!
+          - when 'threshold'
+            You passed #{score a[:threshold]} for the first time!
+          - when 'position'
+            Your current place on the ladder is #{a[:position].ordinalize}.
+
+.answers
+  #wingmen_panel.quiz
+    = render 'ladders/blocks/game_over_wingmen_panel'
+  .relative
+    #wingmen_highlight.quiz
+.question_bottom

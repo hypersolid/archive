@@ -1,0 +1,76 @@
+#sign_in_dialog.hidden
+  .sign
+    %ul
+      %li.sign_in_tab.active
+        Sign in
+      %li.sign_up_tab
+        Sign up
+      %li.close
+    .signIn.hidden
+      = form_for :user, :url => session_path(:user), :remote => true, :html => {:id => 'sign_in_form'} do |f|
+        .validation-error.error
+        .oneLine
+          = f.label :email, :class => 'label'
+          .text
+            = f.email_field :email, :class => 'futura'
+        .oneLine
+          = f.label :password, :class => 'label'
+          .text
+            = f.password_field :password, :class => 'futura'
+        .checkbox
+          = f.check_box :remember_me, :id => 'checkbox'
+          %label.checkboxLabel{:for => "checkbox"} Remember me
+        .link
+          = link_to 'Forgot your password?', new_user_password_path, :id => 'forgot_link'
+        .signInSubmit
+          = f.submit "Sign in", :class => 'submit button futura'
+          .or or
+          .signFacebook
+            .iconFacebook
+            = link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook), :class => 'button'
+    .signUp.hidden
+      = form_for(:user, :url => registration_path(:user), :remote => true) do |f|
+        - if @relation
+          .relative
+            .message_to_wingman
+              You're moments away from taking part in the Game Show,
+              and helping #{@relation.user.name} move up the ladder.
+              Sign up here and let the games begin!
+        .validation-error.error
+        .oneLine
+          = f.label :name, :class => 'label'
+          .text
+            = f.text_field :name, :class => 'futura'
+        .oneLine
+          = f.label :email, :class => 'label'
+          .text
+            = f.email_field :email, :class => 'futura'
+        .oneLine
+          = f.label :password, :class => 'label'
+          .text
+            = f.password_field :password, :class => 'futura'
+        .oneLine
+          = f.label :password_confirmation, 'Confirm Password', :class => 'label'
+          .text
+            = f.password_field :password_confirmation, :class => 'futura'
+        .signUpSubmit
+          = f.submit "Sign up", :class => 'submit futura'
+          .or or
+          .signFacebook
+            .iconFacebook
+            = link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook), :class => 'button'
+    .forgotPass.hidden
+      = form_for :user, :url => password_path(:user), :remote => true, :html => {:id => 'forgot_pass_form'} do |f|
+        .validation-error.error
+        %br/
+        .oneLine
+          = f.label :email, :class => 'label'
+          .text
+            = f.email_field :email, :class => 'futura'
+
+        .signInSubmit
+          = f.submit "Send me reset password instructions", :class => 'submit button futura'
+          .or or
+          .signFacebook
+            .iconFacebook
+            = link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook), :class => 'button'

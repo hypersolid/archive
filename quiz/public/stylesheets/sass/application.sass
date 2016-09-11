@@ -1,0 +1,653 @@
+/* -------- GLOBAL TAGS --------------------------------------------------------------------
+
+*
+  margin: 0px
+  padding: 0px
+  /* position: relative; it conflicts with (border-radius.htc and PIE.htc) rounded corners in IE
+
+html
+  /*  background-color: #0d141d;
+
+body
+  /*  background-color: #000000;  doesn't work
+  font-family: "futura-pt-n5", "futura-pt", sans-serif
+  font-size: 16pt
+  font-weight: 500
+  /* normal=400, medium=500, bold=600
+  font-style: normal
+  color: white
+  background: #0d141d url(/images/backgrounds/bg_body.png) top center repeat-y
+
+#background
+  background: transparent url(/images/backgrounds/bg_default.png) top center no-repeat
+
+#background.quizzes
+  background-image: url(/images/backgrounds/bg_quiz.jpg)
+  height: 1000px
+
+
+.futura
+  font-family: "futura-pt-n5", "futura-pt", sans-serif
+  font-weight: 500
+  font-style: normal
+
+h1
+  font-size: 21pt
+
+h2
+  font-size: 20pt
+
+h3
+  font-size: 15pt
+
+a
+  color: #9296a5
+  text-decoration: none
+  &:visited, &:hover
+    color: #9296a5
+    text-decoration: none
+
+img
+  border: 0px
+
+/* for IE
+
+th
+  text-align: left
+
+/* for IE
+
+.fl
+  float: left
+
+.fr
+  float: right
+
+.hidden
+  display: none
+
+.relative
+  position: relative
+
+.spacer10
+  height: 10px
+
+a
+  &:focus
+    outline: none
+  &.underline
+    text-decoration: underline
+
+.underline
+  text-decoration: underline
+
+.center
+  text-align: center
+
+/* -------- COMMON classes -----------------------------------------------------------------
+
+.valign
+  /* it is for text vertical align
+  display: inline
+  display: inline-table
+  display: inline-block
+  vertical-align: middle
+  line-height: normal
+
+.ajax-loading
+  /*  border:red 1px solid;
+  height: 40px
+  width: 100%
+  background: url( '../images/loading.gif' )
+  background-repeat: no-repeat
+  background-position: center center
+  position: absolute
+  right: 260px
+
+.hr
+  /*  border:red 1px solid;
+  height: 1px
+  background: url(/images/hr.png) center no-repeat
+
+.clear
+  height: 0px
+  font-size: 1px
+  line-height: 0px
+  clear: both
+
+/* -------- Application layout -------------------------------------------------------------
+
+.container
+  /*  border:red 1px solid;
+  margin: 0px auto
+  width: 990px
+
+#alerts_container
+  height: 20px
+  margin: -4px 0px 1px 0px
+
+.notice, .alert
+  font-size: 16px
+  color: yellow
+
+.error
+  font-size: 16px
+  color: red
+
+/*  Blobs
+
+.blob_large, .blob_small
+  position: relative
+  text-align: left
+
+.blob_large
+  background: url(/images/shared/blob_large.png) no-repeat
+  padding: 8px 9px 8px 7px
+  width: 100px
+  height: 100px
+  img
+    width: 97px
+    height: 97px
+  .black_label
+    width: 97px
+    height: 20px
+    position: absolute
+    background-color: black
+    text-align: center
+    margin-top: 77px
+    opacity: 0.7
+    filter: alpha(opacity = 70)
+
+.blob_medium
+  background: url(/images/shared/blob_medium.png) no-repeat
+  padding: 7px 0px 0px 1px
+  width: 83px
+  height: 88px
+  &.avg
+    background: url(/images/shared/blob_medium_avg.png) no-repeat
+  &.pending
+    background: url(/images/shared/blob_pending.png) no-repeat
+  .white_label
+    opacity: 0.7
+    filter: alpha(opacity = 70)
+    width: 70px
+    height: 16px
+    position: absolute
+    background-color: white
+    text-align: center
+    margin: 53px 0px 0px 7px
+    color: black
+    line-height: 100%
+    padding-top: 2px
+    overflow: hidden
+    &.double
+      margin-top: 43px
+      height: 26px
+
+.blob_small
+  background: url(/images/shared/blob_small.png) no-repeat
+  padding: 5px 5px 5px 5px
+  width: 65px
+  height: 70px
+  img
+    width: 64px
+    height: 64px
+  .white_label
+    width: 64px
+    height: 30px
+    position: absolute
+    background-color: white
+    text-align: center
+    margin-top: 34px
+    opacity: 0.5
+    filter: alpha(opacity = 50)
+    color: black
+    line-height: 100%
+  .wingman_left, .wingman_right
+    position: absolute
+    margin-top: 32px
+  .wingman_left img
+    width: 32px
+    height: 32px
+  .wingman_right
+    img
+      width: 32px
+      height: 32px
+    margin-left: 32px
+
+/* ---- Avatar sizes -----
+
+.avatar_tiny img
+  width: 32px
+  height: 32px
+
+.avatar_small img
+  width: 38px
+  height: 38px
+
+.avatar_medium img
+  width: 64px
+  height: 64px
+
+.avatar_results img
+  width: 71px
+  height: 71px
+
+/********************** Copyrights **********************
+
+#copyright
+  text-align: center
+  text-transform: uppercase
+  font-size: 8pt
+  font-weight: 600
+  text-shadow: none
+  letter-spacing: -1px
+  a
+    text-align: center
+    text-transform: uppercase
+    font-size: 8pt
+    font-weight: 600
+    text-shadow: none
+    letter-spacing: -1px
+  &.ladders
+    letter-spacing: 0px
+    text-transform: none
+    margin-top: 10px
+    a
+      color: white
+      text-transform: none
+      text-decoration: underline
+
+/* ---- jQuery dialog styles -----
+
+.ui-dialog
+  position: fixed
+  min-width: 512px
+  overflow: hidden
+  background: url(/images/ladder_right/bg_dialog.png)
+  padding: 10px
+  text-shadow: 1px 0px 1px #fff
+  color: #323232
+  font-size: 12pt
+  -moz-border-radius: 10px
+  -webkit-border-radius: 10px
+  border-radius: 10px
+  behavior: url('/PIE.htc')
+  .ui-dialog-titlebar
+    position: relative
+    height: 37px
+    background-color: #eaeaea
+    border-bottom: 1px solid #dfdfdf
+    padding: 15px 0px 0px 20px
+    color: black
+    -moz-border-radius: 5px 5px 0px 0px
+    -webkit-border-radius: 5px 5px 0px 0px
+    border-radius: 5px 5px 0px 0px
+    behavior: url('/PIE.htc')
+  &.no-title .ui-dialog-titlebar
+    display: none
+  .ui-dialog-title
+    font-size: 14pt
+  .ui-dialog-titlebar-close
+    position: absolute
+    right: 20px
+    top: 50%
+    margin: -8px 0 0 0
+    opacity: 0.8
+    filter: alpha(opacity = 80)
+    &:hover, &:focus
+      opacity: 1
+      filter: alpha(opacity = 100)
+
+.ui-icon-closethick
+  background: url(/images/ladder_right/bt_close.png) no-repeat
+  width: 22px
+  height: 18px
+  display: block
+
+.ui-dialog .ui-dialog-content
+  position: relative
+  border: 0
+  background-color: white
+  overflow: auto
+  list-style: url(/images/ladder_right/bullet.png)
+  -moz-border-radius: 0px 0px 5px 5px
+  -webkit-border-radius: 0px 0px 5px 5px
+  border-radius: 0px 0px 5px 5px
+  behavior: url('/PIE.htc')
+  zoom: 1
+  text-align: center
+  a
+    color: black
+    text-decoration: underline
+  ul
+    text-align: left
+    padding: 0px 10px 0 25px
+    li
+      padding-bottom: 5px
+.ui-dialog .accept_invite
+  padding-top: 20px
+  font-size: 14pt
+
+.ui-widget-overlay
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: #000000
+  opacity: .50
+  filter: Alpha(Opacity = 50)
+
+.ui-widget-shadow
+  margin: -8px 0 0 -8px
+  padding: 8px
+  background: #aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x
+  opacity: .60
+  filter: Alpha(Opacity = 60)
+  -moz-border-radius: 8px
+  -khtml-border-radius: 8px
+  -webkit-border-radius: 8px
+  border-radius: 8px
+
+/* -------------- Email & FB invites dialogs ----------------------------------------
+
+#facebook_invites_dialog .invite_button
+  margin: 13px 0px 8px 0px
+
+#email_invites_dialog .column1, .column2
+  float: left
+  text-align: left
+
+#email_invites_dialog
+  .column1
+    width: 100px
+    background: url(/images/ladder_right/bullet.png) no-repeat
+    background-position: 0px 12px
+    padding: 5px 0px 0px 10px
+    &.first
+      padding: 0px 0px 0px 10px
+      background-position: 0px 7px
+  .row
+    margin-bottom: 15px
+  input
+    width: 240px
+    padding: 5px
+    margin-bottom: 5px
+    border: 1px solid #c2c2c2
+    background-color: #f3f3f3
+    font-weight: bold
+    font-size: 9pt
+    -moz-border-radius: 5px
+    -webkit-border-radius: 5px
+    border-radius: 5px
+    //behavior: url('/PIE.htc')
+  textarea
+    padding: 5px
+    margin-bottom: 5px
+    border: 1px solid #c2c2c2
+    background-color: #f3f3f3
+    font-weight: bold
+    font-size: 9pt
+    -moz-border-radius: 5px
+    -webkit-border-radius: 5px
+    border-radius: 5px
+    //behavior: url('/PIE.htc')
+    margin-bottom: 10px
+  input:focus, textarea:focus
+    background-color: #f8f8f8
+  #email_invite_button
+    margin: 0px 10px 0px 116px
+    width: 76px
+    height: 25px
+    background: url(/images/ladder_right/bn_dialog.png) repeat-x
+    display: block
+    color: white
+    padding-top: 7px
+    text-decoration: none
+    font-size: 11pt
+    text-shadow: #575757 1px 1px 1px
+    font-weight: bold
+    margin-top: -8px
+    cursor: pointer
+    -moz-border-radius: 3px
+    -webkit-border-radius: 3px
+    border-radius: 3px
+    //behavior: url('/PIE.htc')
+    text-align: center
+
+#invites_were_sent_close, #nudge_friend_buy_credits, .ui-dialog .ui-dialog-content a.pay_credits_button
+  margin: 0px 10px 0px 116px
+  width: 76px
+  height: 25px
+  background: url(/images/ladder_right/bn_dialog.png) repeat-x
+  display: block
+  color: white
+  padding-top: 7px
+  text-decoration: none
+  font-size: 11pt
+  text-shadow: #575757 1px 1px 1px
+  font-weight: bold
+  margin-top: -8px
+  cursor: pointer
+  -moz-border-radius: 3px
+  -webkit-border-radius: 3px
+  border-radius: 3px
+  //behavior: url('/PIE.htc')
+  text-align: center
+
+#email_invites_dialog
+  #email_invite_button:hover
+    opacity: 0.9
+    filter: alpha(opacity = 90)
+  input.error
+    border-color: #dd0000
+  padding: 15px
+
+#invites_were_sent_dialog, #facebook_invites_dialog
+  padding: 15px
+
+#email_invites_dialog p, #facebook_invites_dialog p
+  text-align: left
+  padding: 5px 5px 15px 5px
+
+#invites_were_sent_dialog
+  text-align: left
+  .content, .loader
+    min-height: 120px
+  .loader_content
+    margin: 60px auto
+    width: 120px
+    text-align: center
+  p
+    padding: 5px
+  a.invite_another
+    color: blue
+  .sent, .taken
+    font-weight: bold
+    padding: 10px
+  .sent
+    color: darkgreen
+  .taken
+    color: darkred
+
+#invites_were_sent_close
+  margin-top: 30px
+  width: 105px
+  padding: 7px 10px 0px 10px
+
+#nudge_friend_dialog
+  text-align: left
+  form
+    padding: 30px 10px 10px 77px
+  #amount
+    width: 20px
+    text-align: right
+
+#nudge_friend_buy_credits
+  margin: 0px 85px 30px 0px
+
+.ui-dialog .ui-dialog-content a.pay_credits_button
+  float: left
+  margin-right: 0px
+  margin-left: 42px
+
+/* -------------- popup Sign in or take 6 questions ----------------------------------------
+
+#sign_in_dialog
+  /*  border:red 1px groove;
+  font-size: 11pt
+  .left
+    /*  border:red 1px groove;
+    float: left
+    width: 249px
+    padding: 15px
+  .right
+    /*  border:red 1px groove;
+    border-left: #C1C1C1 1px solid
+    background-color: #F7F7F7
+    float: right
+    width: 185px
+    height: 157px
+    padding: 15px
+  .try_button
+    margin: 6px 0 0 0
+
+/* -------------- popup welcome ------------------------------------------------------------
+
+#welcome_dialog
+  /*  border:red 1px groove;
+  font-size: 11pt
+  padding: 15pt
+  .blue_box
+    /*  border:red 1px groove;
+    width: 405px
+    height: 20px
+    margin: 20px auto
+    padding: 15px 0
+    background-color: #E5EFF8
+    font-size: 14pt
+  .text
+    /*  border:red 1px groove;
+    font-size: 10pt
+    text-align: left
+    margin: 10px 0 20px 0
+  .start_playing_button
+    /*  border:red 1px groove;
+    display: inline-block
+    vertical-align: middle
+
+/* -------------- Popup styles ------------------------------------------------------
+
+.popup
+  position: absolute
+  background: url(/images/shared/bg_popup.png) repeat
+  z-index: 1000
+  color: #282828
+  font-size: 11pt
+  padding: 10px
+  text-shadow: none
+  .wrapper
+    position: relative
+  .content
+    padding: 20px 20px 0px 20px
+    background: #fffe99
+    width: 290px
+  .pointer
+    width: 31px
+    height: 39px
+    position: absolute
+    &.left
+      background: url(/images/shared/popup_pointer_left.png) no-repeat
+      left: -31px
+    &.right
+      background: url(/images/shared/popup_pointer_right.png) no-repeat
+      left: 330px
+  .close
+    background: url(/images/shared/popup_close.png) no-repeat
+    width: 31px
+    height: 31px
+    position: absolute
+    top: -18px
+    left: 318px
+    cursor: pointer
+    opacity: 0.9
+    filter: alpha(opacity = 90)
+    z-index: 99
+    &:hover
+      opacity: 1
+      filter: alpha(opacity = 100)
+  a.next_step
+    background: url(/images/shared/bt_popup_next_step.png) repeat-x
+    margin: 15px auto
+    -moz-border-radius: 5px
+    -webkit-border-radius: 5px
+    border-radius: 5px
+    //behavior: url('/PIE.htc')
+    height: 28px
+    padding: 6px 16px 0px 16px
+    color: white
+  h3
+    font-weight: 500
+  p
+    margin: 10px 0
+
+/*---------------------- "Explore" dropdown ---------------------------
+
+// TODO: not sure, it could be removed
+  .dropdown_trigger
+    width: 140px
+    font-size: 11pt
+    border: 1px solid #2e333f
+    background-position: 5px 50px
+    background: url(/images/header/icons.png) no-repeat
+    background-position: 125px 7px
+    background-color: #474a55
+    cursor: pointer
+    padding: 5px
+    margin: 6px 0px 0px 9px
+    -moz-border-radius: 5px
+    -webkit-border-radius: 5px
+    border-radius: 5px
+    behavior: url('/PIE.htc')
+    opacity: 0.9
+    filter: alpha(opacity = 90)
+    .dropdown_content
+      display: none
+    &:hover .dropdown_content
+      display: block
+
+  .dropdown_content a
+    display: block
+    padding: 2px 5px 2px 10px
+    color: white
+    -moz-border-radius: 2px
+    -webkit-border-radius: 2px
+    border-radius: 2px
+    behavior: url('/PIE.htc')
+    &:hover
+      background-color: #676f7d
+
+/*---------------------- Footer ---------------------------
+.footer
+  height: 50px
+  width: 970px
+  margin: 15px auto 0px
+  position: relative
+  span
+    font-size: 9pt
+    color: #fff
+    width: 600px
+    text-align: center
+    display: block
+    margin: 0 auto
+    a
+      color: #fff
+      text-decoration: none
+    a:hover
+      text-decoration: underline
+
+/*---------------------- Misc ---------------------------
+
+.pounds
+  color: #ffd700

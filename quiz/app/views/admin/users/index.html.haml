@@ -1,0 +1,42 @@
+%br
+/%p= link_to 'New User', new_admin_user_path
+
+%table
+  %tr
+    %th Name
+    %th Email
+    %th Admin?
+    %th Credits
+    %th Fraud probability
+    %th Passed<br/>Questions
+
+  - @users.each do |user|
+    %tr
+      %td= user.name
+      %td= user.email
+      %td= (user.admin? ? "YES" : "NO")
+      %td
+        %span.credits= user.credits
+        = link_to "+Add", add_credit_admin_user_path(user), :class => "add_credit", :style => "text-decoration: none; color: blue;", :method => :post
+      %td= user.time_lag_deviation @tournament
+      %td= link_to 'Show', passes_admin_user_path(user)
+      %td= link_to 'Edit', edit_admin_user_path(user)
+      %td= link_to 'Destroy', admin_user_path(user), :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+%br
+= will_paginate(@users)
+
+- content_for :js_adds do
+  :javascript
+    $(function() {
+      $("a.add_credit").click(function(){
+        $.ajax({
+          type: 'POST',
+          url: $(this).attr("href"),
+          dataType: "script"
+        });
+        return false;
+      });
+    });

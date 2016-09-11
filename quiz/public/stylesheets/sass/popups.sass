@@ -1,0 +1,74 @@
+@import compass/css3/border-radius
+
+#pay_dialog
+  height: 380px
+  h2
+    font-size: 14pt
+    margin: 14px 0px
+    color: #1b1b1b
+  .lines
+    .line
+      height: 56px
+      background: url(/images/popups/buy_more/bg_lines.png) no-repeat
+      background-position: 0px -56px
+      font-size: 16pt
+      color: #00386e
+      text-shadow: 1px 1px 0px #fff
+      overflow: hidden
+      &:hover
+        background-position: 0px 0px
+      &:last-child
+        +border-radius(0px 0px 5px 5px)
+      .star
+        width: 60px
+        height: 50px
+        margin: 5px 0px 0px 10px 
+        background: url(/images/popups/buy_more/star.png) no-repeat
+      .credits
+        margin-top: 15px
+        width: 120px
+      .free-credits
+        margin-top: 15px
+        width: 120px
+      .note
+        color: #e23030
+        text-shadow: 1px 1px 0px #fff
+        width: 175px
+        text-align: center
+        margin-top: 9px
+        font-size: 10pt
+      .amount
+        width: 135px
+        margin-top: 15px
+        margin-right: 20px
+        text-align: right
+      .free-amount
+        margin-top: 15px
+        margin-right: 20px
+        width: 135px
+        text-align: right
+      .button
+        a
+          display: block
+          background: url(/images/popups/buy_more/buy.png) repeat-x
+          text-shadow: 1px 1px 0px #002b54
+          width: 70px
+          height: 26px
+          margin: 12px 0px 0px 35px
+          font-size: 12pt
+          padding-top: 7px
+          +border-radius(3px)
+      .invite-button
+        a
+          display: block
+          background: url(/images/popups/buy_more/buy.png) repeat-x
+          text-shadow: 1px 1px 0px #002b54
+          width: 140px
+          height: 26px
+          margin: 12px 0px 0px 0px
+          font-size: 12pt
+          font-weight: bold
+          padding-top: 7px
+          +border-radius(3px)
+          color: white
+          text-decoration: none

@@ -1,0 +1,152 @@
+<?php
+require_once($_SERVER['DOCUMENT_ROOT'].'/resources/settings/directories.php');
+require_once($DirectoryLib.'dblibrary.php');
+/******************************************************************************************************************************/
+function Infiltrate($key)
+{
+		if (!isset($_REQUEST[$key]))
+		{
+			$_REQUEST[$key]="";
+			return $_REQUEST[$key];
+		}
+		$_REQUEST[$key]=preg_replace('{[^[\w\\/]]*}i','',$_REQUEST[$key]);
+		return $_REQUEST[$key];
+
+}
+function AAuthentification($AMessage)
+{
+	global $RootAdmin;
+	global $DirectoryAdmin;
+	include_once($DirectoryAdmin.'design/eskin/components/auth.php');
+	exit();
+} 
+function Error($EMessage)
+{
+	global $DirectoryComponents;
+	include_once($DirectoryComponents.'epage.php');
+	exit();
+}
+function AdminCheck($login,$password)
+{
+	$Info=SQL_SELECT('ddm_admins','*',"login='".$login."'");
+	if (empty($Info))
+	{
+		AAuthentification('Неверный логин');
+	}
+	
+	else
+	{
+		if ($Info[0]['pass']!= md5($password))
+		{
+			AAuthentification('Неверный пароль');
+		}
+		else
+		{
+			$_SESSION['ident']=$Info[0]['id'];
+			$_SESSION['name']=$Info[0]['name'];
+			$_SESSION['surname']=$Info[0]['surname'];
+			$_SESSION['mail']=$Info[0]['mail'];
+			$_SESSION['V']=$Info[0]['V'];
+			$_SESSION['U']=$Info[0]['U'];
+			$_SESSION['C']=$Info[0]['C'];
+			$_SESSION['D']=$Info[0]['D'];
+			$_SESSION['M']=$Info[0]['M'];
+			$_SESSION['login']=$Info[0]['login'];
+		}
+	}
+}
+/******************************************************************************************************************************/
+function InfiltrateL($key)
+{
+		$_REQUEST[$key]=InfiltrateM($key);
+ 		$_REQUEST[$key]=str_replace('.','',$_REQUEST[$key]);
+		$_REQUEST[$key]=str_replace(',','',$_REQUEST[$key]);
+		return $_REQUEST[$key];
+}
+/******************************************************************************************************************************/
+function InfiltrateM($key)
+{
+		if (!isset($_REQUEST[$key]))
+		{
+			$_REQUEST[$key]="";
+			return $_REQUEST[$key];
+		}
+		$_REQUEST[$key]=str_replace('','',$_REQUEST[$key]);
+		$_REQUEST[$key]=str_replace('|','',$_REQUEST[$key]);
+		$_REQUEST[$key]=str_replace('\'','',$_REQUEST[$key]);
+		$_REQUEST[$key]=str_replace('"','',$_REQUEST[$key]);
+		$_REQUEST[$key]=str_replace(';','',$_REQUEST[$key]);
+		$_REQUEST[$key]=str_replace('&','',$_REQUEST[$key]);
+		$_REQUEST[$key]=str_replace('?','',$_REQUEST[$key]);
+		$_REQUEST[$key]=str_replace('*','',$_REQUEST[$key]);
+		$_REQUEST[$key]=str_replace('$','',$_REQUEST[$key]);
+		return $_REQUEST[$key];
+}
+/******************************************************************************************************************************/
+function NavigateFilesLocal($MainRoot,$SecondaryRoot)
+	{
+		global $Files;
+		global $Folders;
+		$dir=opendir($MainRoot.$SecondaryRoot);
+		chdir($MainRoot.$SecondaryRoot);
+		if (!$dir)
+		{
+			return;
+		}
+		while (($CurrentDir=readdir($dir)) !== false) 
+		{
+			
+			if ($CurrentDir=='.' || $CurrentDir=='..')
+			{
+				continue;
+			}	
+			if (is_file($MainRoot.$SecondaryRoot.$CurrentDir))
+			{
+				$Files[]=$CurrentDir;
+				continue;
+			}
+			if (is_dir($MainRoot.$SecondaryRoot.$CurrentDir))
+			{
+				$Folders[]=$CurrentDir;
+				continue;
+			}
+		}
+		closedir($dir);
+	}
+function FilterArray($Expression,$Array)
+	{
+		return preg_grep($Expression,$Array);
+	}
+$Files=array();
+$Folders=array();
+/******************************************************************************************************************************/
+function DeleteFolder($MainRoot)
+	{
+		$dir=opendir($MainRoot);
+		chdir($MainRoot);
+		if (!$dir)
+		{
+			return;
+		}
+		while (($CurrentDir=readdir($dir)) !== false) 
+		{
+			if ($CurrentDir=='.' || $CurrentDir=='..')
+			{
+				continue;
+			}	
+			if (is_file($MainRoot.$CurrentDir))
+			{
+				unlink($MainRoot.$CurrentDir);
+				continue;
+			}
+			if (is_dir($MainRoot.$CurrentDir))
+			{
+				DeleteFolder($MainRoot.$CurrentDir.'/');
+				
+			}
+		}
+		closedir($dir);
+		rmdir($MainRoot);
+	}
+/******************************************************************************************************************************/
+?>

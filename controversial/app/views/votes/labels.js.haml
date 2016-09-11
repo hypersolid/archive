@@ -1,0 +1,15 @@
+- @lbls.each do |l|
+  $("##{l.title}").children(".votes").html(#{l.votes});
+
+$("#lbl1").html('');
+$("#lbl2").html('');
+
+- @lbls.select{|l| l.brand_id==@b1.to_i}[0,3].each do |l|
+  $("#lbl1").append("<div>#{l.title_clear} (#{l.votes})</div>");
+
+
+- @lbls.select{|l| l.brand_id==@b2.to_i}[0,3].each do |l|
+  $("#lbl2").append("<div>#{l.title_clear} (#{l.votes})</div>");
+
+$("#lbl1").fadeIn();
+$("#lbl2").fadeIn();

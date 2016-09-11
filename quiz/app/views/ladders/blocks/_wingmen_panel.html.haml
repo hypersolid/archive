@@ -1,0 +1,79 @@
+- @ladder = current_user.ladder unless @ladder
+- wingman1, wingman2 = @ladder.user.all_wingmen
+
+.photos
+  .wingmen_column1
+    - if @ladder.user == current_user
+      Your score
+    - else
+      = @ladder.user.name
+  .wingmen_column23
+    = @ladder.user == current_user ? 'Your' : @ladder.user.name + "'s"
+    wingmen
+  .wingmen_column4
+    Total
+  .clear
+
+.stats
+  .wingmen_column1
+    = score(@ladder ? @ladder.score : 0)
+  .wingmen_column2
+    - if wingman1.is_a? User
+      = score(wingman1.ladder.score) rescue 0
+    - elsif wingman1.is_a? Relation 
+      0
+    - else 
+      = score(current_tournament.avg_score)
+
+  .wingmen_column3
+    - if wingman2.is_a? User
+      = score(wingman2.ladder.score) rescue 0
+    - elsif wingman2.is_a? Relation
+      0
+    - else 
+      = score(current_tournament.avg_score)
+  .wingmen_column4
+    = score(@ladder ? @ladder.combined_score : current_tournament.avg_score * 2) 
+  .clear
+  
+.buttons
+  .wingmen_column1
+    .avatar_medium
+      = image_tag user_foto_url(@ladder.user)
+
+    - if signed_in? && current_user == @ladder.user
+      .add_picture
+        - if current_user.facebook_image.nil? && !current_user.avatar_file_size
+          = link_to 'Add your picture', edit_user_path(@ladder.user), :class => 'underline'
+      - if current_tournament.active?
+        = link_to 'PLAY NOW', new_quiz_path, :class => 'button', :id => 'playnow_ladders'
+      / - if current_user.can_get_bonus?
+      /   = image_tag "/images/ladder_right/get_2_credits.png", :id => "get_2_credits"
+
+  .wingmen_column2
+    = render 'ladders/blocks/wingmen_panel_buttons', :wingman => wingman1
+  .wingmen_column3
+    = render 'ladders/blocks/wingmen_panel_buttons', :wingman => wingman2
+  .wingmen_column4
+    - if @ladder.prize > 0
+      - if @ladder.user == current_user
+        .spacer10
+      - if current_tournament.active?
+        Currently winning
+      - else
+        Prize
+      .pounds
+        = pounds @ladder.prize
+    - elsif @ladder.user == current_user
+      .note
+        Your position on the ladder is #{@ladder.position.ordinalize}.
+
+        - if @ladder.can_benefit_from_wingmen?
+          - benefit = @ladder.possible_benefit_from_wingmen
+          %br
+          If you invited 2 wingmen who each scored as many points as you did,
+          you'd be coming #{benefit[:position].ordinalize} and winning #{pounds(benefit[:prize])} with #{number_with_delimiter benefit[:score]} points.        
+        - elsif @ladder.next_prize
+          The closest prize position is #{@ladder.next_prize.position.ordinalize}
+          Place (#{pounds @ladder.next_prize.amount})
+  .clear

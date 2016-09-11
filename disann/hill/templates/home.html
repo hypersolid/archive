@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script type="text/javascript">
+$(document).ready(function() {
+   $(function(){
+      $(".edit_trigger").click(function(e){
+        $(this).parent('div').siblings('form').toggle();
+        e.preventDefault();
+      });
+    });
+
+  function log(response){
+    $('#log').html(response);
+  };
+  
+  function stats(response){
+    var data = JSON.parse(response);
+    
+    for (i=0;i<data.length;i++){
+      $('#'+data[i][0]).html(data[i][1]);
+    }
+  };
+  
+  function bindUpdaters(){
+    setInterval(function() {
+      $.ajax({url: '/ajax/stats', data: {'id':{{user.id}}}, success: stats });
+    },3000);
+    
+    setInterval(function() {
+      $.ajax({url: '/ajax/log', data: {'id':{{user.id}}}, success: log });
+    },5000);
+
+  };
+  
+  //bindUpdaters();
+});
+</script>
+{% endblock %}
+
+{% block content %}
+
+<p>
+  <h3>Tasks</h3>
+  <form method="post" enctype="multipart/form-data" action="/tasks/create" class="background">
+    {% csrf_token %}
+    Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;>>
+    <input type="text" name="title"/>
+    <br/>
+    Program &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>
+    <input type="file" name="program" />
+    <br/>
+    Parameters >>
+    <input type="file" name="params"/>
+    <br/>
+    <div class="right">
+    <input type="submit" value="Add" tabindex="3"/>
+    </div>
+  </form>
+
+  <div class="background smalltext">
+  <ul id="tasklist">
+    {% for task in tasks %}
+    <li>
+      <div class="floatleft">
+        #
+        {{task.id}}
+        -
+        {{task.created_at|date:"d.m"}}
+        -
+        {{task.title|default:"No title"}}
+
+        {% if task.program %}<a href="{{task.program_url}}"><img src="/static/icons/application_osx_terminal.png" /></a>{% endif %}
+        {% if task.params %}<a href="{{task.params_url}}"><img src="/static/icons/application_view_list.png" /></a>{% endif %}
+      </div>
+      <div class="floatright">
+        {% if task.validated %}
+          <span id="stats_{{task.id}}_percentage" style="color:green;font-size:11px;">
+              {{task.percentage|default:0}} %
+           </span>
+           (
+            <span id="stats_{{task.id}}_time">
+            {{task.get_time|default:0}}
+            </span> 
+            Min,
+            <span id="stats_{{task.id}}_flops"> 
+            {{task.get_flops|default:0}} 
+            </span>
+            TFlops)
+        {% else %}
+          <span style="color:red">Error</span>
+        {% endif %}
+
+        <a title="Test neural network" href="/tasks/test/{{task.id}}"><img src="/static/icons/test.png" height="16" width="16" /></a>
+        <a title="Check error" href="/tasks/error/{{task.id}}"><img src="/static/icons/error.png" height="16" width="16" /></a>
+        &nbsp&nbsp&nbsp
+
+        <a href="/tasks/update/{{task.id}}"><img src="/static/icons/arrow_redo.png" /></a>
+        <a href="#" class="edit_trigger"><img src="/static/icons/application_edit.png" /></a>
+        <a href="/tasks/delete/{{task.id}}"><img src="/static/icons/application_delete.png" /></a>
+      </div>
+
+      <div class="clearboth"></div>
+       <form method="post" enctype="multipart/form-data" action="/tasks/update/{{task.id}}" class="hidden">
+        {% csrf_token %}
+        <div class="floatright">
+        <input type="submit" value="Update"/>
+        </div>
+        <span class="background">Program </span>
+        <input type="file" name="program" />
+        <br/>
+        <span class="background">Parameters</span> >>
+        <input type="file" name="params"/>
+      </form>
+
+    </li>
+    {% empty %}
+      No tasks.
+    {% endfor %}
+  </ul>
+  </div>
+</p>
+<h3>Results</h3>
+<div class="background">
+  <div class="floatleft">
+     
+    Task: <span id="stats_tasks">{{user.get_profile.tasks_completed}}</span> / {{user.get_profile.tasks_total}}
+    <br />
+    Subtask: <span id="stats_subtasks">{{user.get_profile.units_completed}}</span> / {{user.get_profile.units_total}}
+  </div>
+  <div class="floatright">
+    {{user.get_profile.name_humanized}}
+    |
+    <a href="/logout">Exit</a>
+    <br />
+    {{user.get_profile.organization}}
+  </div>
+  <div class="clearboth"></div>
+  <br />
+  After installing the <a href="/deploy">client program</a> sites will be added automatically.
+</div>
+
+
+<h3>Log</h3>
+<div class="background" id="log">
+ {% for line in log %}
+   {{ line }}<br/><br/>
+ {% endfor%}
+</div>
+
+{% endblock %}
+
+{% block sidebar %}
+
+<h3>Nodes</h3>
+<div class="background smalltext">
+<ul id="nodelist">
+  {% for node in nodes %}
+    <li>
+    <div class="floatleft">
+      {{node.title}}
+    </div>
+    <div class="floatright">
+      {{node.get_flops}} T 
+      <a href="/nodes/delete/{{node.id}}"><img src="/static/icons/application_delete.png" /></a>
+      <a title="Time of node" href="/plot/chart/{{node.id}}"><img src="/static/icons/chart_pie.png" /></a>
+    </div>
+    <div class="clearboth"></div>
+    </li>
+  {% empty %}
+      No nodes.
+  {% endfor %}
+   {%if nodes %}
+    <li>
+    <div class="floatright">
+      -------------------------------------------------<br/>
+      Reset time all nodes
+      <a title="Reset time" href="/rest/reset_time"><img src="/static/icons/cancel.png" /></a>
+      Time of all nodes
+      <a title="Time of node" href="/plot/chart/0"><img src="/static/icons/chart_pie.png"/></a>
+    </div>
+    <div class="clearboth"></div>
+    </li>
+   {% endif %}
+</ul>
+</div>
+{% endblock %}
+
+

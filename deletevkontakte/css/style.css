@@ -1,0 +1,55 @@
+
+
+
+
+
+/*----------------------------------General Styles----------------------------------*/
+body{font-size:11px;font-family:"Lucida Grande",Verdana,sans-serif;background:#000 url(../images/vcard/wrapper.jpg) center}
+a{color:#6aa2c5}
+p{padding:10px 15px 0 0;color:#111;text-shadow:1px 1px 1px #fff;line-height:16px;font-size:12px}
+p img{background:#eee; border:5px solid #e6e6e6; float:left;margin:0 10px 10px 0}
+h1{color:#555;font-size:26px;font-weight:normal;text-shadow:1px 1px 1px #fff;margin-bottom:10px}
+h2{color:#636363;font-size:19px;font-weight:normal;text-shadow:1px 1px 1px #fff;padding:0;margin-bottom:15px}
+ul,ol{margin-top:10px}
+ul li,ol li{padding:5px 0 5px 0;color:#777;text-shadow:1px 1px 1px #fff;list-style:square inside}
+ol li{list-style-type:lower-alpha}
+li span{display:block}
+.li-moreinfo{padding:5px 0 5px 0;color:#777;text-shadow:1px 1px 1px #fff;list-style:none}
+hr{height:2px;border:none;background:url(../images/vcard/hr.gif) repeat-x;margin:0 30px}
+hr.spacer{clear:both;height:25px;background:none}
+input{font-family:Arial;padding:8px 0 8px 5px;margin:0 0 10px 0;width:420px;background:#fff;border:1px solid #dbdbdb;color:#999;font-size:13px;display:block;-moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px}
+textarea{font-family:Arial;padding:8px 0 8px 5px;margin:0 0 10px 0;width:420px;background:#fff;border:1px solid #dbdbdb;color:#999;font-size:13px;display:block;height:45px;resize:none;-moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px}
+.clear{clear:both}
+.clearpx{height:1px}
+.spacer{height:15px}
+.small{position:absolute;font-size:11px;color:#777;padding-top:4px}
+.small a{color:#777;text-decoration:none}
+.pagetitle{display:block}
+.nopadding{padding:0}
+
+/*----------------------------------Items----------------------------------*/
+#wrapper{min-width:800px;min-height:500px}
+#vcard{display:block;z-index:2;position:relative;margin:auto;width:800px;height:450px;background:url(../images/vcard/wrapper.png);-webkit-box-shadow:0 0 0px #000;-moz-box-shadow:0 0 0px #000;box-shadow:0 0 0px #000}
+.main{float:right;width:480px;margin-right:20px;background:url(../images/vcard/sidebar.png) repeat-y;padding-left:40px}
+.sidebar{float:left;margin:0px;width:170px;height:240px;}
+.button{padding:8px 10px;border:1px solid #09a0ff;background:url(../images/vcard/button.gif) repeat-x;color:#fff;text-shadow:1px 1px 1px #1069a1;text-transform:uppercase;font-size:10px;font-weight:bold;text-decoration:none;-moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;margin-bottom:10px}
+.button:hover{background-position-y:-24px;border-color:#1e8dff;text-shadow:1px 1px 1px #3284ff}
+
+/*----------------------------------Header----------------------------------*/
+#header{margin:30px 30px 0 30px;height:80px}
+#header .profilepicture{float:left}
+#header .profilepicture img{width:80px;height:80px}
+#header #logo{float:left;text-indent:-9999px;background:url(../images/logo.png);margin:7px 0 0 20px;width:60px;height:62px}
+#header ul#menu{float:right;height:45px;margin:14px 20px 0 0;padding:0 15px 0 0;-moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px}
+#header ul#menu li{float:left;padding:16px 0 0 15px;font-weight:bold;font-size:13px;text-transform:uppercase;color:#999;text-shadow:1px 1px 1px #fff;list-style:none}
+#header ul#menu li a{color:#999;text-decoration:none}
+#header ul#menu li a:hover{color:#555; border-bottom:2px solid #e3e3e3; border-margin:10px;}
+#header ul#menu li.active h2{color:#555;font-size:16px;}
+
+/*----------------------------------Content----------------------------------*/
+#content{position:relative;margin:25px 30px 0 50px;height:240px;overflow:hidden}
+#scroller{position:relative;height:240px}
+#scroller .contentitem{width:710px;height:240px;float:left;display:block;margin-right:30px}
+
+/*----------------------------------Custom----------------------------------*/
+h3{font-size:10px; padding:2px; margin:0px;}

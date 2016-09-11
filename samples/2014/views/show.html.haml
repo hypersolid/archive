@@ -1,0 +1,192 @@
+#product_page
+  .breadcrumbs
+    %ul
+      %li= link_to "Home", "/"
+      - if @categories
+        - @categories.compact.each do |category|
+          %li
+            = link_to category.name.titleize, shop_exclusives_page_path(path: category.path, by: 'all-designers', price: 'newest')
+
+      - if @referer_designer
+        %li= link_to @referer_designer.name, designer_path(@referer_designer)
+      %li
+        = @exclusive.title
+
+  .column_5
+
+    - if exclusive.multiple_images?
+      .additional-images
+        #buttons_overlay
+          .button#carousel_prev
+          .button
+          .button#carousel_next
+        .arrow
+          &#x25B2;
+        #carousel.jcarousel.jcarousel-skin-tango{'data-sources' => exclusive.images_for_scroll.map{|i| hd_image_url(i)}.join(','), 'data-index' => 1 }
+          %ul
+            - i = 0
+            - exclusive.images_for_scroll.each do |img|
+              %li= image_tag img.file.thumb.url, "data-index" => i
+              - i += 1
+        .arrow
+          &#x25BC;
+    .main-image{"data-id" => (exclusive.main_image ? exclusive.main_image.id : ''), :class => (exclusive.multiple_images? ? 'shift' : '')}
+      - if exclusive.main_image
+        - if exclusive.zoom
+          = link_to image_tag(hd_image_url(exclusive.main_image)), hd_image_url(exclusive.main_image), :rel => 'zoomWidth: 440, zoomHeight: 500, adjustY: -15, adjustX: 65, smoothMove: 2', :class => 'cloud-zoom cloud-zoom-canvas', :title => exclusive.title
+        - else
+          .cloud-zoom-canvas
+            = image_tag hd_image_url(exclusive.main_image)
+
+      - else
+        = image_tag 'missing.png', :class => 'missing-image'
+    .clear
+
+    .clear.spacer10
+
+  .column_3
+    - if exclusive.designer
+      %h2= link_to exclusive.designer.name, exclusive.designer, :id => "designer-title"
+    %p.subtitle
+      = exclusive.title
+    %div
+      .current.price
+        - if exclusive.current_discount.zero?
+          %p.original.price
+            = number_to_currency_with_unit ExchangeRate.convert(exclusive.price)
+        - else
+          - if user_signed_in?
+            .discount-tag
+              %span.striked-price= number_to_currency_with_unit ExchangeRate.convert(exclusive.price)
+              %span= number_to_currency_with_unit ExchangeRate.convert(exclusive.current_price)
+              %span.ff-offer{data: {shop_ends_on: exclusive.current_shop.end_at }} member offer
+          - elsif exclusive.display_discount?
+            %span.discount= number_to_percentage exclusive.current_discount, :precision => 0
+            Off
+
+      %p
+        - if exclusive.upcoming?
+          = l exclusive.start_at, :format => :short_date
+          %span.time
+            at #{l exclusive.start_at, :format => :time}
+      - if exclusive.started? && exclusive.available?
+
+        - if user_signed_in?
+          = form_for shopping_bag_exclusive, url: my_shopping_bag_exclusives_path, remote: true do |f|
+            - if exclusive.option_names
+              #options-container{data: { left_less_three: exclusive.left_less?(3).to_s,
+                                 options: exclusive.options.map{|j| { qty: j.left, name: j.choices.join(', ') } }.to_json }}
+                - exclusive.option_names.split(',').each_with_index do |name, i|
+                  = f.label :option_id, name
+                  = f.select :option_id, [], {}, :class => "exclusive-options exclusive-page", data: {  options: choices_for_select(exclusive, i) }
+            = f.hidden_field :exclusive_id, value: exclusive.id
+            = f.hidden_field :qubit_subcategory, value: @qubit_subcategory
+
+            = f.submit t("add_to_bag"), id: 'add-to-bag', class: "fancy font"
+          = form_for :wished_exclusive, url: my_wished_exclusives_path, remote: true, html: { class: "form-add-to-wishlist"} do |f|
+            = f.hidden_field :exclusive_id, value: exclusive.id
+            %button.fancy.font#add-to-wishlist
+              = t('add_to_wishlist')
+
+        - else
+          = form_for shopping_bag_exclusive, url: my_shopping_bag_exclusives_path, remote: false do |f|
+            - if exclusive.option_names
+              #options-container{data: { left_less_three: exclusive.left_less?(3).to_s,
+                                 options: exclusive.options.map{|j| { qty: j.quantity, name: j.choices.join(', ') } }.to_json }}
+                - exclusive.option_names.split(',').each_with_index do |name, i|
+                  = f.label :option_id, name
+                  = f.select :option_id, [], {}, :class => "exclusive-options exclusive-page", data: {  options: choices_for_select(exclusive, i) }
+            = f.hidden_field :exclusive_id, value: exclusive.id
+            = f.hidden_field :qubit_subcategory, value: @qubit_subcategory
+
+            - if exclusive.current_discount.zero?
+              %a.fancy.button.view-exclusive.sign-in-link.font{href: new_user_session_url(protocol: protocol)}
+                = t('add_to_bag')
+              %a.fancy.button.view-exclusive.sign-in-link.font#add-to-wishlist{href: new_user_session_url(protocol: protocol)}
+                = t('add_to_wishlist')
+            - else
+              %a.fancy.button.view-exclusive.sign-in-link.secret-price{href: new_user_session_url(:protocol => protocol), title: t('secret_offer_tip').html_safe }
+                View Secret Price
+
+      - elsif exclusive.sold_out?
+        %p.verdict
+          This exclusive has sold out. We’re sad you missed out this time but we hope to see you back on
+          %strong LUX FIX
+          soon.
+
+      .clearfix
+      - if exclusive.lead_time.present?
+        %span
+          = exclusive.lead_time
+      - if exclusive.started? && exclusive.available? && user_signed_in?
+        %span.scarcity_message
+          - if exclusive.left_less?(3)
+            = t 'scarcity_message', qty: exclusive.left
+
+    .tab-view
+      %ul.tab-links.list.horizontal
+        %li.tab
+          = link_to raw("Notes"), "#notes", :class => 'notes active'
+        %li.tab
+          = link_to "Details", "#details", :class => 'details'
+        %li.tab
+          = link_to raw("Size & Fit"), "#size-fit", :class => 'size-fit'
+        %li.tab
+          = link_to "Delivery & Returns", "#delivery-return", :class => 'delivery-return'
+
+      %ul.tab-items
+        %li#notes.tab
+          .description
+            = simple_format exclusive.designers_notes
+        %li#details.tab
+          .description
+            = simple_format exclusive.description
+        %li#size-fit.tab
+          .description
+            = simple_format exclusive.size_and_fit
+
+        %li#delivery-return.tab
+          .description= delivery_and_returns(exclusive)
+
+    .ask-the-designer
+      = ask_the_designer(exclusive)
+    .social-buttons
+      .item
+        .pin-it-button-wrap
+          - if exclusive.image.present?
+            %a.pin-it-button{"count-layout" => "horizontal", :href => pinterest_url(exclusive), "target" => "_blank" }
+              %img{:border => "0", :src => "//assets.pinterest.com/images/PinExt.png", :title => "Pin It"}/
+
+      .item{:style => "margin-top:8px;width:90px;"}
+        .fb-like{'data-href' => shop_exclusive_url(exclusive),
+          'data-width' => "90",
+          'data-layout' => "button_count",
+          'data-action' => "like",
+          'data-show-faces' => "true",
+          'data-share' => "false"}
+
+      .item{:style => "margin-top:8px;"}
+        %a.twitter-share-button{"data-url" => "#{exclusive_url(exclusive)}", :href => "https://twitter.com/share", "data-text" => exclusive.title } Tweet
+
+      .email-button-wrap
+        = sharing_through_email(exclusive)
+
+  .clear
+  - if @similar.present?
+    .similar
+      %h2
+        More from #{exclusive.designer.name}
+      %ul.pageless{'data-exclusives-count' => @similar_count, 'data-designer' => exclusive.designer.slug, 'data-exclude' => exclusive.id}
+        - i = 0
+        - @similar.each do |e|
+          %li
+            = render "shop/exclusives/exclusive", :exclusive => e
+          - i += 1
+          - if i % 4 == 0
+            .clear
+      .clear
+
+#loader-template.hidden
+  .loader
+    .msg Loading image
+    %img{:alt => "loading image", :src => "/assets/load.gif"}

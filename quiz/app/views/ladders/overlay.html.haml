@@ -1,0 +1,8 @@
+#wingmen_panel_overlay
+  = render 'ladders/blocks/wingmen_panel'
+
+#wingmen_panel_overlay_wall
+  - if signed_in?
+    %p
+      Write something on #{@ladder.user.name}'s wall:
+  = render 'ladders/blocks/wall', :user => @ladder.user

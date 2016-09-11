@@ -1,0 +1,5 @@
+- 30.times do |i|
+  h4 -#{i.days.ago}
+  - Entry.decompose_titles((i+1).days.ago, i.days.ago)[0,10].each do |item|
+    = "#{item.last} - #{item.first}"
+    br

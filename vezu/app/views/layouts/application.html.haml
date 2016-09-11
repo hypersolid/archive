@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+%html
+  %head
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "jquery", "jquery-ui-1.9.2.custom.min", "items", "main"
+    = csrf_meta_tags
+    
+    %title
+      ПривезуЕду.рф > Ростов >
+      = yield(:title)
+      
+    - if SOCIAL
+      %script{:type => "text/javascript", :src => "//vk.com/js/api/openapi.js?74"}
+      %script{:type => "text/javascript"}
+        VK.init({apiId: 3313513, onlyWidgets: true});
+    
+    = yield :head
+    
+    - if Rails.env.production?
+      :javascript
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-27895687-5']);
+        _gaq.push(['_trackPageview']);
+      
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+     
+  %body
+
+    - if SOCIAL
+      - if false
+        %div{:id => "fb-root"}
+        %script
+          (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1&appId=125170940980644";
+          fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+
+    - cache("head", :expires_in => 1.day) do
+      #head
+        #logo.fl
+          = link_to image_tag('/logo.png', :alt => "ПривезуЕду.рф - Вся доставка еды в Ростове-на-Дону"), '/', :title => "На главную страницу"
+        .wrappper.fl
+          %a.plate{:href => '/Пицца', :title => 'Заказать пиццу с доставкой'}
+            = image_tag '/design/icons/pizza.png', :alt => 'Пицца'
+          %a.plate{:href => '/Роллы', :title => 'Заказать роллы с доставкой'}
+            = image_tag '/design/icons/rolls.png', :alt => 'Роллы'
+          %a.plate{:href => '/Суши', :title => 'Заказать суши с доставкой'}
+            = image_tag '/design/icons/sushi.png', :alt => 'Суши'
+          %a.plate{:href => '/Сеты', :title => 'Заказать сэт с доставкой'}
+            = image_tag '/design/icons/sets.png', :alt => 'Сэты'
+          %a.plate{:href => '/Супы', :title => 'Заказать первые блюда с доставкой'}
+            = image_tag '/design/icons/first.png', :alt => 'Первое'
+          %a.plate{:href => '/Второе', :title => 'Заказать вторые блюда с доставкой'}
+            = image_tag '/design/icons/second.png', :alt => 'Второе'
+          %a.plate{:href => '/Салаты', :title => 'Заказать салаты с доставкой'}
+            = image_tag '/design/icons/salads.png', :alt => 'Салаты'
+          %a.plate{:href => '/Напитки', :title => 'Заказать напитки с доставкой'}
+            = image_tag '/design/icons/drinks.png', :alt => 'Напитки'
+        .social.fr
+          .fl
+            #vk_like
+            %script{:type=>"text/javascript"}
+              VK.Widgets.Like("vk_like", {type: "button",  pageTitle: "Вся доставка еды в Ростове-на-Дону", pageDescription: "",  text: "Отличный сайт! Выбрал-Позвонил-Привезли =)", pageImage: "http://privezuedu.ru/vk.png"}, 1000);
+          - if false
+            .fl
+              <div class="fb-like" data-href="#{HOST}" data-send="false" data-layout="button_count" data-width="120" data-show-faces="false"></div>
+          .cl
+        .cl
+    #page
+      #content
+        .googlead
+          =render 'ads/default'
+        = yield
+      #footer
+        = link_to 'На главную', '/'
+        - for p in Page.all
+          |
+          = link_to p.header, '/pages/'+p.slug 

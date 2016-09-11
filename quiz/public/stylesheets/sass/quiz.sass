@@ -1,0 +1,345 @@
+/* ----- the Quiz page styles -----
+
+/* ----- General layout -----
+
+#quiz_page
+  margin: 20px 0px 30px 0px
+  position: relative
+  .column1, .column2, .column3
+    float: left
+    text-align: center
+  .column1
+    padding-top: 50px
+    width: 225px
+  .column2
+    width: 532px
+  .column3
+    padding-top: 50px
+    width: 225px
+
+/* ----- Stats -----
+
+#quiz_stats
+  font-size: 9pt
+  display: none
+  .table
+    background: url(/images/quiz/bg_stats_table.png)
+    width: 184px
+    height: 144px
+    padding: 2px 0px 0px 6px
+  .name
+    margin: 16px 0px 25px 10px
+  .score1, .score2, .score3
+    margin-left: 15px
+  .score1
+    margin-bottom: 15px
+  .score2
+    margin-bottom: 16px
+  .number
+    margin: 0px 10px 0px 0px
+  .prize
+    background: url(/images/quiz/bg_stats_prize.png)
+    width: 185px
+    height: 55px
+    padding: 3px 0px 0px 6px
+    margin-top: 20px
+    text-align: left
+    .next
+      margin: 6px 0px 0px 52px
+  .friend
+    background: url(/images/quiz/bg_stats_friend.png)
+    width: 184px
+    height: 57px
+    margin-top: 12px
+    padding: 3px 0px 0px 6px
+    text-align: left
+  img
+    display: block
+    margin: 4px 0px 0px 0px
+  .friend .next
+    margin: 5px 0px 0px 12px
+  .points
+    margin: 2px 0px 0px 0px
+    color: #838588
+
+/* ----- Questions panel -----
+
+#quiz_question
+  .question_top
+    background: url(/images/quiz/bg_question_top.png) no-repeat
+    padding: 20px 20px 0px 20px
+    height: 63px
+  &.wrong .question_top
+    background-position: -532px 0px
+  .question
+    padding: 20px 0px
+    background: url(/images/quiz/bg_question.png)
+    min-height: 40px
+  &.wrong .question
+    background-position: -532px 0px
+  .question_bottom
+    background: url(/images/quiz/bg_question_bottom.png)
+    height: 13px
+  &.wrong .question_bottom
+    background-position: -532px 0px
+  .answers
+    padding: 20px 0px
+    background: url(/images/quiz/bg_answers.png)
+    min-height: 230px
+  &.wrong .answers
+    background-position: -532px 0px
+  a
+    cursor: default
+  &.active a
+    cursor: pointer
+    &:hover .answer
+      background: url(/images/quiz/bg_set_answers.png)
+      background-position: 0px -160px
+
+#answer1, #answer2, #answer3, #get_ready_trigger .answer
+  margin: 0px 0px 10px 40px
+  padding: 6px
+  width: 441px
+  height: 68px
+  background: url(/images/quiz/bg_set_answers.png)
+  background-position: 0px 0px
+  display: none
+
+a#get_ready_trigger
+  margin-top: 60px
+  display: block
+
+#get_ready_trigger .answer
+  display: block
+
+#answer1 .wrapper, #answer2 .wrapper, #answer3 .wrapper
+  background: url(/images/quiz/bg_set_letters.png) no-repeat
+  height: 52px
+  color: white
+  font-size: 20pt
+  padding-top: 16px
+
+#get_ready_trigger .wrapper
+  background: url(/images/quiz/bg_set_letters.png) no-repeat
+  height: 52px
+  color: white
+  font-size: 20pt
+  padding-top: 16px
+  background: url(/images/quiz/bg_arrow.png) no-repeat
+
+#answer1.correct, #answer2.correct, #answer3.correct
+  background-position: 0px -80px
+
+#quiz_question.wrong
+  .answer
+    background-position: 0px -240px
+  #answer1.wrong, #answer2.wrong, #answer3.wrong
+    background-position: 0px -320px
+
+#answer1 .wrapper
+  background-position: 0px -204px
+
+#answer2 .wrapper
+  background-position: 0px -272px
+
+#answer3 .wrapper
+  background-position: 0px -340px
+
+#answer1.correct .wrapper
+  background-position: 0px 0px
+
+#answer2.correct .wrapper
+  background-position: 0px -68px
+
+#answer3.correct .wrapper
+  background-position: 0px -136px
+
+#quiz_question
+  &.wrong
+    #answer1.wrong .wrapper
+      background-position: 0px -612px
+    #answer2.wrong .wrapper
+      background-position: 0px -680px
+    #answer3.wrong .wrapper
+      background-position: 0px -748px
+    #answer1 .wrapper
+      background-position: 0px -408px
+    #answer2 .wrapper
+      background-position: 0px -476px
+    #answer3 .wrapper
+      background-position: 0px -544px
+  .question_number
+    margin-top: 15px
+    margin-left: 20px
+    font-size: 15pt
+    color: #848781
+    display: none
+  a#pass_button
+    color: #7a7b78
+    background: url(/images/quiz/bn_pass.png) no-repeat
+    width: 96px
+    height: 43px
+    display: block
+    font-size: 19pt
+    margin: 5px 5px 0px 0px
+    padding: 7px 0px 0px 0px
+    background-position: 0px -50px
+    cursor: default
+    .passes_left
+      font-size: 7pt
+      margin: -7px -55px 0px 0px
+    &.active
+      color: white
+      background-position: 0px 0px
+      cursor: pointer
+  .question .text
+    font-size: 20pt
+    width: 454px
+    margin-left: 40px
+
+/* ----- Scorer -----
+
+#quiz_scorer
+  position: relative
+  padding: 0px 0px 0px 70px
+
+#scorer
+  padding-top: 5px
+  width: 55px
+  height: 420px
+  background: url(/images/quiz/scorer_base.png) no-repeat
+  position: relative
+  .top
+    background: url(/images/quiz/scorer_empty.png) no-repeat
+    background-position: 13px 14px
+    height: 383px
+  .bottom
+    position: relative
+
+#scorer_indicator
+  background: url(/images/quiz/scorer_indicator.png) no-repeat
+  position: absolute
+  right: 3px
+  top: -8px
+  z-index: 10
+  width: 110px
+  height: 45px
+
+#seconds_left
+  top: 400px
+  left: 4px
+  width: 48px
+  position: absolute
+  font-size: 8pt
+
+/* ----- Bubbles -----
+
+#bonus1, #bonus2
+  left: 66px
+  width: 126px
+  height: 46px
+  position: absolute
+  z-index: 20
+  display: none
+
+#bonus1 .platform, #bonus2 .platform
+  font-size: 8pt
+  font-weight: bold
+  margin: 12px 0px 0px 82px
+  text-shadow: #fff 0px 0px 1px
+  text-align: center
+  position: absolute
+  line-height: 1
+  z-index: 21
+
+#bonus1
+  background: url(/images/quiz/bg_bonus.png) no-repeat
+  color: #00c5ff
+
+#bonus2
+  background: url(/images/quiz/bg_bonus.png) no-repeat
+  background-position: 0px -46px
+
+#bubble
+  position: relative
+  .platform
+    margin: 13px 0px 0px 4px
+    font-size: 9pt
+    color: #e7ff88
+    width: 46px
+    text-align: center
+    position: absolute
+
+
+/* ----- Popups -----
+
+#quiz_scorer_popup
+  left: 0px
+  .pointer
+    top: 70px
+
+#quiz_stats_popup
+  top: 25px
+  left: 600px
+  .pointer
+    top: 60px
+
+#quiz_pass_popup
+  top: -14px
+  left: -100px
+  .pointer
+    top: 35px    
+
+/* ----- Misc -----
+
+a#play_again
+  width: 140px
+  height: 52px
+  display: block
+  background: url(/images/quiz/bn_play_again.png) no-repeat
+  padding-top: 12px
+  padding-left: 15px
+  font-size: 16pt
+  font-weight: bold
+  color: #dad7d8
+  letter-spacing: -1px
+  text-shadow: #606060 1px 1px 1px
+  cursor: pointer
+
+#quiz_page #copyright
+  text-align: center
+  text-transform: uppercase
+  color: #3c3c3c
+  font-size: 6pt
+  font-weight: bold
+  text-shadow: none
+  margin-top: 12px
+  letter-spacing: 0px
+  a
+    text-align: center
+    text-transform: uppercase
+    color: #3c3c3c
+    font-size: 6pt
+    font-weight: bold
+    text-shadow: none
+    margin-top: 12px
+    letter-spacing: 0px
+
+#hourglass
+  width: 395px
+  background-color: black
+  position: absolute
+  top: 100px
+  left: 244px
+  padding: 50px
+  display: none
+  .text
+    font-size: 25pt
+    font-weight: normal
+
+#quiz_home_button
+  position: absolute
+  z-index: 100
+  display: block
+  margin-left: 110px
+  width: 110px

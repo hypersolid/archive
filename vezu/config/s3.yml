@@ -1,0 +1,10 @@
+development:
+  bucket: vezu2
+  access_key_id: AKIAJHK7QPDCHW2YAI2A
+  secret_access_key: 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
+  endpoint: http://vezu.s3-website-eu-west-1.amazonaws.com/
+production:
+  bucket: vezu2
+  access_key_id: AKIAJHK7QPDCHW2YAI2A
+  secret_access_key: 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
+  endpoint: http://vezu.s3-website-eu-west-1.amazonaws.com/

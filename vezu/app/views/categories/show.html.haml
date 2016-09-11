@@ -1,0 +1,23 @@
+- content_for :title do
+  Доставка #{@category.downcase2}  
+
+- content_for :head do
+  %meta{:name=>"description", :content=>"Доставка #{@category.downcase2} по Ростову-на-Дону от #{@firms_opened.map(&:name).join(', ')}. Полное меню и online-заказ."}
+
+%h1.font= yield :title
+
+#firms
+  - unless @firms_opened.empty?
+    = render @firms_opened
+  
+  - unless @firms_closed.empty?
+    = render @firms_closed
+    
+  .cl
+
+.googlead
+  =render 'ads/default'
+
+- if @category.description
+  .description
+    =raw @category.description

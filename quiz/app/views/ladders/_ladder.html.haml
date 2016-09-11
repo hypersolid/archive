@@ -1,0 +1,36 @@
+- current_class = (current_user == ladder.user ? 'current' : '')
+
+%a.row{:href => '#', 'data-position' => ladder.position}
+  .col1
+    .position
+      = ladder.position.ordinalize
+  .col2
+    .movable_content{:class => "#{current_class}"}
+      .ladder-info{'data-id' => ladder.id}
+      .three_fotos.avatar_medium
+        - if ladder.user.wingmen.count.in? [1, 2]
+          .wingman_foto.w_left
+            = image_tag user_foto_url(ladder.user.wingmen[0])
+          .wingman_foto.w_right
+            = image_tag user_foto_url(ladder.user.wingmen[1])
+        = image_tag user_foto_url(ladder.user)
+      .name
+        .valign
+          = truncate(ladder.user.name, :length => 18)
+          = image_tag '/images/ladder_left/ladder_row_up.png', :class => ladder.up? ? 'arrow_up' : 'arrow_up hidden'
+          = image_tag '/images/ladder_left/ladder_row_down.png', :class => ladder.down? ? 'arrow_down' : 'arrow_down hidden'
+          .status_message
+            - if current_user && (current_user == ladder.user || current_user.admin?)
+              .inplace-editor{:user_id => "#{ladder.user.id}"}= ladder.user.status_message
+            - else
+              = ladder.user.status_message
+
+          .score
+            = number_with_delimiter ladder.combined_score
+          .time
+            = distance_of_time_in_words_to_now(ladder.set_at)
+            ago
+  .col3
+    .prize
+      = pounds(ladder.prize) if ladder.prize > 0
+  .info_pointer

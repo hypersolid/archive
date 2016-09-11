@@ -1,0 +1,73 @@
+source 'http://rubygems.park.rambler.ru'
+
+# Base
+gem 'rails', '>= 4.2.0'
+gem 'config'
+gem 'unicorn'
+gem 'thin'
+gem 'russian'
+
+# Cache
+gem 'dalli'
+# You can optionally install the 'kgio' gem to give Dalli a 20-30% performance boost.
+gem 'kgio'
+
+gem 'method_source'
+
+# Data management
+gem 'mongoid'
+gem 'pg'
+gem 'hashie'
+gem 'draper'
+gem 'responders'
+gem 'jbuilder'
+gem 'redcarpet'
+
+# Frontend
+gem 'slim-rails'
+gem 'sass' # for gulp
+gem 'webpack-pipeline', git: 'https://gitlab.rambler.ru/s.zubkov/webpack-pipeline.git',
+                        branch: :master
+
+# Api
+gem 'excon'
+gem 'yajl-ruby' # faster json
+
+# Debug & Lintering
+
+group :development, :test do
+  gem 'web-console'
+
+  gem 'rubocop'
+  gem 'rspec-rails'
+  gem 'factory_girl'
+  gem 'faker'
+
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
+# Deploy
+group :development do
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-rbenv', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano', require: false
+  gem 'rack-mini-profiler', require: false
+end
+
+group :test do
+  gem 'simplecov'
+  gem 'database_cleaner'
+  gem 'mongoid-rspec'
+  gem 'webmock'
+  gem 'vcr'
+end
+
+# Services
+gem 'sentry-raven'
+gem 'eye'
+gem 'newrelic_rpm'
+
+# Reusable code
+gem 'g_utils', git: 'git@gitlab.rambler.ru:gazeta/g_utils.git', branch: :master

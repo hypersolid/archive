@@ -1,0 +1,25 @@
+= render 'admin/shared/menu'
+
+-30.times do |i|
+  =Vote.all(:conditions=>["created_at between ? and ?",Date.today-i.days-1.days,Date.today-i.days]).count
+
+
+%table
+  - @votes.count.times do |i|
+    - v = @votes[i]
+    %tr
+      %td
+        =v.id
+      %td
+        =v.created_at.strftime('%m/%d/%Y %I:%M%p')
+        - if i!=0
+          (+
+          =((@votes[i-1].created_at-v.created_at)/60).round()
+          )
+      %td
+        =link_to "#{v.brand.fight.title} | #{v.brand.humanize_verb}", v.brand.fight.url
+      %td
+        =v.meta1
+
+        
+= render 'admin/shared/menu'

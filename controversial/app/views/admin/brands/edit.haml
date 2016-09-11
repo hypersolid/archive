@@ -1,0 +1,18 @@
+= render 'admin/shared/menu'
+
+= form_for @brand, :url => admin_brand_path(@brand), :html => { :multipart => true } do |f|
+  %p
+    verb
+    %br
+    =f.text_field :verb
+  %p
+    header
+    %br
+    =f.text_field :header
+  %p
+    picture
+    %br
+    =f.file_field :img
+  = f.submit
+  
+= render 'admin/shared/menu'

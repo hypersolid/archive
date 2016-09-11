@@ -1,0 +1,10 @@
+100#2500#http://127.0.0.1:8000/static/files/100.dat
+200#10000#http://127.0.0.1:8000/static/files/200.dat
+300#22500#http://127.0.0.1:8000/static/files/300.dat
+400#40000#http://127.0.0.1:8000/static/files/400.dat
+500#62500#http://127.0.0.1:8000/static/files/500.dat
+600#90000#http://127.0.0.1:8000/static/files/600.dat
+700#122500#http://127.0.0.1:8000/static/files/700.dat
+800#160000#http://127.0.0.1:8000/static/files/800.dat
+900#202500#http://127.0.0.1:8000/static/files/900.dat
+1000#250000#http://127.0.0.1:8000/static/files/1000.dat

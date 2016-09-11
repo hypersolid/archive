@@ -1,0 +1,14 @@
+- if signed_in? 
+  .wall_form
+    = form_for :wall_message, :url => wall_messages_path, :method => 'POST', :remote => true do |f|
+      = f.text_field :text, :class => 'inputBox futura'
+      = f.hidden_field :recipient_id, :value => user.id
+
+- qty = 5
+- messages = user.wall_messages.joins(:sender).all(:limit => qty)
+.wall{:id => "wall#{user.id}"}  
+  = render messages
+  
+  - if user.wall_messages.count > qty 
+    .more
+      = link_to 'Show more', more_wall_messages_path(:user_id => user.id, :message_id => messages.last.id, :messages_count => qty), :remote => true

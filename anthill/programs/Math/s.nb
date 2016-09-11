@@ -1,0 +1,244 @@
+Nm = 5; 
+\[Nu]1 = 0.34; 
+\[Nu] = 0.28; 
+Ex1 = 70*10^9; 
+Ex = 210*10^9; 
+h_placeholder
+h1_placeholder
+h2 = 2; 
+a = 0.05; 
+node[n_] := N[Cos[(Pi*(2*n - 1))/(2*Nm)]]; 
+nodes = Array[node, Nm]; 
+G = Ex/(2*(1 + \[Nu])); 
+G1 = Ex1/(2*(1 + \[Nu]1)); 
+k1 = h1*G1*(\[Nu] - 1); 
+k2 = G*(\[Nu]1 - 1); 
+k3 = 3 - 4*\[Nu]; 
+tS = Table[Pi*ChebyshevU[j - 1, nodes[[i]]], {i, Nm}, {j, Nm}]; 
+Subscript[f, x] = -((a*((a*\[Zeta] - h)^2 - 4*(a*\[Zeta] - h)*(a*z - h) - (a*z - h)^2))/((a*\[Zeta] - h) + (a*z - h))^3); 
+Subscript[f, 0] = 
+   -((a*((12*(4*k1 - k2*(a*\[Zeta] - h))*(8*k1 - k2*(a*z - h))*ExpIntegralE[4, -((k2*(-2*h + a*z + a*\[Zeta]))/(4*k1))])/
+        E^((k2*(a*\[Zeta] + a*z - 2*h))/(4*k1)) + 16*k1*k2*(a*\[Zeta] - h) + k2^2*((a*\[Zeta] - h)^2 - 4*(a*\[Zeta] - h)*(a*z - h) - 
+         (a*z - h)^2) - 128*k1^2))/(k2^2*(a*\[Zeta] + a*z - 2*h)^3)); 
+Subscript[f, 1] = TrigToExp[(a*Abs[\[Alpha]]*E^(Abs[\[Alpha]]*(a*\[Zeta] - h))*(2*\[Alpha]^3*E^(Abs[\[Alpha]]*(-(2*a*\[Zeta]) + 2*h - h2))*
+        ((h - a*z)*(h2*k2 + 2*k1)*Cosh[\[Alpha]*(a*z - h + h2)] + 4*h2*k1*Sinh[\[Alpha]*h2]*Sinh[\[Alpha]*(a*z - h)] + 
+         2*k1*(h - a*z)*Cosh[\[Alpha]*((-a)*z + h + h2)]) - 2*\[Alpha]^2*E^(Abs[\[Alpha]]*(-(2*a*\[Zeta]) + 2*h - h2))*
+        (2*h2*k2*Sinh[\[Alpha]*h2]*Cosh[\[Alpha]*(h - a*z)] - Cosh[\[Alpha]*h2]*Sinh[\[Alpha]*(h - a*z)]*(k2*((-a)*z + h + h2) + 8*k1)) + 
+       Abs[\[Alpha]]^3*(a*\[Zeta]*k2 - h*k2 - 4*k1)*(h*(Sinh[\[Alpha]*(a*z - h + 2*h2)] + Sinh[\[Alpha]*(a*z - h)]) + 
+         a*z*Sinh[\[Alpha]*((-a)*z + h - 2*h2)] + (a*z + 2*h2)*Sinh[\[Alpha]*(h - a*z)]) + 2*\[Alpha]*Abs[\[Alpha]]*(k2*(h - a*\[Zeta]) + 4*k1)*
+        (Cosh[\[Alpha]*(a*z - h + 2*h2)] + Cosh[\[Alpha]*(h - a*z)]) - 2*Abs[\[Alpha]]^3*(a*\[Zeta] - h + h2)*
+        E^(Abs[\[Alpha]]*(-(2*a*\[Zeta]) + 2*h - h2))*(4*k1*Cosh[\[Alpha]*h2]*Sinh[\[Alpha]*(h - a*z)] + 
+         k2*(a*z - h)*Sinh[\[Alpha]*(a*z - h + h2)]) + \[Alpha]*k2*Abs[\[Alpha]]*((-a)*\[Zeta] + h - h2)*
+        E^(Abs[\[Alpha]]*(-(2*a*\[Zeta]) + 2*h - h2))*(3*Cosh[\[Alpha]*(a*z - h + h2)] + Cosh[\[Alpha]*((-a)*z + h + h2)]) + 
+       4*\[Alpha]*k2*Cosh[\[Alpha]*h2]*Cosh[\[Alpha]*(h - a*z)]*E^(Abs[\[Alpha]]*(-(2*a*\[Zeta]) + 2*h - h2)) + 
+       \[Alpha]^3*(a*\[Zeta] - h)*((k2*(h - a*z) + 4*k1)*Cosh[\[Alpha]*(a*z - h + 2*h2)] + Cosh[\[Alpha]*(h - a*z)]*
+          (k2*(a*z - h + 2*h2) + 4*k1)) - \[Alpha]^2*k2*((a*(\[Zeta] + z) - 2*h)*Sinh[\[Alpha]*(a*z - h + 2*h2)] + 
+         (a*z + 2*h2)*Sinh[\[Alpha]*(a*z - h)] + a*\[Zeta]*Sinh[\[Alpha]*(h - a*z)]) - 
+       2*\[Alpha]*k2*(Cosh[\[Alpha]*(a*z - h + 2*h2)] + Cosh[\[Alpha]*(h - a*z)])))/
+     (\[Alpha]^2*(4*\[Alpha]*k1*Cosh[2*\[Alpha]*h2] + 2*\[Alpha]*h2*k2 + k2*Sinh[2*\[Alpha]*h2] + 4*\[Alpha]*k1))]; 
+Subscript[f, 2] = -(a*E^((-(a*z - h))*\[Alpha] - (-h + h2 + a*\[Zeta])*Abs[\[Alpha]])*\[Alpha]*
+      ((2*((-E^((h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]]))*k3*((a*z - h)*\[Alpha] - 2)*(4*k1 - k2*(a*\[Zeta] - h)) - 
+           E^(2*(-h + 2*h2 + a*z)*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*k3*((a*z - h)*\[Alpha] + 2)*(4*k1 - k2*(a*\[Zeta] - h)) + 
+           E^(3*h2*\[Alpha])*(\[Alpha]*(k2 + 4*k1*\[Alpha])*h2^2 + (4*k1*\[Alpha]*((a*z - h)*\[Alpha] + (a*\[Zeta] - h)*\[Alpha] - 2*\[Nu]) + k2*
+                (\[Alpha]*(a*\[Zeta] - h) + 2*(a*z - h)*\[Alpha]*(\[Nu] - 1) - 4*(\[Nu] - 1)*\[Nu]))*h2 + ((a*z - h)*\[Alpha] - 2*\[Nu])*
+              (k2*(a*\[Zeta] - h) + 4*k1*(\[Alpha]*(a*\[Zeta] - h) + 2*\[Nu] - 3))) + E^((h2 + 2*(a*z - h))*\[Alpha])*
+            (\[Alpha]*(k2 - 4*k1*\[Alpha])*h2^2 + (k2*(\[Alpha]*(a*\[Zeta] - h) + 2*(a*z - h)*\[Alpha]*(\[Nu] - 1) + 4*(\[Nu] - 1)*\[Nu]) - 4*k1*\[Alpha]*
+                ((a*z - h)*\[Alpha] + (a*\[Zeta] - h)*\[Alpha] + 2*\[Nu]))*h2 + (k2*(a*\[Zeta] - h) - 4*k1*(\[Alpha]*(a*\[Zeta] - h) - 2*\[Nu] + 3))*
+              ((a*z - h)*\[Alpha] + 2*\[Nu])) + E^((3*h2 + 2*(a*z - h))*\[Alpha])*(\[Alpha]*(k2*(2*(a*z - h)*\[Alpha] + 3) - 4*k1*\[Alpha])*h2^2 + 
+             (4*k1*\[Alpha]*((a*z - h)*\[Alpha] - (a*\[Zeta] - h)*\[Alpha] + 2*\[Nu]) + k2*(2*(a*z - h)*(a*\[Zeta] - h)*\[Alpha]^2 + 
+                 3*(a*\[Zeta] - h)*\[Alpha] - 2*(a*z - h)*\[Nu]*\[Alpha] + 4*\[Nu]^2 - 12*\[Nu] + 4))*h2 + k2*(a*\[Zeta] - h)*
+              (k3*(a*z - h)*\[Alpha] - 6*\[Nu] + 4) + 4*k1*((a*z - h)*\[Alpha] + 2*\[Nu])*(\[Alpha]*(a*\[Zeta] - h) + 2*\[Nu] - 3)) + 
+           E^(h2*\[Alpha])*(\[Alpha]*(4*k1*\[Alpha] + k2*(3 - 2*(a*z - h)*\[Alpha]))*h2^2 + (4*k1*\[Alpha]*((-(a*z - h))*\[Alpha] + (a*\[Zeta] - h)*\[Alpha] + 
+                 2*\[Nu]) - k2*(2*(a*z - h)*(a*\[Zeta] - h)*\[Alpha]^2 - 3*(a*\[Zeta] - h)*\[Alpha] + 2*(a*z - h)*\[Nu]*\[Alpha] + 4*\[Nu]^2 - 
+                 12*\[Nu] + 4))*h2 - 4*k1*((a*z - h)*\[Alpha] - 2*\[Nu])*(\[Alpha]*(a*\[Zeta] - h) - 2*\[Nu] + 3) + 
+             k2*(a*\[Zeta] - h)*(k3*(a*z - h)*\[Alpha] + 6*\[Nu] - 4)) + E^(2*(-h + h2 + a*z)*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*
+            (k2*(2*h2^2*(a*\[Zeta] - h)*\[Alpha]^2 + 2*h2*(2*\[Alpha]*(a*\[Zeta] - h) + (a*z - h)*\[Alpha]*(\[Alpha]*(a*\[Zeta] - h) - 1) - 2*\[Nu]) + 
+               (a*\[Zeta] - h)*(8*\[Nu]^2 - 12*\[Nu] + (a*z - h)*\[Alpha] + 6)) - 4*k1*(2*h2^2*\[Alpha]^2 + 3*(a*z - h)*\[Alpha] + 2*h2*
+                ((a*z - h)*\[Alpha] + 2)*\[Alpha] + 8*\[Nu]^2 - 8*\[Nu] + 6)) + E^(2*h2*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*
+            (4*k1*(2*h2^2*\[Alpha]^2 - 3*(a*z - h)*\[Alpha] + 2*h2*((a*z - h)*\[Alpha] - 2)*\[Alpha] + 8*\[Nu]^2 - 8*\[Nu] + 6) + 
+             k2*(-2*h2^2*(a*\[Zeta] - h)*\[Alpha]^2 + (a*\[Zeta] - h)*(-8*\[Nu]^2 + 12*\[Nu] + (a*z - h)*\[Alpha] - 6) - 2*h2*
+                ((a*z - h)*\[Alpha]*(\[Alpha]*(a*\[Zeta] - h) + 1) - 2*(\[Alpha]*(a*\[Zeta] - h) + \[Nu]))))) + 
+         (E^(4*h2*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*(a*\[Zeta] - h)*(4*k1*\[Alpha]*(k3 - h2*\[Alpha]) + 
+             k2*(-4*\[Nu]^2 + h2*\[Alpha]*((a*z - h)*\[Alpha] - 2*\[Nu] - 1) + 2*(a*z - h)*\[Alpha]*(\[Nu] - 1) + 3)) - 
+           2*E^(3*h2*\[Alpha])*(-h + h2 + a*\[Zeta])*(4*k1*\[Alpha]*(k3 - h2*\[Alpha]) + k2*(-4*\[Nu]^2 + h2*\[Alpha]*((a*z - h)*\[Alpha] - 2*\[Nu] - 1) + 
+               2*(a*z - h)*\[Alpha]*(\[Nu] - 1) + 3)) - E^(2*(-h + 2*h2 + a*z)*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*(a*\[Zeta] - h)*
+            (4*k1*\[Alpha]*(k3 - h2*\[Alpha]) + k2*(-4*\[Nu]^2 + 8*\[Nu] + h2*\[Alpha]*((a*z - h)*\[Alpha] - 2*\[Nu] + 3) + 2*(a*z - h)*\[Alpha]*
+                (\[Nu] - 1) - 5)) + 2*E^((3*h2 + 2*(a*z - h))*\[Alpha])*(-h + h2 + a*\[Zeta])*(4*k1*\[Alpha]*(k3 - h2*\[Alpha]) + 
+             k2*(-4*\[Nu]^2 + 8*\[Nu] + h2*\[Alpha]*((a*z - h)*\[Alpha] - 2*\[Nu] + 3) + 2*(a*z - h)*\[Alpha]*(\[Nu] - 1) - 5)) - 
+           2*E^(2*h2*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*(a*\[Zeta] - h)*(k2*(h2*\[Alpha]*(2*\[Nu] - 1) - 2*((a*z - h)*\[Alpha] - 2)*
+                (\[Nu] - 1)) - 4*k1*k3*\[Alpha]) + 2*E^(2*(-h + h2 + a*z)*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*(a*\[Zeta] - h)*
+            (k2*(h2*\[Alpha]*(2*\[Nu] - 1) - 2*((a*z - h)*\[Alpha] + 2)*(\[Nu] - 1)) - 4*k1*k3*\[Alpha]) - E^((h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*
+            (a*\[Zeta] - h)*(k2*(-4*\[Nu]^2 + 8*\[Nu] - 2*(a*z - h)*\[Alpha]*(\[Nu] - 1) + h2*\[Alpha]*((a*z - h)*\[Alpha] + 2*\[Nu] - 3) - 5) - 
+             4*k1*\[Alpha]*(k3 + h2*\[Alpha])) + 2*E^(h2*\[Alpha])*(-h + h2 + a*\[Zeta])*(k2*(-4*\[Nu]^2 + 8*\[Nu] - 2*(a*z - h)*\[Alpha]*(\[Nu] - 1) + 
+               h2*\[Alpha]*((a*z - h)*\[Alpha] + 2*\[Nu] - 3) - 5) - 4*k1*\[Alpha]*(k3 + h2*\[Alpha])) + 
+           E^(2*(a*z - h)*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*(a*\[Zeta] - h)*
+            (k2*(-4*\[Nu]^2 - 2*(a*z - h)*\[Alpha]*(\[Nu] - 1) + h2*\[Alpha]*((a*z - h)*\[Alpha] + 2*\[Nu] + 1) + 3) - 
+             4*k1*\[Alpha]*(k3 + h2*\[Alpha])) - 2*E^((h2 + 2*(a*z - h))*\[Alpha])*(-h + h2 + a*\[Zeta])*
+            (k2*(-4*\[Nu]^2 - 2*(a*z - h)*\[Alpha]*(\[Nu] - 1) + h2*\[Alpha]*((a*z - h)*\[Alpha] + 2*\[Nu] + 1) + 3) - 
+             4*k1*\[Alpha]*(k3 + h2*\[Alpha])))*Sign[\[Alpha]])*Abs[\[Alpha]]^2 + 
+       (E^(4*h2*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*\[Alpha]*(a*\[Zeta] - h)*(4*k1*\[Alpha]*(h2*\[Alpha] - k3) - 
+           k2*(-4*\[Nu]^2 + h2*\[Alpha]*((a*z - h)*\[Alpha] - 2*\[Nu] - 1) + 2*(a*z - h)*\[Alpha]*(\[Nu] - 1) + 3)) + 
+         E^(2*(a*z - h)*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*\[Alpha]*(a*\[Zeta] - h)*(4*k1*\[Alpha]*(k3 + h2*\[Alpha]) - 
+           k2*(-4*\[Nu]^2 - 2*(a*z - h)*\[Alpha]*(\[Nu] - 1) + h2*\[Alpha]*((a*z - h)*\[Alpha] + 2*\[Nu] + 1) + 3)) - 
+         2*E^(2*(-h + h2 + a*z)*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*(8*k1*(a*\[Zeta] - h)*(h2*\[Alpha] + (a*z - h)*\[Alpha] + 2*\[Nu])*
+            \[Alpha]^2 + k2*(2*h2^2*\[Alpha]^2 + (a*z - h)*\[Alpha] + 2*h2*((a*z - h)*\[Alpha] + 2)*\[Alpha] + 8*\[Nu]^2 - 12*\[Nu] + 6) + 
+           k2*(2*h2^2*(\[Alpha]*(a*\[Zeta] - h) - 2)*\[Alpha]^2 + 8*(a*\[Zeta] - h)*\[Nu]^2*\[Alpha] + 7*(a*\[Zeta] - h)*\[Alpha] - 
+             16*(a*\[Zeta] - h)*\[Nu]*\[Alpha] + (a*z - h)*(\[Alpha]*(a*\[Zeta] - h) - 2*\[Alpha]*\[Nu]*(a*\[Zeta] - h) - 2)*\[Alpha] + 
+             h2*(\[Alpha]*(a*\[Zeta] - h) + 2*\[Alpha]*\[Nu]*(a*\[Zeta] - h) + 2*(a*z - h)*\[Alpha]*(\[Alpha]*(a*\[Zeta] - h) - 2) - 8)*\[Alpha] - 16*\[Nu]^2 + 
+             24*\[Nu] - 12)) + E^(2*(-h + 2*h2 + a*z)*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*
+          (k2*(h2*(a*\[Zeta] - h)*(3 - 2*\[Nu])*\[Alpha]^2 + (a*z - h)*(h2*(a*\[Zeta] - h)*\[Alpha]^2 + (a*\[Zeta] - h)*(4 - 6*\[Nu])*\[Alpha] - 16*
+                \[Nu] + 12)*\[Alpha] + (-4*(a*\[Zeta] - h)*\[Nu]^2 - h + a*\[Zeta])*\[Alpha] - 32*\[Nu] + 24) - 
+           2*(2*k1*(k3 + h2*\[Alpha])*(a*\[Zeta] - h)*\[Alpha]^2 + k2*k3*((a*z - h)*\[Alpha] + 2))) + E^((h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*
+          (k2*(h2*(a*\[Zeta] - h)*(2*\[Nu] - 3)*\[Alpha]^2 + (-4*(a*\[Zeta] - h)*\[Nu]^2 - h + a*\[Zeta])*\[Alpha] + 
+             (a*z - h)*(h2*(a*\[Zeta] - h)*\[Alpha]^2 + 2*(a*\[Zeta] - h)*(3*\[Nu] - 2)*\[Alpha] - 16*\[Nu] + 12)*\[Alpha] - 8*k3) - 
+           2*(2*k1*(h2*\[Alpha] - k3)*(a*\[Zeta] - h)*\[Alpha]^2 + k2*k3*((a*z - h)*\[Alpha] - 2))) - 
+         2*E^(2*h2*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*(8*k1*(a*\[Zeta] - h)*(h2*\[Alpha] + (a*z - h)*\[Alpha] - 2*\[Nu])*\[Alpha]^2 + 
+           k2*(-2*h2^2*\[Alpha]^2 + (a*z - h)*\[Alpha] - 2*h2*((a*z - h)*\[Alpha] - 2)*\[Alpha] - 8*\[Nu]^2 + 12*\[Nu] - 6) + 
+           k2*(2*h2^2*(\[Alpha]*(a*\[Zeta] - h) + 2)*\[Alpha]^2 + 8*(a*\[Zeta] - h)*\[Nu]^2*\[Alpha] + 7*(a*\[Zeta] - h)*\[Alpha] - 
+             16*(a*\[Zeta] - h)*\[Nu]*\[Alpha] + (a*z - h)*(\[Alpha]*(a*\[Zeta] - h)*(2*\[Nu] - 1) - 2)*\[Alpha] + 
+             h2*(2*(a*z - h)*\[Alpha]*(\[Alpha]*(a*\[Zeta] - h) + 2) - \[Alpha]*(-h + a*\[Zeta] + 2*(a*\[Zeta] - h)*\[Nu]) - 8)*\[Alpha] + 16*\[Nu]^2 - 
+             24*\[Nu] + 12)) - 2*E^(h2*\[Alpha])*(4*G1*h1*(a*z - h)*(a*\[Zeta] - h)*\[Alpha]^3 - 4*G1*h1*(a*z - h)*(a*\[Zeta] - h)*\[Nu]*
+            \[Alpha]^3 - 8*G1*h1*(a*z - h)*\[Nu]^2*\[Alpha]^2 + 8*G1*h1*(a*\[Zeta] - h)*\[Nu]^2*\[Alpha]^2 + 4*k1*(a*z - h)*\[Alpha]^2 + 
+           G*(a*z - h)*(a*\[Zeta] - h)*\[Alpha]^2 - h2^2*k2*((a*z - h)*\[Alpha] - 2*\[Nu])*\[Alpha]^2 + 8*G1*h1*(a*z - h)*\[Nu]*\[Alpha]^2 - 
+           8*G1*h1*(a*\[Zeta] - h)*\[Nu]*\[Alpha]^2 - 2*G*(a*z - h)*(a*\[Zeta] - h)*\[Nu]*\[Alpha]^2 - G*(a*z - h)*(a*\[Zeta] - h)*\[Nu]1*\[Alpha]^2 + 
+           2*G*(a*z - h)*(a*\[Zeta] - h)*\[Nu]*\[Nu]1*\[Alpha]^2 + 16*G1*h1*\[Nu]^3*\[Alpha] - 16*G1*h1*\[Nu]^2*\[Alpha] + 8*G*(a*z - h)*\[Nu]^2*\[Alpha] + 
+           4*G*(a*\[Zeta] - h)*\[Nu]^2*\[Alpha] - 8*k1*\[Nu]*\[Alpha] - 6*G*(a*z - h)*\[Nu]*\[Alpha] - 2*G*(a*\[Zeta] - h)*\[Nu]*\[Alpha] + 
+           h2*(-4*k1*\[Alpha] - 4*k1*((a*z - h)*\[Alpha] - 4*\[Nu])*\[Alpha] - k2*(2*\[Nu]*((-\[Alpha])*(a*\[Zeta] - h) + 2*\[Nu] - 4) + (a*z - h)*\[Alpha]*
+                (\[Alpha]*(a*\[Zeta] - h) + 2*\[Nu] + 1)))*\[Alpha] - 8*G*(a*z - h)*\[Nu]^2*\[Nu]1*\[Alpha] - 4*G*(a*\[Zeta] - h)*\[Nu]^2*\[Nu]1*\[Alpha] + 
+           6*G*(a*z - h)*\[Nu]*\[Nu]1*\[Alpha] + 2*G*(a*\[Zeta] - h)*\[Nu]*\[Nu]1*\[Alpha] - 12*G*\[Nu]^2 + 
+           k2*((-k3)*(a*z - h)*\[Alpha] + h2*(2*(a*z - h)*\[Alpha] - 3)*\[Alpha] - 6*\[Nu] + 4) + 8*G*\[Nu] + 12*G*\[Nu]^2*\[Nu]1 - 
+           8*G*\[Nu]*\[Nu]1) + 2*E^((3*h2 + 2*(a*z - h))*\[Alpha])*(-4*G1*h1*(a*z - h)*(a*\[Zeta] - h)*\[Alpha]^3 + 
+           4*G1*h1*(a*z - h)*(a*\[Zeta] - h)*\[Nu]*\[Alpha]^3 - 8*G1*h1*(a*z - h)*\[Nu]^2*\[Alpha]^2 + 8*G1*h1*(a*\[Zeta] - h)*\[Nu]^2*\[Alpha]^2 + 
+           4*k1*(a*z - h)*\[Alpha]^2 + G*(a*z - h)*(a*\[Zeta] - h)*\[Alpha]^2 + 8*G1*h1*(a*z - h)*\[Nu]*\[Alpha]^2 - 
+           8*G1*h1*(a*\[Zeta] - h)*\[Nu]*\[Alpha]^2 - 2*G*(a*z - h)*(a*\[Zeta] - h)*\[Nu]*\[Alpha]^2 + h2^2*k2*((a*z - h)*\[Alpha] + 2*\[Nu])*\[Alpha]^2 - 
+           G*(a*z - h)*(a*\[Zeta] - h)*\[Nu]1*\[Alpha]^2 + 2*G*(a*z - h)*(a*\[Zeta] - h)*\[Nu]*\[Nu]1*\[Alpha]^2 - 16*G1*h1*\[Nu]^3*\[Alpha] + 
+           16*G1*h1*\[Nu]^2*\[Alpha] - 8*G*(a*z - h)*\[Nu]^2*\[Alpha] - 4*G*(a*\[Zeta] - h)*\[Nu]^2*\[Alpha] + 8*k1*\[Nu]*\[Alpha] + 
+           6*G*(a*z - h)*\[Nu]*\[Alpha] + 2*G*(a*\[Zeta] - h)*\[Nu]*\[Alpha] + h2*(-4*k1*\[Alpha] + 4*k1*((a*z - h)*\[Alpha] + 4*\[Nu])*\[Alpha] + 
+             k2*((a*z - h)*\[Alpha]*(\[Alpha]*(a*\[Zeta] - h) - 2*\[Nu] - 1) + 2*\[Nu]*(\[Alpha]*(a*\[Zeta] - h) + 2*\[Nu] - 4)))*\[Alpha] + 
+           8*G*(a*z - h)*\[Nu]^2*\[Nu]1*\[Alpha] + 4*G*(a*\[Zeta] - h)*\[Nu]^2*\[Nu]1*\[Alpha] - 6*G*(a*z - h)*\[Nu]*\[Nu]1*\[Alpha] - 
+           2*G*(a*\[Zeta] - h)*\[Nu]*\[Nu]1*\[Alpha] - 12*G*\[Nu]^2 + k2*(k3*(a*z - h)*\[Alpha] + h2*(2*(a*z - h)*\[Alpha] + 3)*\[Alpha] - 6*\[Nu] + 4) + 
+           8*G*\[Nu] + 12*G*\[Nu]^2*\[Nu]1 - 8*G*\[Nu]*\[Nu]1) + 2*E^(3*h2*\[Alpha])*(h2^2*k2*((a*z - h)*\[Alpha] - 2*\[Nu])*\[Alpha]^2 + 
+           h2*(-4*G1*h1*(a*z - h)*\[Alpha]^2 - G*(a*z - h)*(a*\[Zeta] - h)*\[Alpha]^2 + 4*G1*h1*(a*z - h)*\[Nu]*\[Alpha]^2 + 
+             G*(a*z - h)*(a*\[Zeta] - h)*\[Nu]1*\[Alpha]^2 - 16*G1*h1*\[Nu]^2*\[Alpha] + 4*k1*\[Alpha] + G*(a*z - h)*\[Alpha] + 16*G1*h1*\[Nu]*\[Alpha] - 
+             2*G*(a*z - h)*\[Nu]*\[Alpha] + 2*G*(a*\[Zeta] - h)*\[Nu]*\[Alpha] - G*(a*z - h)*\[Nu]1*\[Alpha] + 2*G*(a*z - h)*\[Nu]*\[Nu]1*\[Alpha] - 
+             2*G*(a*\[Zeta] - h)*\[Nu]*\[Nu]1*\[Alpha] + 4*G*\[Nu]^2 + k2 - 4*G*\[Nu]^2*\[Nu]1)*\[Alpha] + ((a*z - h)*\[Alpha] - 2*\[Nu])*
+            (-4*G1*h1*(a*\[Zeta] - h)*\[Alpha]^2 + 4*G1*h1*(a*\[Zeta] - h)*\[Nu]*\[Alpha]^2 - 8*G1*h1*\[Nu]^2*\[Alpha] + 4*k1*\[Alpha] + 
+             G*(a*\[Zeta] - h)*\[Alpha] + 8*G1*h1*\[Nu]*\[Alpha] - 2*G*(a*\[Zeta] - h)*\[Nu]*\[Alpha] - G*(a*\[Zeta] - h)*\[Nu]1*\[Alpha] + 
+             2*G*(a*\[Zeta] - h)*\[Nu]*\[Nu]1*\[Alpha] + k2 + 2*G*\[Nu] - 2*G*\[Nu]*\[Nu]1)) + 2*E^((h2 + 2*(a*z - h))*\[Alpha])*
+          (h2^2*k2*((a*z - h)*\[Alpha] + 2*\[Nu])*\[Alpha]^2 + h2*(-4*G1*h1*(a*z - h)*\[Alpha]^2 - G*(a*z - h)*(a*\[Zeta] - h)*\[Alpha]^2 + 
+             4*G1*h1*(a*z - h)*\[Nu]*\[Alpha]^2 + G*(a*z - h)*(a*\[Zeta] - h)*\[Nu]1*\[Alpha]^2 + 16*G1*h1*\[Nu]^2*\[Alpha] - 4*k1*\[Alpha] - 
+             G*(a*z - h)*\[Alpha] - 16*G1*h1*\[Nu]*\[Alpha] + 2*G*(a*z - h)*\[Nu]*\[Alpha] - 2*G*(a*\[Zeta] - h)*\[Nu]*\[Alpha] + 
+             G*(a*z - h)*\[Nu]1*\[Alpha] - 2*G*(a*z - h)*\[Nu]*\[Nu]1*\[Alpha] + 2*G*(a*\[Zeta] - h)*\[Nu]*\[Nu]1*\[Alpha] + 4*G*\[Nu]^2 + k2 - 
+             4*G*\[Nu]^2*\[Nu]1)*\[Alpha] + ((a*z - h)*\[Alpha] + 2*\[Nu])*(-4*G1*h1*(a*\[Zeta] - h)*\[Alpha]^2 + 4*G1*h1*(a*\[Zeta] - h)*\[Nu]*\[Alpha]^2 + 
+             8*G1*h1*\[Nu]^2*\[Alpha] - 4*k1*\[Alpha] - G*(a*\[Zeta] - h)*\[Alpha] - 8*G1*h1*\[Nu]*\[Alpha] + 2*G*(a*\[Zeta] - h)*\[Nu]*\[Alpha] + 
+             G*(a*\[Zeta] - h)*\[Nu]1*\[Alpha] - 2*G*(a*\[Zeta] - h)*\[Nu]*\[Nu]1*\[Alpha] + k2 + 2*G*\[Nu] - 2*G*\[Nu]*\[Nu]1)) - 
+         (2*E^(3*h2*\[Alpha])*(8*k1*\[Alpha]*(k3 - h2*\[Alpha])*(\[Nu] - 1) + k2*(-8*\[Nu]^2 + 12*\[Nu] + (a*z - h)*\[Alpha] + 2*h2*\[Alpha]*
+                ((a*z - h)*\[Alpha] - 2*\[Nu] - 1)*(\[Nu] - 1) - 6)) + E^(4*h2*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*
+            (4*k1*\[Alpha]*(k3 - h2*\[Alpha]) + k2*(-4*\[Nu]^2 + h2*\[Alpha]*((a*z - h)*\[Alpha] - 2*\[Nu] - 1) + 2*(a*z - h)*\[Alpha]*(\[Nu] - 1) + 
+               3)) + E^(2*(-h + 2*h2 + a*z)*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*(4*k1*\[Alpha]*(k3 + h2*\[Alpha]) - 
+             k2*(-4*\[Nu]^2 + 2*(a*z - h)*\[Alpha]*\[Nu] + 8*\[Nu] - 2*(a*z - h)*\[Alpha] + 2*k3*((a*z - h)*\[Alpha] + 1) + h2*\[Alpha]*
+                ((a*z - h)*\[Alpha] - 2*\[Nu] + 3) - 5)) + 2*E^(2*h2*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*
+            (8*h2*k1*\[Alpha]^2 + k2*(2*h2^2*\[Alpha]^2 + h2*(2*\[Nu] - 1)*\[Alpha] + (a*z - h)*(2*\[Nu] - 1)*\[Alpha] + 8*\[Nu]^2 - 16*\[Nu] + 7)) + 
+           E^((h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*(4*k1*\[Alpha]*(h2*\[Alpha] - k3) + k2*(4*\[Nu]^2 + 2*(a*z - h)*\[Alpha]*\[Nu] - 8*\[Nu] - 2*
+                (a*z - h)*\[Alpha] + 2*k3*((a*z - h)*\[Alpha] - 1) - h2*\[Alpha]*((a*z - h)*\[Alpha] + 2*\[Nu] - 3) + 5)) + 
+           E^(2*(a*z - h)*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*(k2*(-4*\[Nu]^2 - 2*(a*z - h)*\[Alpha]*(\[Nu] - 1) + h2*\[Alpha]*
+                ((a*z - h)*\[Alpha] + 2*\[Nu] + 1) + 3) - 4*k1*\[Alpha]*(k3 + h2*\[Alpha])) + 2*E^((h2 + 2*(a*z - h))*\[Alpha])*
+            (k2*(-8*\[Nu]^2 + 12*\[Nu] - (a*z - h)*\[Alpha] + 2*h2*\[Alpha]*(\[Nu] - 1)*((a*z - h)*\[Alpha] + 2*\[Nu] + 1) - 6) - 
+             8*k1*\[Alpha]*(k3 + h2*\[Alpha])*(\[Nu] - 1)) - 2*E^((3*h2 + 2*(a*z - h))*\[Alpha])*(8*k1*\[Alpha]*(k3 - h2*\[Alpha])*(\[Nu] - 1) + 
+             k2*(8*\[Nu]^2 - 20*\[Nu] + 2*h2*\[Alpha]*((a*z - h)*\[Alpha] - 2*\[Nu] + 3)*(\[Nu] - 1) + (a*z - h)*\[Alpha]*(-2*\[Nu]*k3 + 3*k3 + 
+                 2*\[Nu] - 2) + 10)) - 2*E^(h2*\[Alpha])*(k2*(8*\[Nu]^2 - 20*\[Nu] + 2*h2*\[Alpha]*(\[Nu] - 1)*((a*z - h)*\[Alpha] + 2*\[Nu] - 
+                 3) + (a*z - h)*\[Alpha]*(2*\[Nu]*k3 - 3*k3 - 2*\[Nu] + 2) + 10) - 8*k1*\[Alpha]*(k3 + h2*\[Alpha])*(\[Nu] - 1)) + 
+           2*E^(2*(-h + h2 + a*z)*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*(8*h2*k1*\[Alpha]^2 + 
+             k2*(2*h2^2*\[Alpha]^2 + (a*z - h)*\[Alpha] - 2*(a*z - h)*\[Nu]*\[Alpha] + 8*\[Nu]^2 - 16*\[Nu] + h2*(\[Alpha] - 2*\[Alpha]*\[Nu]) + 7)))*
+          Sign[\[Alpha]])*Abs[\[Alpha]] + \[Alpha]*(2*E^(h2*\[Alpha])*(4*k1*\[Alpha] + k2*(h2*\[Alpha] - 2*\[Nu] + 1))*((a*z - h)*\[Alpha] - 2*\[Nu]) + 
+         2*E^(3*h2*\[Alpha])*(4*k1*\[Alpha] + k2*(h2*\[Alpha] + 2*\[Nu] - 1))*((a*z - h)*\[Alpha] - 2*\[Nu]) + 2*E^((h2 + 2*(a*z - h))*\[Alpha])*
+          (4*k1*\[Alpha] + k2*(h2*\[Alpha] - 2*\[Nu] + 1))*((a*z - h)*\[Alpha] + 2*\[Nu]) + 2*E^((3*h2 + 2*(a*z - h))*\[Alpha])*
+          ((a*z - h)*\[Alpha] + 2*\[Nu])*(4*k1*\[Alpha] + k2*(h2*\[Alpha] + 2*\[Nu] - 1)) + E^(4*h2*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*
+          (k2*(-4*\[Nu]^2 + h2*\[Alpha]*((a*z - h)*\[Alpha] - 2*\[Nu] - 1) + 2*(a*z - h)*\[Alpha]*(\[Nu] - 1) + 3) - 4*k1*\[Alpha]*(h2*\[Alpha] - k3)) + 
+         E^(2*(-h + 2*h2 + a*z)*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*(4*k1*\[Alpha]*(k3 + h2*\[Alpha]) - 
+           k2*(-4*\[Nu]^2 - 6*(a*z - h)*\[Alpha]*\[Nu] + 4*(a*z - h)*\[Alpha] + h2*\[Alpha]*((a*z - h)*\[Alpha] - 2*\[Nu] + 3) + 1)) + 
+         2*E^(2*h2*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*(8*k1*\[Alpha]*(h2*\[Alpha] + (a*z - h)*\[Alpha] - 2*\[Nu]) + 
+           k2*(2*h2^2*\[Alpha]^2 + h2*(2*(a*z - h)*\[Alpha] - 2*\[Nu] - 1)*\[Alpha] + (a*z - h)*(2*\[Nu] - 1)*\[Alpha] + 8*\[Nu]^2 - 16*\[Nu] + 7)) + 
+         E^(2*(a*z - h)*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*(k2*(-4*\[Nu]^2 - 2*(a*z - h)*\[Alpha]*(\[Nu] - 1) + 
+             h2*\[Alpha]*((a*z - h)*\[Alpha] + 2*\[Nu] + 1) + 3) - 4*k1*\[Alpha]*(k3 + h2*\[Alpha])) + E^((h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*
+          (4*k1*\[Alpha]*(h2*\[Alpha] - k3) - k2*(-4*\[Nu]^2 + h2*\[Alpha]*((a*z - h)*\[Alpha] + 2*\[Nu] - 3) + 2*(a*z - h)*\[Alpha]*(3*\[Nu] - 2) + 
+             1)) + 2*E^(2*(-h + h2 + a*z)*\[Alpha] + (h2 + 2*(a*\[Zeta] - h))*Abs[\[Alpha]])*
+          (8*k1*\[Alpha]*(h2*\[Alpha] + (a*z - h)*\[Alpha] + 2*\[Nu]) + k2*(2*h2^2*\[Alpha]^2 + h2*(2*(a*z - h)*\[Alpha] + 2*\[Nu] + 1)*\[Alpha] + 
+             8*\[Nu]^2 - 16*\[Nu] + (a*z - h)*(\[Alpha] - 2*\[Alpha]*\[Nu]) + 7)))))/
+    (2*(k3*(k2 - 4*k1*\[Alpha]) + E^(4*h2*\[Alpha])*k3*(k2 + 4*k1*\[Alpha]) + 2*E^(2*h2*\[Alpha])*
+       (8*h2*k1*\[Alpha]^2 + k2*(2*h2^2*\[Alpha]^2 + 8*\[Nu]^2 - 12*\[Nu] + 5)))*\[Alpha]^2); 
+Subscript[f, 3] = TrigToExp[-(a*E^((-(a*z - h))*\[Alpha] - (-h + h2 + a*\[Zeta])*Abs[\[Alpha]])*
+       (((-E^(3*h2*\[Alpha]))*((k2 + 4*k1*\[Alpha])*h2^2 + (4*((a*z - h)*\[Alpha] + (a*\[Zeta] - h)*\[Alpha] - 3)*k1 + (a*\[Zeta] - h)*k2)*h2 + 
+            4*((a*z - h)*\[Alpha] - 2)*(a*\[Zeta] - h)*k1) + E^((2*(a*z - h) + h2)*\[Alpha])*((-(k2 - 4*k1*\[Alpha]))*h2^2 + 
+            (4*k1*((a*z - h)*\[Alpha] + (a*\[Zeta] - h)*\[Alpha] + 3) - k2*(a*\[Zeta] - h))*h2 + 4*((a*z - h)*\[Alpha] + 2)*(a*\[Zeta] - h)*k1) - 
+          E^(h2*\[Alpha])*((4*k1*\[Alpha] + k2*(3 - 2*(a*z - h)*\[Alpha]))*h2^2 + ((-4*(a*z - h)*\[Alpha] + 4*(a*\[Zeta] - h)*\[Alpha] + 12)*k1 + 
+              (a*\[Zeta] - h)*k2*(3 - 2*(a*z - h)*\[Alpha]))*h2 - 4*k1*((a*z - h)*\[Alpha] - 2)*(a*\[Zeta] - h)) + 
+          E^(2*(a*z - h)*\[Alpha] + 3*h2*\[Alpha])*((4*k1*\[Alpha] - k2*(2*(a*z - h)*\[Alpha] + 3))*h2^2 - 
+            (4*((a*z - h)*\[Alpha] - (a*\[Zeta] - h)*\[Alpha] + 3)*k1 + (2*(a*z - h)*\[Alpha] + 3)*(a*\[Zeta] - h)*k2)*h2 - 
+            4*k1*((a*z - h)*\[Alpha] + 2)*(a*\[Zeta] - h)) + 2*(4*k1*((a*z - h)*\[Alpha] + h2*\[Alpha] + 3) - 
+            k2*(((a*z - h)*\[Alpha] + 2)*(a*\[Zeta] - h) + (\[Alpha]*(a*\[Zeta] - h) - 1)*h2))*
+           E^(2*(-h + h2 + a*z)*\[Alpha] + (2*(a*\[Zeta] - h) + h2)*Abs[\[Alpha]])*h2 - 2*E^(2*h2*\[Alpha] + (2*(a*\[Zeta] - h) + h2)*Abs[\[Alpha]])*
+           (4*k1*((a*z - h)*\[Alpha] + h2*\[Alpha] - 3) - k2*(((a*z - h)*\[Alpha] - 2)*(a*\[Zeta] - h) + h2*\[Alpha]*(a*\[Zeta] - h) + h2))*h2)*
+         Abs[\[Alpha]]^4 + ((-E^(3*h2*\[Alpha]))*(4*((a*z - h)*\[Alpha] + h2*\[Alpha] - 2)*k1 + h2*k2) + 
+          (h2*k2*(2*(a*z - h)*\[Alpha] - 3) - 4*k1*((-(a*z - h))*\[Alpha] + h2*\[Alpha] + 2))*E^(h2*\[Alpha]) + 
+          (4*k1*((-(a*z - h))*\[Alpha] + h2*\[Alpha] - 2) - h2*k2*(2*(a*z - h)*\[Alpha] + 3))*E^(2*(a*z - h)*\[Alpha] + 3*h2*\[Alpha]) - 
+          2*((a*z - h)*\[Alpha] + h2*\[Alpha] - 2)*E^(2*h2*\[Alpha] + (2*(a*\[Zeta] - h) + h2)*Abs[\[Alpha]])*h2*k2 + 
+          2*((a*z - h)*\[Alpha] + h2*\[Alpha] + 2)*E^(2*(-h + h2 + a*z)*\[Alpha] + (2*(a*\[Zeta] - h) + h2)*Abs[\[Alpha]])*h2*k2 + 
+          E^((2*(a*z - h) + h2)*\[Alpha])*(4*k1*((a*z - h)*\[Alpha] + h2*\[Alpha] + 2) - h2*k2))*Abs[\[Alpha]]^3 + 
+        (E^((2*(a*\[Zeta] - h) + h2)*Abs[\[Alpha]])*(k2*((\[Alpha]*(a*\[Zeta] - h) - 1)*(a*z - h)*\[Alpha] - 2*(a*\[Zeta] - h)*\[Alpha] + 1) - 
+            4*k1*\[Alpha]*((a*z - h)*\[Alpha] - 3)) + (4*k1*\[Alpha]*((a*z - h)*\[Alpha] + 1) - k2*(((a*\[Zeta] - h)*\[Alpha] + 1)*(a*z - h)*\[Alpha] + 
+              2*(a*\[Zeta] - h)*\[Alpha] + ((a*z - h)*\[Alpha] + 3)*h2*\[Alpha] + 1))*E^((2*(a*z - h) + h2)*\[Alpha]) + 
+          (((\[Alpha]*(a*\[Zeta] - h) - 1)*(a*z - h)*\[Alpha] - 2*(a*\[Zeta] - h)*\[Alpha] + (3*(a*z - h)*\[Alpha] - 5)*h2*\[Alpha] + 1)*k2 + 
+            4*((a*z - h)*\[Alpha] - 1)*k1*\[Alpha])*E^(h2*\[Alpha]) + (4*k1*\[Alpha]*((a*z - h)*\[Alpha] - 1) - 
+            k2*((\[Alpha]*(a*\[Zeta] - h) - 1)*(a*z - h)*\[Alpha] - 2*(a*\[Zeta] - h)*\[Alpha] + ((a*z - h)*\[Alpha] - 3)*h2*\[Alpha] + 1))*E^(3*h2*\[Alpha]) + 
+          ((((a*\[Zeta] - h)*\[Alpha] + 1)*(a*z - h)*\[Alpha] + 2*(a*\[Zeta] - h)*\[Alpha] + (3*(a*z - h)*\[Alpha] + 5)*h2*\[Alpha] + 1)*k2 + 
+            4*((a*z - h)*\[Alpha] + 1)*k1*\[Alpha])*E^(2*(a*z - h)*\[Alpha] + 3*h2*\[Alpha]) + 
+          (((-(a*z - h))*(a*\[Zeta] - h)*\[Alpha]^2 + (a*z - h)*\[Alpha] + 2*(a*\[Zeta] - h)*\[Alpha] + 2*((a*z - h)*\[Alpha] - 1)*h2*\[Alpha] - 1)*k2 + 
+            4*(3*(a*z - h)*\[Alpha] - 5)*k1*\[Alpha])*E^(2*h2*\[Alpha] + (2*(a*\[Zeta] - h) + h2)*Abs[\[Alpha]]) + 
+          (((-(a*z - h))*((a*\[Zeta] - h)*\[Alpha] + 1)*\[Alpha] - 2*(a*\[Zeta] - h)*\[Alpha] + 2*((a*z - h)*\[Alpha] + 1)*h2*\[Alpha] - 1)*k2 + 
+            4*(3*(a*z - h)*\[Alpha] + 5)*k1*\[Alpha])*E^(2*(-h + h2 + a*z)*\[Alpha] + (2*(a*\[Zeta] - h) + h2)*Abs[\[Alpha]]) + 
+          (k2*(((a*\[Zeta] - h)*\[Alpha] + 1)*(a*z - h)*\[Alpha] + 2*(a*\[Zeta] - h)*\[Alpha] + 1) - 4*k1*\[Alpha]*((a*z - h)*\[Alpha] + 3))*
+           E^(2*(-h + 2*h2 + a*z)*\[Alpha] + (2*(a*\[Zeta] - h) + h2)*Abs[\[Alpha]]))*Abs[\[Alpha]]^2 - 
+        \[Alpha]*(E^(2*(-h + 2*h2 + a*z)*\[Alpha] + (2*(a*\[Zeta] - h) + h2)*Abs[\[Alpha]])*(4*k1*\[Alpha]^2*(a*\[Zeta] - h) - 
+            k2*(((a*\[Zeta] - h)*\[Alpha] + 1)*(a*z - h)*\[Alpha] + (a*\[Zeta] - h)*\[Alpha] + 2)) + 
+          (4*k1*\[Alpha]*(h2^2*\[Alpha]^2 + ((a*\[Zeta] - h)*\[Alpha] + 2)*(a*z - h)*\[Alpha] + (a*\[Zeta] - h)*\[Alpha] + ((a*z - h)*\[Alpha] + 
+                (a*\[Zeta] - h)*\[Alpha] + 3)*h2*\[Alpha] + 4) - k2*(h2^2*\[Alpha]^2 + ((a*\[Zeta] - h)*\[Alpha] + 1)*(a*z - h)*\[Alpha] + 
+              (a*\[Zeta] - h)*\[Alpha] + ((a*z - h)*\[Alpha] + (a*\[Zeta] - h)*\[Alpha] + 3)*h2*\[Alpha] + 2))*E^((2*(a*z - h) + h2)*\[Alpha]) + 
+          (k2*((2*(a*z - h)*\[Alpha] - 3)*h2^2*\[Alpha]^2 + (a*\[Zeta] - h)*\[Alpha] + ((2*(a*\[Zeta] - h)*\[Alpha] + 3)*(a*z - h)*\[Alpha] - 
+                3*(a*\[Zeta] - h)*\[Alpha] - 5)*h2*\[Alpha] + (\[Alpha] - \[Alpha]^2*(a*\[Zeta] - h))*(a*z - h) - 2) - 
+            4*k1*\[Alpha]*(h2^2*\[Alpha]^2 - (a*z - h)*((a*\[Zeta] - h)*\[Alpha] + 2)*\[Alpha] + (a*\[Zeta] - h)*\[Alpha] + ((-(a*z - h))*\[Alpha] + 
+                (a*\[Zeta] - h)*\[Alpha] + 3)*h2*\[Alpha] + 4))*E^(h2*\[Alpha]) + 
+          ((h2^2*\[Alpha]^2 + (\[Alpha]*(a*\[Zeta] - h) - 1)*(a*z - h)*\[Alpha] - (a*\[Zeta] - h)*\[Alpha] + ((a*z - h)*\[Alpha] + (a*\[Zeta] - h)*\[Alpha] - 
+                3)*h2*\[Alpha] + 2)*k2 + 4*(h2^2*\[Alpha]^2 + (\[Alpha]*(a*\[Zeta] - h) - 2)*(a*z - h)*\[Alpha] - (a*\[Zeta] - h)*\[Alpha] + 
+              ((a*z - h)*\[Alpha] + (a*\[Zeta] - h)*\[Alpha] - 3)*h2*\[Alpha] + 4)*k1*\[Alpha])*E^(3*h2*\[Alpha]) + 
+          (k2*((2*(a*z - h)*\[Alpha] + 3)*h2^2*\[Alpha]^2 + ((a*\[Zeta] - h)*\[Alpha] + 1)*(a*z - h)*\[Alpha] + (a*\[Zeta] - h)*\[Alpha] + 
+              ((2*\[Alpha]*(a*\[Zeta] - h) - 3)*(a*z - h)*\[Alpha] + 3*(a*\[Zeta] - h)*\[Alpha] - 5)*h2*\[Alpha] + 2) - 
+            4*k1*\[Alpha]*(h2^2*\[Alpha]^2 + (2 - \[Alpha]*(a*\[Zeta] - h))*(a*z - h)*\[Alpha] - (a*\[Zeta] - h)*\[Alpha] + ((-(a*z - h))*\[Alpha] + 
+                (a*\[Zeta] - h)*\[Alpha] - 3)*h2*\[Alpha] + 4))*E^(2*(a*z - h)*\[Alpha] + 3*h2*\[Alpha]) - 
+          E^(2*h2*\[Alpha] + (2*(a*\[Zeta] - h) + h2)*Abs[\[Alpha]])*(4*(2*(a*z - h)*\[Alpha] + 2*h2*\[Alpha] - 3)*(a*\[Zeta] - h)*k1*\[Alpha]^2 + 
+            (2*((a*\[Zeta] - h)*\[Alpha] + 2)*h2^2*\[Alpha]^2 + (\[Alpha]*(a*\[Zeta] - h) - 1)*(a*z - h)*\[Alpha] - (a*\[Zeta] - h)*\[Alpha] + 
+              2*(((a*\[Zeta] - h)*\[Alpha] + 2)*(a*z - h)*\[Alpha] + (a*\[Zeta] - h)*(-\[Alpha]) - 4)*h2*\[Alpha] + 2)*k2) + 
+          E^(2*(-h + h2 + a*z)*\[Alpha] + (2*(a*\[Zeta] - h) + h2)*Abs[\[Alpha]])*(k2*(-2*(\[Alpha]*(a*\[Zeta] - h) - 2)*h2^2*\[Alpha]^2 - 
+              2*h2*((\[Alpha]*(a*\[Zeta] - h) - 2)*(a*z - h)*\[Alpha] + (a*\[Zeta] - h)*\[Alpha] - 4)*\[Alpha] + ((a*\[Zeta] - h)*\[Alpha] + 1)*(a*z - 
+                h)*\[Alpha] + (a*\[Zeta] - h)*\[Alpha] + 2) - 4*k1*\[Alpha]^2*(2*(a*z - h)*\[Alpha] + 2*h2*\[Alpha] + 3)*(a*\[Zeta] - h)) + 
+          E^((2*(a*\[Zeta] - h) + h2)*Abs[\[Alpha]])*(k2*((\[Alpha]*(a*\[Zeta] - h) - 1)*(a*z - h)*\[Alpha] + (a*\[Zeta] - h)*(-\[Alpha]) + 2) - 
+            4*k1*\[Alpha]^2*(a*\[Zeta] - h)))*Abs[\[Alpha]] - \[Alpha]^2*(E^(2*h2*\[Alpha] + (2*(a*\[Zeta] - h) + h2)*Abs[\[Alpha]])*
+           ((2*h2^2*\[Alpha]^2 + (a*z - h)*\[Alpha] + 2*((a*z - h)*\[Alpha] - 1)*h2*\[Alpha] - 1)*k2 + 4*(2*(a*z - h)*\[Alpha] + 2*h2*\[Alpha] - 3)*k1*
+             \[Alpha]) + (k2*((-(a*z - h))*\[Alpha] + (2*(a*z - h)*\[Alpha] - 3)*h2*\[Alpha] + 1) - 4*k1*\[Alpha]*((-(a*z - h))*\[Alpha] + h2*\[Alpha] + 1))*
+           E^(h2*\[Alpha]) + (((a*z - h)*\[Alpha] + (2*(a*z - h)*\[Alpha] + 3)*h2*\[Alpha] + 1)*k2 + 4*((a*z - h)*\[Alpha] - h2*\[Alpha] + 1)*k1*\[Alpha])*
+           E^(2*(a*z - h)*\[Alpha] + 3*h2*\[Alpha]) + ((2*h2^2*\[Alpha]^2 - (a*z - h)*\[Alpha] + 2*((a*z - h)*\[Alpha] + 1)*h2*\[Alpha] - 1)*k2 + 
+            4*(2*(a*z - h)*\[Alpha] + 2*h2*\[Alpha] + 3)*k1*\[Alpha])*E^(2*(-h + h2 + a*z)*\[Alpha] + (2*(a*\[Zeta] - h) + h2)*Abs[\[Alpha]]) + 
+          ((a*z - h)*\[Alpha] + h2*\[Alpha] + 1)*E^((2*(a*z - h) + h2)*\[Alpha])*(4*k1*\[Alpha] - k2) + ((a*z - h)*\[Alpha] + h2*\[Alpha] - 1)*
+           E^(3*h2*\[Alpha])*(k2 + 4*k1*\[Alpha]) + E^((2*(a*\[Zeta] - h) + h2)*Abs[\[Alpha]])*((-(a*z - h))*\[Alpha]*k2 + k2 + 4*k1*\[Alpha]) + 
+          E^(2*(-h + 2*h2 + a*z)*\[Alpha] + (2*(a*\[Zeta] - h) + h2)*Abs[\[Alpha]])*((a*z - h)*\[Alpha]*k2 + k2 - 4*k1*\[Alpha]))))/
+     ((k2*(-2*E^(2*h2*\[Alpha])*(2*h2^2*\[Alpha]^2 + 1) + E^(4*h2*\[Alpha]) + 1) - 4*k1*\[Alpha]*(4*E^(2*h2*\[Alpha])*h2*\[Alpha] - E^(4*h2*\[Alpha]) + 1))*
+      Abs[\[Alpha]]^2)]; 
+tR = Table[z = nodes[[i]]; Int = (1/Sqrt[1 - \[Zeta]^2])*ChebyshevT[j, \[Zeta]]*(Subscript[f, 1]/2); 
+     NIntegrate[Int, {\[Zeta], -1, 1}, {\[Alpha], -Infinity, Infinity}, Method -> "LocalAdaptive", MaxRecursion -> 5, 
+      PrecisionGoal -> 10, AccuracyGoal -> 10, Exclusions -> {\[Zeta] == -1, \[Zeta] == 1, \[Alpha] == 0}], {i, Nm}, {j, Nm}]; 
+RR = LinearSolve[tS + tR, Table[Pi, {i, Nm}]]; 
+dg[y_] := Sum[RR[[i]]*ChebyshevT[i, y], {i, Nm}]; 
+y =. 
+file = OpenWrite["output_placeholder"]; 
+Write[file, {a, h, dg[1], dg[-1]}]; 
+Close[file]; 

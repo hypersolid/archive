@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf‐8"?> 
+<createOrderRequest xmlns="http://www.sheepla.pl/webapi/1_0"> 
+  <authentication>    
+    <apiKey>f8a2cbeb4bce4e61ab2cb2f75b7620bd</apiKey> 
+  </authentication> 
+  <orders> 
+    <order> 
+      <orderValue>299</orderValue> 
+      <orderValueCurrency>PLN</orderValueCurrency> 
+      <externalDeliveryTypeId>07</externalDeliveryTypeId> 
+      <externalDeliveryTypeName>DHL AH</externalDeliveryTypeName> 
+      <externalPaymentTypeId>pp</externalPaymentTypeId> 
+      <externalPaymentTypeName>PayPal</externalPaymentTypeName> 
+      <externalCarrierName>DHL Poland</externalCarrierName> 
+      <externalCarrierId>dhl02</externalCarrierId> 
+      <externalCountryId>PL</externalCountryId> 
+      <externalBuyerId>b123</externalBuyerId> 
+      <externalOrderId>ah‐200‐abc</externalOrderId> 
+      <shipmentTemplate>122</shipmentTemplate> 
+      <comments>Some info about delivery</comments> 
+      <createdOn>1900‐01‐01T01:01:01+01:00</createdOn> 
+      <deliveryPrice>12</deliveryPrice> 
+      <deliveryPriceCurrency>PLN</deliveryPriceCurrency>       
+      <deliveryAddress> 
+        <street>Orba 1 Street</street> 
+        <zipCode>01‐234</zipCode> 
+        <city>Hel</city> 
+        <countryAlpha2Code>1045</countryAlpha2Code> 
+        <firstName>Jean</firstName> 
+        <lastName>Kowalski</lastName> 
+        <companyName>LTD JK</companyName> 
+        <phone>963852741</phone> 
+        <email>jean.kowalski@orba.pl</email> 
+      </deliveryAddress> 
+    </order> 
+  </orders> 
+</createOrderRequest> 
+

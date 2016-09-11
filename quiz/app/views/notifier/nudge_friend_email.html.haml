@@ -1,0 +1,8 @@
+- content_for :greetings do
+  Hey #{@friend.name},
+
+Your wingman #{@user.name} has just sent you 
+#{pluralize(@amount, 'credit')}.
+%br
+%br
+= @message

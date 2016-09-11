@@ -1,0 +1,156 @@
+/*base*/
+img 
+{
+	border: none;
+	padding:0px;	
+	margin:0;
+}
+a 
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color:darkblue;
+	text-decoration: none;
+}
+a:hover 
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color:darkblue;
+	text-decoration: none;
+}
+a:visited
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color:darkblue;
+	text-decoration: none;
+}
+/*/base*/
+/*head*/
+.h_table
+{
+background-image:url(../images/sp_h_wl.jpg);
+background-repeat:repeat;
+}
+.head_sp_lwl
+{
+width:5%;
+}
+.head_sp_rwl
+{
+width:25%;
+}
+.head_sp_b
+{
+background-image:url(../images/sp_h_b.jpg);
+background-repeat:repeat;
+width:70%;
+}
+/*/head*/
+
+
+
+/*foot*/
+.foot
+{
+border-top:solid;
+border-top-width:1px;
+border-top-color:#eeeeee;
+color:gray;
+font-size:12px;
+padding:0;
+margin:0;
+width:100%;
+}
+a.afoot,a.afoot:link,a.afoot:hover,a.afoot:visited
+{
+color:grey;
+}
+/*/foot*/
+.AF 
+{
+	color:#ffffff;
+	font-family: Tahoma;
+	font-size: 8px;
+	text-decoration: none;
+}
+.bgtop 
+{
+	background-repeat: repeat-x;
+}
+/*Authentification*/
+.AuthLP
+{
+font-size:14px;
+color:#888888;
+padding-left:5px;
+vertical-align:top;
+}
+.AuthMessage
+{
+	color:#888888;
+	font:bold;
+	font-size:14px;
+}
+.AuthMTable
+{
+border:none;
+background-color:#ccccc;
+background-image:none;
+}
+.AuthInput
+{
+	font-size:14px;
+	color:#444444;
+	width:83%;
+	background-color:#eeeeef;
+}
+/*/Authentification*/
+a.Menu:visited
+{
+   color:#000000;	
+}
+a.Menu:hover
+{    
+   color:#000000;	
+}
+a.Menu 
+{
+    color:#000000;
+	font-size:16px;
+    text-decoration:none;
+}
+/*menu*/
+.mitem
+{
+padding-left:10px;
+padding-top:5px;
+height:20px;
+background-color:#eeeeee;
+border:solid;
+border-color:#cccccc;
+border-bottom-color:#eeeeee;
+border-width:1px;
+}
+.mspacer
+{
+height:20px;
+background-color:#eeeeee;
+border-left:solid;
+border-right:solid;
+border-top:solid;
+border-top-width:1px;
+border-left-width:1px;
+border-right-width:1px;
+border-color:#cccccc;
+}
+.menu_ts
+{
+height:10px;
+}
+/*/menu*/
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+%html
+  %head
+    %title GameShow
+    %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
+
+    = stylesheet_link_tag "application", "ladders", "quiz", "header", "wingmen_panel", "sign_in", "popups", "profile", :cache => true
+    = javascript_include_tag :all, :cache => true
+
+    = csrf_meta_tag
+    = yield :js_adds
+
+    = javascript_include_tag "http://js.pusherapp.com/1.9/pusher.min.js"
+    = javascript_include_tag "http://use.typekit.com/znx6azl.js" unless Rails.env.test?
+    :javascript
+      try{Typekit.load();}catch(e){}
+
+    = yield :head
+
+    = render :partial => "/layouts/ga" if Rails.env.production? # Google Analytics js
+
+  %body
+    - unless Rails.env == 'test'
+      :javascript
+        // initialize the BlockUI plugin for AJAX calls
+        $.blockUI.defaults.message = null;
+        $.blockUI.defaults.overlayCSS.opacity = 0;
+        $(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
+    
+    - if signed_in?
+      #user_variables{'data-invites_left' => current_user.invites_left, 'data-page' => params[:controller], 'data-user_id' => current_user.id}
+      :javascript
+        var signed_in = true;
+        var ultimatePayParams = {
+        "method" : "StartOrderFrontEnd",
+        "display" : "Lightbox",
+        "sn" : "#{Playspan.config["sn"]}",
+        "completeurl" : "http://#{request.host}/ladders",
+        "incompleteurl" : "http://#{request.host}/payments/incomplete",
+        "livemode" : "#{Rails.env.production? ? "T" : "F"}",
+        "currency" : "GBP",
+        "userid" : "#{current_user.id}",
+        "email" : "#{current_user.email}",
+        "xdurl" : "http://#{request.host}/xd.html",
+        "merchtrans" : "#{current_user.id}-#{current_user.payments.count}"
+        };
+
+    #fb-root
+      - if facebook_signed_in?
+        :javascript
+          // http://developers.facebook.com/docs/reference/dialogs/requests/
+          show_native_facebook_invites_dialog = function(e){
+            FB.ui({
+              method: 'send',
+              display: 'iframe',
+              link: "http://#{request.host}/quiz/quiz?ref_id=#{current_user.id}",
+              picture: 'http://www.gameshow.co.uk/images/header/logo.jpg',
+              name: 'GameShow',
+              description: 'The General Knowledge ladder where you can win big cash prizes. Play now!'
+            }, 
+            function(response) {
+              if(response){ // user sent the message
+                $.post("/facebook_invites");
+              }
+            });
+
+            if (e) {
+              e.preventDefault();
+            };
+          };
+
+      - else
+        :javascript
+          $('a#facebook_invites_button').live("click", function(e){
+            $.cookie('dialog', 'facebook_invites');
+            location.href = '#{user_omniauth_authorize_path(:facebook)}';
+            return false;
+          });
+
+      :javascript
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : #{FACEBOOK[:app_id]}, // App ID
+            channelURL : '//#{request.host}/channel.html', // Channel File
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            oauth      : true, // enable OAuth 2.0
+            xfbml      : true  // parse XFBML
+          });
+
+          // Additional initialization code here
+          FB.getLoginStatus(function(response) {
+            if (response.status === 'connected' && #{facebook_signed_in?}) {
+              $('#facebook_invites_button').live("click", show_native_facebook_invites_dialog);
+              if ($.cookie('dialog') == 'facebook_invites'){
+                $.cookie('dialog', '');
+                show_native_facebook_invites_dialog();
+              };
+            };
+          });
+        };
+
+        // Load the SDK Asynchronously
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+
+    #background{:class => params[:controller]}
+      = yield :header
+
+      .container
+        #alerts_container
+          %p.notice
+            = notice
+          %p.alert
+            = alert
+
+        = yield
+        .clear
+
+    #ui_dialog.hidden
+    #div_b{:style => "display:none;padding:10px;position:fixed;top: 50%;left: 50%; margin-top: -212px; margin-left: -351px; z-index:1001;"}

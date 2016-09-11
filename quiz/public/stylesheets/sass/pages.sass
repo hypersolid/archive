@@ -1,0 +1,50 @@
+@import compass/css3/border-radius
+@import compass/css3/box-shadow
+@import compass/css3/text-shadow
+@import compass/css3/opacity
+
+$i: "/images/pages/"
+
+.contentPage
+  width: 990px
+  margin: 8px auto 0
+  .title
+    color: #fefefe
+    font-size: 19px
+    display: block
+    width: 950px
+    height: 54px
+    line-height: 55px
+    padding-left: 30px
+    background: url($i + "titlePageBg.png") repeat
+    +border-radius(3px 3px 0 0)
+    //behavior: url(/PIE.htc)
+  .content
+    width: 980px
+    padding: 16px 0px
+    height: 100%
+    background: url($i + "profileWBg.png") repeat
+    .article
+      border-bottom: 1px solid #7b7c7e
+      margin-bottom: 25px
+      padding: 0 29px 13px 29px
+      font-size: 14px
+      .articleTitle
+        font-size: 18px
+      ul
+        list-style-type: none
+        margin-top: 11px
+        li
+          background: url($i + "labelCircle.png") no-repeat 0 7px
+          padding-left: 11px
+          font-size: 14px
+          margin-bottom: 13px
+        .blueItem
+          margin-left: 19px
+          color: #68d3ff
+          background: url($i + "CircleBlue.png") no-repeat 0 7px
+      ol
+        margin-left: 20px
+
+.noBorder
+  border: none !important

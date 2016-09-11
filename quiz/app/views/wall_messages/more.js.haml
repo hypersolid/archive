@@ -1,0 +1,5 @@
+$('#wall#{@user.id} .more').remove();
+$('#wall#{@user.id}').append('#{escape_javascript(render(@messages))}');
+
+- if @show_more_link
+  $('#wall#{@user.id}').append('<div class="more">#{escape_javascript(link_to('Show more', more_wall_messages_path(:user_id => @user.id, :message_id => @messages.last.id, :messages_count => @messages.size), :remote => true))}</div>');

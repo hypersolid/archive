@@ -1,0 +1,9 @@
+- if Rails.env=='production' || AD
+  %script{:type=>"text/javascript"}
+    google_ad_client = "ca-pub-2757095090042676";
+    google_ad_slot = "1328280037";
+    google_ad_width = 468;
+    google_ad_height = 60;
+  %script{:type=>"text/javascript", :src=>"http://pagead2.googlesyndication.com/pagead/show_ads.js"}
+- else
+  %img{:src=>"#{MEDIA_HOST}/images/test.png"}

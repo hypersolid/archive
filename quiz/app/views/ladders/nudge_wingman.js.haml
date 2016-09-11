@@ -1,0 +1,5 @@
+$('#ui_dialog').dialog('close');
+$('.creditsBox .visible').html('#{pluralize(current_user.credits, 'credit')}');
+$('.creditsBox .visible').fadeOut(500);
+setTimeout("$('.creditsBox .visible').html('#{pluralize(current_user.reload.credits, 'credit')}')",500);
+$('.creditsBox .visible').fadeIn(500, function(){$(this).css("display", "");});

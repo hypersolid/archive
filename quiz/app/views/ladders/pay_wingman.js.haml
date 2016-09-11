@@ -1,0 +1,14 @@
+$('#nudge_friend_dialog').dialog('close');
+
+- if @credits_to_buy > 0
+  ultimatePayParams["mirror"] = "nudge";
+  ultimatePayParams["amountdesc"] = "#{pluralize(@credits_to_buy, 'Credit')}";
+  ultimatePayParams["amount"] = "#{cost_pounds(@credits_to_buy * current_tournament.cost_pence / 100.0)}";
+  ultimatePayParams["hash"] = "#{Playspan.hash(current_user.id, "GBP", cost_pounds(@credits_to_buy * current_tournament.cost_pence / 100.0), "#{current_user.id}-#{current_user.payments.count}")}";
+
+  ulp.ultimatePay = true;
+  ulp.displayUltimatePay();
+- else
+  $('.creditsBox .visible').fadeOut(500);
+  setTimeout("$('.creditsBox .visible').html('#{pluralize(current_user.reload.credits, 'credit')}')",500);
+  $('.creditsBox .visible').fadeIn(500, function(){$(this).css("display", "");});

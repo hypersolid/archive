@@ -1,0 +1,7 @@
+$('.creditsBox .visible').fadeOut(500);
+setTimeout("$('.creditsBox .visible').html('#{pluralize(current_user.reload.credits, 'credit')}')",500);
+$('.creditsBox .visible').fadeIn(500, function(){$(this).css("display", "");});
+
+$("#wingmen_panel.ladder").html('#{raw escape_javascript(render('/ladders/blocks/wingmen_panel'))}');
+$("#wingmen_panel.quiz").html('#{raw escape_javascript(render('/ladders/blocks/game_over_wingmen_panel'))}');
+$('#facebook_invites_dialog').dialog('close');

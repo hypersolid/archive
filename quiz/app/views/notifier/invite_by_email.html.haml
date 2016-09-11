@@ -1,0 +1,6 @@
+- content_for :header do
+  From #{@relation.user.name}:
+- content_for :greetings do
+  Hey, #{@relation.name}
+
+= @message

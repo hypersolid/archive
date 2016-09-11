@@ -1,0 +1,21 @@
+#ladders_wingmen_popup.popup.hidden
+  .wrapper
+    .pointer.right
+    .close
+    .content
+      %h3 Get free credits!
+      
+      Invite your friends to be your wingmen, and you’ll get free credits straight away.
+      %br
+      You also get their scores added to yours.
+      %br
+      - if current_user.ladder.can_benefit_from_wingmen?
+        - benefit = current_user.ladder.possible_benefit_from_wingmen
+        Let’s say you invited two wingmen who each scored the same as you, then you would be coming #{benefit[:position].ordinalize} and winning #{pounds(benefit[:prize])}.
+        %br
+
+      %a#email_invite_link{:href => "#"} Invite friends now!
+
+      %a.next_step.fr{:href => '#'}
+        OK
+      .clear

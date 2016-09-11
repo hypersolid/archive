@@ -1,0 +1,33 @@
+= render 'admin/shared/menu'
+
+%table
+  - @fights.each do |fight|
+    - i1,i2 = fight.brands
+    - unless i1.nil? || i2.nil?
+      %tr
+        %td
+          - if fight.featured
+            %b
+              =fight.id
+          - else 
+            =fight.id
+        %td
+          =fight.votes
+        %td
+          =link_to fight.title,fight.url
+          (
+          =link_to 'edit', edit_admin_fight_path(fight)
+          |
+          =link_to 'I', edit_admin_brand_path(i1)
+          ,
+          =link_to 'II', edit_admin_brand_path(i2)
+          )
+        %td
+          =fight.tag_list.blank? ? 'none' : fight.tag_list
+        %td
+          =fight.created_at.to_date
+    %tr
+      %td
+        =link_to 'Delete',admin_fight_path(fight),:method=>'delete',:confirm=>'Are you shure?'
+        
+= render 'admin/shared/menu'

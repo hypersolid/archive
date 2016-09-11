@@ -1,0 +1,89 @@
+source 'http://rubygems.park.rambler.ru'
+
+# NOTE: Add new gems following alphabetic order
+# Tip: You may use some plugins for your editor
+gem 'active_model_serializers'
+gem 'activejob-lock'
+gem 'ancestry'
+gem 'bson_ext'
+gem 'core', '= 1.1.52.6', path: 'vendor/mate/core-1.1.52.6'
+gem 'danthes', path: 'vendor/mate/danthes-2.0.1'
+gem 'delayed_paperclip'
+gem 'devise-encryptable'
+gem 'devise'
+gem 'differ'
+gem 'dotenv-rails'
+gem 'excon'
+gem 'faye-redis'
+gem 'foreman'
+gem 'g_utils', git: 'git@gitlab.rambler.ru:gazeta/g_utils.git', branch: :master
+gem 'gon_responder'
+gem 'gon'
+gem 'hashie'
+gem 'hiredis'
+gem 'htmlentities'
+gem 'lists', '= 1.1.52.6', path: 'vendor/mate/lists-1.1.52.6'
+gem 'mongo', '~> 1.11'
+gem 'mysql2', '~> 0.3.18'
+gem 'newrelic_rpm'
+gem 'paper_trail', '>= 4.0.0'
+gem 'paperclip'
+gem 'paranoia'
+gem 'pg_search'
+gem 'pg'
+gem 'plugins', '= 1.1.52.6', path: 'vendor/mate/plugins-1.1.52.6'
+gem 'rack-cors'
+gem 'rails-i18n'
+gem 'rails', '~> 4.2.0'
+gem 'redcarpet'
+gem 'redis-namespace'
+gem 'redis-objects'
+gem 'redis'
+gem 'responders'
+gem 'resque-lock'
+gem 'resque-multi-job-forks'
+gem 'resque-scheduler'
+gem 'resque-sentry'
+gem 'resque', '~> 1.0'
+gem 'sentry-raven'
+gem 'slim-rails'
+gem 'tags', '= 1.1.52.6', path: 'vendor/mate/tags-1.1.52.6'
+gem 'thin'
+gem 'topics', '= 1.1.52.6', path: 'vendor/mate/topics-1.1.52.6'
+gem 'vahter', git: 'git@gitlab.rambler.ru:gazeta/vahter.git'
+gem 'websocket-driver', '< 0.5' # FIXME: danthes configuration problems on newer ws-driver
+gem 'widgets', '= 1.1.52.6', path: 'vendor/mate/widgets-1.1.52.6'
+gem 'will_paginate'
+gem 'wisper'
+gem 'yard', require: false
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl', '~> 4.0'
+  gem 'faker'
+end
+
+group :development do
+  gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'capistrano', require: false
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rbenv', require: false
+end
+
+group :test do
+  gem 'webmock'
+  gem 'vcr'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers', require: false
+  gem 'test_after_commit'
+  gem 'simplecov', require: false
+  gem 'rubocop', require: false
+end
+
+group :staging1, :staging2, :production do
+  gem 'eye'
+  gem 'unicorn'
+end

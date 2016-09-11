@@ -1,0 +1,7 @@
+- case @payment.mode
+  - when "pay_and_play"
+    location.href = "#{new_quiz_url}";
+  - when "nudge"
+    $.ajax({type: 'POST', url: "#{nudge_wingman_ladders_url}", dataType: "script"});
+  - when "pay"
+    location.href = "#{ladders_url}";

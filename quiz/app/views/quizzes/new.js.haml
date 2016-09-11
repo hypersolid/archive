@@ -1,0 +1,11 @@
+- unless current_tournament.active?
+  location.href = "#{root_url}";
+- else
+  - if user_signed_in?
+    - unless current_quiz
+      $('#pay_dialog').dialog('open');
+    - else
+      location.href = "#{quiz_quiz_url}";
+
+  - else
+    location.href = "#{new_user_session_url}";

@@ -1,0 +1,16 @@
+- if @questions.empty?
+  %h2 This user has no passed questions
+
+- else
+  %br
+  %table
+    %tr
+      %th Difficulty
+      %th Category
+      %th Question
+
+    - for q in @questions
+      %tr
+        %td= q.difficulty
+        %td= q.category.name
+        %td= link_to q.question, edit_admin_question_path(q)

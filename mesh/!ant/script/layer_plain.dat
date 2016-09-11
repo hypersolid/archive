@@ -1,0 +1,163 @@
+/UNITS,SI
+!**** TITLE & CONSTANTS *****************************************************
+/title, Crack in coated layer
+!**** PARAMETERS **************************************************************
+!constants
+WIDTH=3
+FORCE=1e6
+TimeStep=1e-5
+TimeForce=5e-5
+TimeTicks=500e-5
+Damping=1e-5
+
+! comment out following lines in batch mode
+!LHEIGHT=0.01
+!HEIGHT=0.5
+!CCENTER=0.48
+!AAA=0.001
+!ACTUATOR=0.95
+!SENSOR_OFFSET=0.05
+
+! Base
+ex1=70e9
+nu1=.34
+dens1=2700
+
+! Coating
+ex2=210e9
+nu2=.28
+dens2=7700
+
+! Variables
+DEPTH=CCENTER - AAA
+SIZE=2*AAA
+A=AAA
+TIPX=SIZE/100
+TIPY=SIZE/10
+SENSOR=ACTUATOR+SENSOR_OFFSET
+CENTER=WIDTH/2
+RANGE=WIDTH/4
+
+!**** MATERIAL PROPERTIES *****************************************************
+/prep7 
+
+ET,1,PLANE183
+ET,2,PLANE183
+
+MPTEMP,1,1
+
+MPDATA,EX,1,,ex1
+MPDATA,PRXY,1,,nu1
+mp,dens,1,dens1 
+
+MPDATA,EX,2,,ex2
+MPDATA,PRXY,2,,nu2
+mp,dens,2,dens2
+
+MP,DAMP,1,Damping
+MP,DAMP,2,Damping
+
+!*** GEOMETRY *****************************************************************
+!keypoints
+k,1,-CENTER, LHEIGHT
+k,2,-CENTER+ACTUATOR, LHEIGHT
+k,3,-CENTER+SENSOR, LHEIGHT
+k,4,CENTER, LHEIGHT
+k,5,CENTER, 0
+k,6,-CENTER, 0
+
+k,11,-CENTER, -HEIGHT
+k,12,CENTER, -HEIGHT
+
+!lines
+lstr,1,2
+lstr,2,3
+lstr,3,4
+lstr,4,5
+lstr,5,6
+lstr,6,1
+lstr,6,11
+lstr,11,12
+lstr,12,5
+
+AL,1,2,3,4,5,6
+AL,5,7,8,9
+
+!*** LOADS ******************************************************************** 
+
+DL,8,,ALL,0
+
+!*** MESHING *****************************************************************                
+MSHAPE,0,2D
+
+asel,s,area,,1
+aatt,2
+asel,s,area,,2
+aatt,1
+asel,all
+
+lesize,5,,,100
+
+amap,1,1,4,5,6
+amap,2,5,6,11,12
+
+!AESIZE,1,LHEIGHT*2
+
+!AESIZE,2,HEIGHT
+!SMRTSIZE,OFF
+
+AMESH,ALL
+
+!***SOLUTION***************************************************************************************************               
+/SOLU           
+ANTYPE,TRANS
+TRNOPT,REDUC
+nsel,all
+M,ALL,UY
+
+DELTIM,TimeStep
+
+!step by step problem definition
+TIME,0.000
+FK,2,FY,-FORCE*10
+LSWRITE,1
+
+TIME,TimeForce
+FKDELE,2,ALL
+LSWRITE,2
+
+TIME,TimeTicks
+LSWRITE,3
+
+LSSOLVE,1,3,1
+FINISH
+
+!***POSTPROCESSING***************************************************************************************************               
+/POST26
+FILE,'file','rdsp','.'  
+
+KSEL,S,,,2
+NSLK,S
+NSOL,2,ndnext(0),U,Y,S1
+STORE,MERGE
+
+KSEL,S,,,3
+NSLK,S
+NSOL,3,ndnext(0),U,Y,S2
+STORE,MERGE
+
+!***EXPORTING********************************************************************************************************               
+*GET,size,VARI,,NSETS 
+
+*dim,A1,array,size
+*dim,A2,array,size
+*dim,A3,array,size
+
+VGET,A1(1),1
+VGET,A2(1),2
+VGET,A3(1),3
+
+*CFOPEN,data,dat
+*VWRITE,A1(1),A2(1),A3(1)        ! Write array in given format to file ".dat"
+(f12.6,f20.8,f20.8)
+*CFCLOSE

@@ -1,0 +1,20 @@
+.floatleft{:id=>"battle#{n}"}
+  .picture
+    =image_tag brand.picture(:medium), :class=>"bordered"
+    %div{:id=>"plus#{n}", :class=>show_on_vote(@vote,n)}
+      %img{:src=>"#{MEDIA_HOST}/images/design/laurel_leaves.png", :alt=>"#{@fight.short_title} - #{brand.verb}"}
+    %div{:id=>"share#{n}", :class=>hide_on_vote(@other_vote,n)}
+      - if @vote == 0
+        .floatright.onplus{:id=>"like#{n}"}
+          - if FB      
+            %fb:like{:href=>@paths[n],
+                    :colorscheme=>'dark',
+                    :send=>"false",
+                    "data-width"=>"350",
+                    "data-show-faces"=>"false",
+                    "data-layout"=>"button_count", 
+                    :style=>'overflow:hidden'}
+      .floatright.onplus{:class=>hide_on_vote(@vote,n)}
+        to vote for <i>#{@fight.send("brand#{n}").humanize_verb}</i>, click &ndash;
+      .floatright{:id=>"plusmessage#{n}", :class=>show_on_vote(@vote,n)}
+        you've voted for <i>#{@fight.send("brand#{n}").humanize_verb}</i>, thank you 

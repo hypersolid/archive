@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^controversialmatter.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www.controversialmatter.com$
+RewriteRule ^.*$ "http\:\/\/127\.0\.0\.1\:12002%{REQUEST_URI}" [P,QSA,L]
+

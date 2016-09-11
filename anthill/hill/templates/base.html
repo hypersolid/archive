@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="author" content="Alexander Krasnoschekov" />
+<meta name="keywords" content="distributed computing, python, django, artificial neural networks, solid mechanics" />
+<meta name="description" content="open infrastructure for distributed calculations" />
+
+<title>The open infrastructure for distributed computing "Anthill"</title>
+
+<link rel="stylesheet" type="text/css" media="screen" href="/static/css/base.css" />
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/base.js"></script>
+
+{% block head %}{% endblock %}
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="/">ANT HILL</a></h1>
+			<p>Platform for distributed computing</p>
+		</div>
+	</div>
+	<!-- end #header -->
+	
+	<div id="page">
+	  {% if flash %}<div id="flash">{{ flash }}</div>{% endif %}
+		<div id="content">
+			{% block content %}{% endblock %}
+		</div>
+		<!-- end #content -->
+		<div id="sidebar">
+			<ul>
+			  {% block sidebar %}{% endblock %}	
+			</ul>
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p> &copy; 2010-2011 Krasnosiokov А., Department "IT", DGTU </p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

@@ -1,0 +1,92 @@
+= form_for(@tournament, :url => (@tournament.new_record? ? admin_tournaments_path : admin_tournament_path(@tournament))) do |f|
+  - if @tournament.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@tournament.errors.count, 'error')} prohibited this user from being saved:"
+      %ul
+      - @tournament.errors.full_messages.each do |msg|
+        %li= msg
+  %hr
+  .field
+    = f.label :starts_at
+    = f.datetime_select :starts_at
+  .field
+    = f.label :ends_at
+    = f.datetime_select :ends_at
+  %hr
+
+  .field
+    = f.label :time_limit, "Countdown timer"
+    = f.select :time_limit, 1..60
+    seconds
+  .field
+    = f.label :default_avg_time, "Default average time for questions"
+    = f.select :default_avg_time, 1..60
+    seconds
+  .field
+    = f.label :default_best_time, "Default best time for questions"
+    = f.select :default_best_time, 1..60
+    seconds
+
+  .field
+    = f.label :existing_user_credits, "Existing user gets when the tournament starts"
+    = f.select :existing_user_credits, 0..50
+    credits
+
+  .field
+    = f.label :new_user_credits, "New user gets when the tournament starts"
+    = f.select :new_user_credits, 0..50
+    credits
+
+  .field
+    = f.label :passes, "User gets"
+    = f.select :passes, 0..10
+    passes
+
+  .field
+    = f.label :cost_pence, "Cost of each game"
+    = f.text_field :cost_pence, :size => 3
+    pence
+
+  .field
+    = f.label :points_per_second
+    = f.text_field :points_per_second, :size => 5
+  %hr
+
+  Scoring 
+  %br
+  .field
+    = f.radio_button :deploy_average_scoring, false
+    = f.label :deploy_average_scoring_false, "Deploy zero starting scores for each spare space for a wingman"
+    %br
+    = f.radio_button :deploy_average_scoring, true
+    = f.label :deploy_average_scoring_true, "Deploy average scoring for each spare space for a wingman"
+  %hr
+
+  .field
+    = f.label :best_time_bonus
+    = f.text_field :best_time_bonus, :size => 5
+    points
+  .field
+    = f.label :avg_time_bonus
+    = f.text_field :avg_time_bonus, :size => 5
+    points
+  %hr
+
+  .field
+    = f.label :tournament_counters, "Difficulty Settings"
+    %br
+    = f.fields_for :tournament_counters do |counters_form|
+      = render "tournament_counter_fields", :f => counters_form
+    %p= link_to_add_fields "Add Counter", f, :tournament_counters
+  %hr
+
+  .field
+    = f.label :prizes
+    %br
+    - f.fields_for :prizes do |prize_form|
+      = render "prize_fields", :f => prize_form
+    %p= link_to_add_fields "Add Prize", f, :prizes
+  %hr
+
+  .actions
+    = f.submit

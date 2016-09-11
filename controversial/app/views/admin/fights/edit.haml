@@ -1,0 +1,30 @@
+= render 'admin/shared/menu'
+= form_for @fight, :url => admin_fight_path(@fight), :html => { :multipart => true }, :method=>"PUT" do |f|
+
+  %p
+    =f.label :title
+    %br
+    =f.text_field :title
+
+  %p
+    =f.label :question
+    %br
+    =f.text_field :question
+    
+  %p
+    =f.label :description
+    %br
+    =f.text_area :description, :rows=>5, :cols=>100
+
+  %p
+    =f.label :tag_list
+    %br
+    =f.text_field :tag_list
+
+  %p    
+    =f.label :featured
+    =f.check_box :featured, :checked=>@fight.featured
+
+  = f.submit
+  
+= render 'admin/shared/menu'

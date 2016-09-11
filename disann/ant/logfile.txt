@@ -1,0 +1,931 @@
+2012-05-22 19:43:34,078 - START ANT
+2012-05-22 19:44:09,030 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:105 - ~ Upload error.
+2012-05-22 19:44:46,983 - START ANT
+2012-05-22 19:44:46,983 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-23 01:26:57,921 - START ANT
+2012-05-23 02:19:47,000 - START ANT
+2012-05-23 02:21:17,030 - START ANT
+2012-05-23 02:21:17,030 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #25.
+2012-05-23 02:23:57,000 - START ANT
+2012-05-23 14:05:33,780 - START ANT
+2012-05-23 14:09:38,265 - START ANT
+2012-05-23 14:09:38,265 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #27.
+2012-05-23 18:39:10,078 - START ANT
+2012-05-23 18:56:07,217 - START ANT
+2012-05-23 18:57:38,515 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:102 - Server has gone OFFLINE
+2012-05-23 18:57:38,515 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:108 - ~ Upload error.
+2012-05-24 01:02:30,983 - START ANT
+2012-05-24 01:02:30,983 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #29.
+2012-05-24 01:02:51,842 - START ANT
+2012-05-24 01:04:00,312 - START ANT
+2012-05-24 01:04:00,312 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #1.
+2012-05-24 01:06:48,890 - START ANT
+2012-05-24 01:06:48,890 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #1.
+2012-05-24 01:13:08,703 - START ANT
+2012-05-24 01:13:08,703 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #1.
+2012-05-24 01:17:16,592 - START ANT
+2012-05-24 01:17:16,640 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #1.
+2012-05-24 01:18:00,437 - START ANT
+2012-05-24 01:18:00,437 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #1.
+2012-05-24 01:18:01,717 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:111 - ~ Upload error.
+2012-05-24 01:18:02,937 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:111 - ~ Upload error.
+2012-05-24 01:18:04,155 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:111 - ~ Upload error.
+2012-05-24 01:18:05,421 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:111 - ~ Upload error.
+2012-05-24 01:18:06,515 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:111 - ~ Upload error.
+2012-05-24 01:18:07,562 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:111 - ~ Upload error.
+2012-05-24 01:18:08,608 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:111 - ~ Upload error.
+2012-05-24 01:18:10,015 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:111 - ~ Upload error.
+2012-05-24 01:18:11,405 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:111 - ~ Upload error.
+2012-05-24 01:18:12,515 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:111 - ~ Upload error.
+2012-05-24 01:18:13,671 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:111 - ~ Upload error.
+2012-05-24 01:18:14,921 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:111 - ~ Upload error.
+2012-05-24 01:18:16,140 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:111 - ~ Upload error.
+2012-05-24 01:18:17,671 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:111 - ~ Upload error.
+2012-05-24 01:18:18,967 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:111 - ~ Upload error.
+2012-05-24 01:18:51,250 - START ANT
+2012-05-24 01:18:51,250 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #1.
+2012-05-24 01:18:52,500 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:18:54,092 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:18:55,578 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:18:57,187 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:18:58,687 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:18:59,780 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:01,046 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:02,296 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:03,592 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:04,967 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:06,125 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:07,546 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:09,062 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:10,296 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:11,375 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:12,796 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:13,905 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:15,187 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:16,280 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:17,592 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:19,155 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:20,467 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:21,655 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:22,967 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:24,171 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:25,562 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:26,765 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:27,858 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:29,046 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:30,155 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:31,390 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:32,937 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:34,467 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:36,046 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:19:37,592 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:20:37,375 - START ANT
+2012-05-24 01:20:37,375 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #1.
+2012-05-24 01:20:39,687 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:20:41,562 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:20:42,750 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:20:44,046 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:20:45,296 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:20:46,405 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:20:47,562 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 01:21:33,437 - START ANT
+2012-05-24 01:21:33,437 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #1.
+2012-05-24 01:22:02,515 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 01:22:02,515 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 02:14:32,155 - START ANT
+2012-05-24 02:19:48,092 - START ANT
+2012-05-24 02:19:48,092 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #2.
+2012-05-24 02:20:49,078 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:20:49,078 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 02:37:25,030 - START ANT
+2012-05-24 02:37:28,342 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:29,375 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:30,405 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:31,530 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:32,655 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:34,375 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:35,687 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:36,796 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:37,750 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:38,703 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:39,750 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:40,842 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:42,592 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:43,733 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:45,030 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:46,375 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:47,328 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:48,328 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:49,453 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:51,467 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:52,562 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:53,717 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:54,687 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:55,812 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:56,780 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:57,796 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:37:59,733 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:38:00,703 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:38:01,750 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:38:02,858 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:38:03,983 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:38:05,092 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:38:06,250 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:38:08,562 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:38:09,750 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:38:11,608 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:38:11,608 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 02:56:38,765 - START ANT
+2012-05-24 02:56:38,765 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #3.
+2012-05-24 02:57:41,265 - START ANT
+2012-05-24 02:57:41,280 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #3.
+2012-05-24 02:57:42,905 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:57:43,905 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:57:44,858 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:57:45,812 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:57:46,765 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 02:57:48,500 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:10:49,217 - START ANT
+2012-05-24 03:10:52,655 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:10:53,703 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:10:55,000 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:10:56,203 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:10:57,437 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:10:58,733 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:00,842 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:01,780 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:02,812 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:04,108 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:05,280 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:06,765 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:07,937 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:10,921 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:12,640 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:13,780 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:15,453 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:16,828 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:18,437 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:20,280 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:22,390 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:23,546 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:24,796 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:25,828 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:26,983 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:28,483 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:29,655 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:31,780 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:32,765 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:33,842 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:11:34,875 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:12:46,078 - START ANT
+2012-05-24 03:12:49,078 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:12:50,171 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:12:51,312 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:12:53,562 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:12:54,828 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:12:56,467 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:12:57,500 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:12:58,890 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:13:00,437 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:13:01,640 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:13:03,500 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:13:04,905 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:13:06,733 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:13:08,592 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:13:10,421 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:13:11,640 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:13:12,812 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:41:19,937 - START ANT
+2012-05-24 03:41:19,937 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-24 03:41:25,405 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:41:27,328 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:41:28,592 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:41:30,030 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:41:31,812 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:41:32,828 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:41:33,905 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:41:36,203 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:41:37,812 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:41:38,983 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:41:40,046 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:41:41,280 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:41:42,421 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:41:43,875 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:41:45,687 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:41:46,953 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:41:48,015 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:41:49,312 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:41:50,655 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:41:51,640 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:46:58,765 - START ANT
+2012-05-24 03:46:58,765 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-24 03:47:00,500 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:02,592 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:03,796 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:05,187 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:06,562 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:07,655 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:08,625 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:09,733 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:11,405 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:12,467 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:13,546 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:14,530 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:15,640 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:16,937 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:18,405 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:20,328 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:21,592 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:22,671 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:23,750 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:24,796 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:25,780 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:27,062 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:28,953 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:30,078 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:31,453 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:32,421 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:33,592 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:34,780 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:36,046 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:37,983 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:38,937 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:47:40,203 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:48:47,030 - START ANT
+2012-05-24 03:48:47,030 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-24 03:48:49,030 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:48:50,217 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:48:51,515 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:48:52,655 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:48:54,625 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:48:55,953 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:48:57,500 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:48:58,530 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:48:59,796 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:49:00,812 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:49:02,062 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:49:04,280 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:49:05,342 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 03:49:06,858 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:13:06,608 - START ANT
+2012-05-24 04:13:06,608 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-24 04:17:10,453 - START ANT
+2012-05-24 04:17:10,453 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-24 04:17:12,437 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:13,921 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:15,265 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:17,078 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:18,342 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:19,467 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:22,233 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:23,578 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:24,703 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:25,937 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:27,342 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:28,780 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:29,828 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:31,842 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:33,125 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:34,265 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:35,250 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:36,421 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:37,703 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:38,703 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:40,765 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:42,312 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:43,342 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:44,421 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:45,375 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:46,640 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:48,108 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:50,092 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:51,125 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:52,530 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:53,655 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:54,703 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:17:55,875 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:18:18,671 - START ANT
+2012-05-24 04:18:22,312 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:18:24,562 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:18:25,717 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:18:26,905 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:18:28,108 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:18:29,453 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:18:30,515 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:18:31,796 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:18:33,592 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:18:35,250 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:18:36,437 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:18:37,780 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:18:39,125 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:18:40,203 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:18:41,328 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:18:43,858 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:18:44,890 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:31:51,546 - START ANT
+2012-05-24 04:31:51,562 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #6.
+2012-05-24 04:31:55,000 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:31:56,265 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:31:57,875 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:31:58,937 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:32:00,358 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:32:02,375 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:32:03,608 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:32:05,217 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:32:06,467 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:32:44,796 - START ANT
+2012-05-24 04:32:44,796 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #6.
+2012-05-24 04:32:46,312 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:32:47,875 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:32:49,750 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:32:52,437 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:32:53,562 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:32:55,437 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:32:56,780 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:32:58,342 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:32:59,405 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:33:01,203 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:33:03,983 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:33:05,655 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:33:06,921 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:33:08,155 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:35:18,250 - START ANT
+2012-05-24 04:35:21,937 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:35:23,655 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:35:25,515 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:35:27,296 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:35:28,608 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:35:29,703 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:35:32,390 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:35:34,265 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:35:36,140 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:35:37,390 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:35:39,483 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:104 - Server has gone OFFLINE
+2012-05-24 04:35:39,483 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:110 - ~ Upload error.
+2012-05-24 04:38:09,171 - START ANT
+2012-05-24 04:38:09,171 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #7.
+2012-05-24 04:38:56,000 - START ANT
+2012-05-24 05:23:20,875 - START ANT
+2012-05-24 05:35:02,858 - START ANT
+2012-05-24 05:35:02,858 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 05:35:27,921 - START ANT
+2012-05-24 05:35:27,921 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 05:37:30,125 - START ANT
+2012-05-24 05:37:30,140 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 05:39:11,217 - START ANT
+2012-05-24 05:39:11,217 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:06:19,812 - START ANT
+2012-05-24 06:06:19,828 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:07:52,171 - START ANT
+2012-05-24 06:07:52,187 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:08:55,280 - START ANT
+2012-05-24 06:08:55,280 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:10:32,562 - START ANT
+2012-05-24 06:10:32,562 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:13:34,875 - START ANT
+2012-05-24 06:13:34,875 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:22:16,483 - START ANT
+2012-05-24 06:22:16,483 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:22:45,421 - START ANT
+2012-05-24 06:22:45,421 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:24:05,328 - START ANT
+2012-05-24 06:24:05,342 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:24:40,890 - START ANT
+2012-05-24 06:24:40,890 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:25:20,500 - START ANT
+2012-05-24 06:25:20,515 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:26:05,875 - START ANT
+2012-05-24 06:26:05,875 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:26:54,875 - START ANT
+2012-05-24 06:26:54,875 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:27:16,983 - START ANT
+2012-05-24 06:27:16,983 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:27:43,953 - START ANT
+2012-05-24 06:27:43,953 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:28:17,078 - START ANT
+2012-05-24 06:28:17,078 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:28:37,375 - START ANT
+2012-05-24 06:28:37,390 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:28:56,921 - START ANT
+2012-05-24 06:28:56,921 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:30:08,030 - START ANT
+2012-05-24 06:30:08,030 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:31:20,328 - START ANT
+2012-05-24 06:31:20,328 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:32:09,217 - START ANT
+2012-05-24 06:32:09,217 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:32:48,390 - START ANT
+2012-05-24 06:32:48,390 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:32:57,812 - START ANT
+2012-05-24 06:32:57,812 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:33:13,030 - START ANT
+2012-05-24 06:33:13,030 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:33:33,030 - START ANT
+2012-05-24 06:33:33,030 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:34:19,312 - START ANT
+2012-05-24 06:34:19,328 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:35:50,592 - START ANT
+2012-05-24 06:35:50,608 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:37:04,358 - START ANT
+2012-05-24 06:37:04,375 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:37:38,358 - START ANT
+2012-05-24 06:37:38,375 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:37:56,358 - START ANT
+2012-05-24 06:37:56,358 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:39:29,828 - START ANT
+2012-05-24 06:39:29,828 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:40:04,078 - START ANT
+2012-05-24 06:40:04,092 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:40:16,937 - START ANT
+2012-05-24 06:40:16,937 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:40:56,515 - START ANT
+2012-05-24 06:40:56,530 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:41:42,717 - START ANT
+2012-05-24 06:41:42,717 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:41:43,937 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:41:59,640 - START ANT
+2012-05-24 06:41:59,640 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:42:00,780 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:42:26,530 - START ANT
+2012-05-24 06:42:26,546 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:42:27,750 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:42:28,828 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:42:29,921 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:42:31,000 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:42:32,078 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:42:33,108 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:42:34,155 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:42:35,375 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:42:36,640 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:42:37,671 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:42:38,875 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:42:39,937 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:42:41,046 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:42:42,078 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:42:43,140 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:42:44,265 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:42:45,312 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:43:03,703 - START ANT
+2012-05-24 06:43:03,703 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:49:43,812 - START ANT
+2012-05-24 06:49:43,842 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:49:48,437 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:49:49,796 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:49:51,000 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:49:52,046 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:49:53,140 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:49:54,467 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:54:06,390 - START ANT
+2012-05-24 06:54:06,390 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:54:08,171 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:54:09,233 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:54:10,405 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:54:11,578 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:54:12,640 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:54:13,828 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:54:14,858 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:54:15,890 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:55:03,203 - START ANT
+2012-05-24 06:55:03,203 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:55:04,342 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:55:05,375 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:55:06,562 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:55:07,687 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:55:08,750 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:55:41,703 - START ANT
+2012-05-24 06:55:41,703 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:55:42,953 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:55:44,000 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:55:45,078 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:55:46,125 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:55:47,296 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:55:48,342 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:55:49,405 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:55:50,562 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:55:51,780 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:55:52,812 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:55:53,842 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:55:54,875 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:55:55,905 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:55:56,937 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:57:09,078 - START ANT
+2012-05-24 06:57:09,078 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:57:10,233 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:57:11,296 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:57:12,328 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:57:13,375 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:59:42,187 - START ANT
+2012-05-24 06:59:42,187 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #9.
+2012-05-24 06:59:43,342 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:59:44,375 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:59:45,453 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:59:46,483 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:59:47,515 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:59:48,546 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:59:49,578 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:59:50,608 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:59:51,625 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:59:52,655 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:59:53,750 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:59:54,765 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:59:55,796 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:59:56,828 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:59:57,921 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 06:59:58,953 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:07,592 - START ANT
+2012-05-24 07:01:10,578 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:11,703 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:12,983 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:14,030 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:15,265 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:16,453 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:17,500 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:18,578 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:19,703 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:20,812 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:22,155 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:23,233 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:24,265 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:25,312 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:26,421 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:27,687 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:28,796 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:30,015 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:31,046 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:32,140 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:33,187 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:34,233 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:35,562 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:36,937 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:38,030 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:39,265 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:40,342 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:41,483 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:42,655 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:43,842 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:44,921 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:45,967 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:01:47,030 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:10,765 - START ANT
+2012-05-24 07:03:13,530 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:14,655 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:15,842 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:16,953 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:18,062 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:19,203 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:20,233 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:21,500 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:22,530 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:23,608 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:24,687 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:25,828 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:26,905 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:28,015 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:29,108 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:30,187 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:31,280 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:32,437 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:33,467 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:34,515 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:35,640 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:36,717 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:37,780 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:03:38,812 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:04:37,483 - START ANT
+2012-05-24 07:04:37,483 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #11.
+2012-05-24 07:04:38,625 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:04:39,717 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:04:40,750 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:04:41,812 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:04:42,828 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:04:44,046 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:04:45,250 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:04:46,375 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:04:47,437 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:04:48,483 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:04:49,562 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:04:50,625 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:04:51,796 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:04:53,062 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:04:54,092 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:04:55,187 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:04:56,217 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:04:57,250 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:04:58,312 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:04:59,390 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 07:05:43,233 - START ANT
+2012-05-24 07:05:43,250 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #11.
+2012-05-24 07:07:07,717 - START ANT
+2012-05-24 13:09:39,233 - START ANT
+2012-05-24 13:09:42,342 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:09:43,515 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:09:44,640 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:09:45,750 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:09:46,905 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:09:48,000 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:09:49,921 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:09:51,140 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:09:52,280 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:09:53,390 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:09:54,546 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:09:55,717 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:09:57,125 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:09:58,953 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:10:00,140 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:10:01,358 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:10:02,421 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:10:03,483 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:10:04,640 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:10:05,765 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:10:07,640 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:10:08,703 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:11:20,921 - START ANT
+2012-05-24 13:11:23,750 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:11:24,812 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:11:25,905 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:11:27,015 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:11:28,171 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:11:29,265 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:11:31,092 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:11:33,125 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:112 - ~ Upload error.
+2012-05-24 13:13:20,796 - START ANT
+2012-05-24 13:17:38,733 - START ANT
+2012-05-24 13:24:57,983 - START ANT
+2012-05-24 13:27:42,592 - START ANT
+2012-05-24 13:27:42,608 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #17.
+2012-05-24 13:27:48,953 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 13:27:50,015 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 13:27:51,078 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 13:27:52,187 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 13:28:35,155 - START ANT
+2012-05-24 13:28:35,155 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #17.
+2012-05-24 13:28:49,812 - START ANT
+2012-05-24 13:28:49,812 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #17.
+2012-05-24 13:29:24,280 - START ANT
+2012-05-24 13:29:24,280 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #17.
+2012-05-24 13:32:15,078 - START ANT
+2012-05-24 13:40:35,796 - START ANT
+2012-05-24 13:40:35,796 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #18.
+2012-05-24 13:49:11,967 - START ANT
+2012-05-24 13:49:11,967 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #18.
+2012-05-24 13:50:07,062 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 14:48:27,890 - START ANT
+2012-05-24 14:48:27,890 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #18.
+2012-05-24 14:48:32,687 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:115 - ~ Upload error.
+2012-05-24 14:48:34,828 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:115 - ~ Upload error.
+2012-05-24 14:48:37,015 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:115 - ~ Upload error.
+2012-05-24 14:48:39,155 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:115 - ~ Upload error.
+2012-05-24 14:48:41,265 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:115 - ~ Upload error.
+2012-05-24 14:48:42,640 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:115 - ~ Upload error.
+2012-05-24 14:49:17,265 - START ANT
+2012-05-24 14:49:17,265 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #18.
+2012-05-24 14:49:47,765 - START ANT
+2012-05-24 14:49:47,765 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #18.
+2012-05-24 15:13:17,828 - START ANT
+2012-05-24 16:06:50,078 - START ANT
+2012-05-24 16:06:50,078 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #19.
+2012-05-24 16:06:51,453 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 16:06:52,858 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 16:06:54,312 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 16:06:56,312 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 16:06:58,405 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 16:06:59,875 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 16:07:01,780 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 16:07:24,921 - START ANT
+2012-05-24 16:07:24,921 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #19.
+2012-05-24 16:09:41,108 - START ANT
+2012-05-24 16:13:07,890 - START ANT
+2012-05-24 16:22:14,953 - START ANT
+2012-05-24 16:22:14,953 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #21.
+2012-05-24 16:26:44,108 - START ANT
+2012-05-24 16:28:52,062 - START ANT
+2012-05-24 16:35:46,217 - START ANT
+2012-05-24 16:35:46,217 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 16:39:56,765 - START ANT
+2012-05-24 16:39:56,765 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 16:41:24,187 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 16:41:54,187 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 16:43:42,046 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 16:44:12,046 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 16:46:11,640 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 16:46:41,640 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 16:48:29,983 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 16:48:59,983 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 16:50:45,858 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 16:51:15,858 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 16:53:03,765 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 16:53:33,765 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 16:55:34,140 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 16:56:04,140 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 16:58:05,467 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 16:58:35,467 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 17:00:23,703 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 17:00:53,703 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 17:02:27,421 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 17:02:57,421 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 17:04:30,967 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 17:05:00,967 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 17:06:30,530 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 17:07:00,530 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 17:08:42,500 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 17:09:12,500 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 17:11:16,592 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 17:11:46,592 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 17:12:42,875 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 17:13:12,875 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 17:13:14,812 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 17:13:44,812 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 17:13:46,967 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 17:14:16,967 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 17:14:19,030 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 17:14:49,030 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 17:14:51,467 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 17:15:21,467 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 17:15:23,921 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 17:15:53,921 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 17:15:56,358 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 17:16:26,358 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 17:16:28,812 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 17:16:58,812 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 17:17:01,296 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 17:17:31,296 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 17:18:12,687 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:75 - run unit from service error
+2012-05-24 17:18:42,687 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 17:19:48,717 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:68 - SomeShortNameVersion - STOPPED!
+2012-05-24 18:49:46,905 - START ANT
+2012-05-24 18:49:46,921 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #23.
+2012-05-24 18:52:26,140 - START ANT
+2012-05-24 18:52:36,453 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 18:52:45,046 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 18:52:53,217 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 18:53:01,217 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 18:55:38,390 - START ANT
+2012-05-24 18:55:38,390 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #1.
+2012-05-24 18:55:43,875 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 18:55:51,842 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 18:56:48,250 - START ANT
+2012-05-24 18:56:48,265 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #1.
+2012-05-24 18:56:52,265 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 18:57:01,328 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 18:57:54,687 - START ANT
+2012-05-24 18:57:54,687 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #1.
+2012-05-24 18:58:02,780 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-24 19:00:15,437 - START ANT
+2012-05-24 19:00:15,437 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #1.
+2012-05-24 19:01:58,562 - START ANT
+2012-05-24 19:04:49,375 - START ANT
+2012-05-24 19:06:47,765 - START ANT
+2012-05-24 19:10:03,655 - START ANT
+2012-05-24 19:10:03,655 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #4.
+2012-05-24 19:14:03,375 - START ANT
+2012-05-24 19:14:03,375 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #4.
+2012-05-24 19:14:38,750 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:76 - run unit from service error
+2012-05-24 19:15:08,750 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #4.
+2012-05-24 19:15:52,640 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:76 - run unit from service error
+2012-05-24 19:16:22,640 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #4.
+2012-05-24 19:16:57,953 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:76 - run unit from service error
+2012-05-24 19:17:27,953 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #4.
+2012-05-24 19:18:20,140 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:76 - run unit from service error
+2012-05-24 19:18:50,140 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #4.
+2012-05-24 19:19:27,453 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:76 - run unit from service error
+2012-05-24 19:19:57,453 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #4.
+2012-05-24 19:20:33,233 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:76 - run unit from service error
+2012-05-24 19:21:03,233 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #4.
+2012-05-24 19:21:38,983 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:76 - run unit from service error
+2012-05-24 19:22:08,983 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #4.
+2012-05-24 19:22:44,953 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:76 - run unit from service error
+2012-05-24 19:23:14,953 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #4.
+2012-05-24 19:23:39,921 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:76 - run unit from service error
+2012-05-24 19:24:09,921 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #4.
+2012-05-24 19:25:06,765 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:76 - run unit from service error
+2012-05-24 19:25:36,765 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #4.
+2012-05-24 19:25:36,765 - E:\Projects\disann\ant\service.py - function:SvcDoRun - line:69 - SomeShortNameVersion - STOPPED!
+2012-05-25 04:51:22,233 - START ANT
+2012-05-25 04:55:34,125 - START ANT
+2012-05-25 04:55:34,125 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-25 05:09:46,467 - START ANT
+2012-05-25 05:09:46,467 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-25 05:09:47,390 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-25 05:09:48,171 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-25 05:09:49,000 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-25 05:09:49,828 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-25 05:09:50,592 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-25 05:09:51,405 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-25 05:09:52,578 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-25 05:09:53,280 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-25 05:09:53,967 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-25 05:10:46,953 - START ANT
+2012-05-25 05:10:46,953 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-25 05:19:53,733 - START ANT
+2012-05-25 05:19:53,733 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-25 05:22:01,703 - START ANT
+2012-05-25 05:22:01,703 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-25 13:17:53,390 - START ANT
+2012-05-25 13:17:53,405 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-25 13:21:41,828 - START ANT
+2012-05-25 13:21:41,828 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 13:11:28,155 - START ANT
+2012-05-26 13:11:28,171 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 13:31:49,296 - START ANT
+2012-05-26 13:31:49,296 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 13:34:30,655 - START ANT
+2012-05-26 13:34:30,671 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 13:41:56,578 - START ANT
+2012-05-26 13:41:56,578 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 13:42:54,187 - E:\Projects\disann\ant\lib\tasks.py - function:store_unit - line:114 - ~ Upload error.
+2012-05-26 13:45:25,280 - START ANT
+2012-05-26 13:45:25,280 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 13:47:21,890 - START ANT
+2012-05-26 13:47:21,890 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 13:49:15,625 - START ANT
+2012-05-26 13:49:15,625 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 14:06:41,905 - START ANT
+2012-05-26 14:06:41,905 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 17:21:33,092 - START ANT
+2012-05-26 17:21:33,108 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 17:24:09,092 - START ANT
+2012-05-26 17:24:09,092 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 17:27:08,875 - START ANT
+2012-05-26 17:27:08,875 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 17:27:25,250 - START ANT
+2012-05-26 17:27:25,250 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 17:28:02,796 - START ANT
+2012-05-26 17:28:02,796 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 17:28:27,296 - START ANT
+2012-05-26 17:28:27,296 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 17:34:19,733 - START ANT
+2012-05-26 17:34:19,733 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 17:34:48,592 - START ANT
+2012-05-26 17:34:48,592 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 17:41:39,312 - START ANT
+2012-05-26 17:41:39,312 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 17:44:36,233 - START ANT
+2012-05-26 17:44:36,250 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 17:46:57,421 - START ANT
+2012-05-26 17:46:57,421 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 18:13:21,437 - START ANT
+2012-05-26 18:13:21,437 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 18:18:05,515 - START ANT
+2012-05-26 18:18:05,515 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 18:19:49,812 - START ANT
+2012-05-26 18:19:49,812 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 18:53:05,750 - START ANT
+2012-05-26 18:53:05,750 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 18:53:56,187 - START ANT
+2012-05-26 18:53:56,187 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 18:55:30,265 - START ANT
+2012-05-26 18:55:30,265 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 18:55:57,405 - START ANT
+2012-05-26 18:55:57,421 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 18:58:17,625 - START ANT
+2012-05-26 18:58:17,640 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 19:00:53,578 - START ANT
+2012-05-26 19:00:53,592 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 19:01:44,875 - START ANT
+2012-05-26 19:01:44,875 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 19:02:49,592 - START ANT
+2012-05-26 19:02:49,592 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 19:04:17,187 - START ANT
+2012-05-26 19:04:17,203 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 19:10:18,655 - START ANT
+2012-05-26 19:10:18,655 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 19:10:49,796 - START ANT
+2012-05-26 19:10:49,796 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 19:13:11,062 - START ANT
+2012-05-26 19:13:11,062 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 19:15:30,390 - START ANT
+2012-05-26 19:15:30,421 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 19:35:18,625 - START ANT
+2012-05-26 19:35:18,655 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 19:38:18,905 - START ANT
+2012-05-26 19:38:18,905 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 19:51:02,515 - START ANT
+2012-05-26 19:51:02,546 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 20:02:56,437 - START ANT
+2012-05-26 20:02:56,453 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 20:03:25,858 - START ANT
+2012-05-26 20:03:25,858 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 21:21:20,562 - START ANT
+2012-05-26 21:21:20,608 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 21:36:40,046 - START ANT
+2012-05-26 21:36:40,092 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 21:44:10,030 - START ANT
+2012-05-26 21:44:10,030 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 21:52:39,655 - START ANT
+2012-05-26 21:52:39,655 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-05-26 23:15:21,750 - START ANT
+2012-05-26 23:15:21,765 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-06-04 22:06:09,342 - START ANT
+2012-06-04 22:06:09,342 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-06-04 22:16:49,625 - START ANT
+2012-06-04 22:16:49,625 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-06-04 22:37:28,421 - START ANT
+2012-06-04 22:37:28,437 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-06-07 18:25:22,640 - START ANT
+2012-06-07 18:25:22,640 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-06-07 18:26:19,092 - START ANT
+2012-06-07 18:26:19,092 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-06-07 18:34:39,125 - START ANT
+2012-06-07 18:34:39,125 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.
+2012-06-07 18:40:36,796 - START ANT
+2012-06-07 18:40:36,812 - E:\Projects\disann\ant\lib\registration.py - function:login_node - line:28 - > This machine is known as node #5.

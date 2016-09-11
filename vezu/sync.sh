@@ -1,0 +1,1 @@
+rsync -va --delete --exclude .git --exclude tmp/ --exclude log/ --exclude vendor --exclude schema.rb --exclude vendor/ --exclude .bundle --exclude Gemfile.lock /home/sol/development/vezu/ s74@lapwing.arvixe.com:/home/s74/rails_apps/vezu

@@ -1,0 +1,98 @@
+- content_for :header do
+  - if current_tournament.active?
+    - complete_action = controller_name == 'quizzes' ? 'quiz_page.doTimeOutAction();' : "location.href = '#{root_url}';"
+    :javascript
+      $(function() {
+        // count down timer
+        $('#countdown_dashboard').countDown({
+          omitWeeks: true,
+          targetDate: {
+            'utc':    true,
+            'day':    '#{current_tournament.ends_at.in_time_zone("UTC").day}',
+            'month':  '#{current_tournament.ends_at.in_time_zone("UTC").month}',
+            'year':   '#{current_tournament.ends_at.in_time_zone("UTC").year}',
+            'hour':   '#{current_tournament.ends_at.in_time_zone("UTC").hour}',
+            'min':    '#{current_tournament.ends_at.in_time_zone("UTC").min}',
+            'sec':    '#{current_tournament.ends_at.in_time_zone("UTC").sec}'
+          },
+          onComplete: function() { #{complete_action} }
+        });
+      });
+
+.headerWrapper
+  .topmenu
+    .top_menu_wr
+      %ul#header_links.lm
+        = render 'shared/header_links'
+
+      - unless Rails.env.test?
+        %iframe{:src => "http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.gameshow.co.uk%2F&show_faces=false&colorscheme=dark&width=200", :scrolling => "no", :frameborder => "0"}
+
+      %ul.rm
+        %li
+          %a.twitter{:href => 'https://twitter.com/#!/gameshow', :target => '_blank'} Twitter
+        %li
+          %a.facebook{:href => 'http://www.facebook.com/gameshow', :target => '_blank'} Facebook
+        %li
+          %span.delimiter
+            |
+        %li
+          %a.support_link{:href => "#"} Live Support
+        %li
+          %span.delimiter
+            |
+
+  .header
+    .counter
+      - if current_tournament.active?
+        .counter_text Tournament Time Remaining
+        .countdown_position
+          #countdown
+            #countdown_dashboard
+              .dash.days_dash
+                .digit=time_left_digits[0]
+                .digit=time_left_digits[1]
+                .label DAYS
+                .line
+              .dash.hours_dash
+                .digit=time_left_digits[2]
+                .digit=time_left_digits[3]
+                .label HOURS
+                .line
+              .dash.minutes_dash
+                .digit=time_left_digits[4]
+                .digit=time_left_digits[5]
+                .label MINS
+                .line
+              .dash.seconds_dash
+                .digit=time_left_digits[6]
+                .digit=time_left_digits[7]
+                .label SECS
+                .line
+              .dash.milliseconds_dash
+                .image
+                  = image_tag '/images/header/milliseconds.gif', :alt => ''
+                .label MS
+                .line
+      - else 
+        .counter_soon Next tournament coming soon
+
+    %h1.logo
+      %a{:href => root_path} Game Show
+    .creditsBox
+      - if signed_in?
+        %a#buy_more_credits{:href => "#"}
+          - if current_user.credits > 0
+            .visible= pluralize(current_user.credits, 'credit')
+            .hidden Buy more
+          - else
+            .visible= "#{current_tournament.cost_pence}p per go"
+            .hidden Buy credits
+      %a.playnow{:href => "#", :class => "#{current_tournament.active? ? 'active' : 'inactive'} #{signed_in? ? '' : ' rounded'}"} PLAY NOW
+
+- if signed_in?
+  = #render 'shared/facebook_invites_dialog' if facebook_signed_in?
+  = render 'shared/email_invites_dialog'
+  = render 'shared/invites_were_sent_dialog'
+  = render 'shared/nudge_friend_dialog'
+  = render 'shared/pay_dialog'

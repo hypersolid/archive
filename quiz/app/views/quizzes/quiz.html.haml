@@ -1,0 +1,95 @@
+- content_for :head do
+  %script
+    = render 'quizzes/blocks/quiz_defaults'
+    = render 'quizzes/blocks/quiz_variables'
+  :javascript
+    $(function() {
+
+      $(document).bind("keydown", function(e) {
+        // disable F5
+        if (e.which == 116) e.preventDefault();
+      });
+
+      quiz_page.init(defaults);
+      quiz_page.setIndicator(100);
+    });
+  - if signed_in?
+    :javascript
+      $(function() {
+        $('#get_ready_trigger').click(function(e){
+          quiz_page.ready();
+          quiz_page.start(params);
+          e.preventDefault();
+        });
+      });
+    - if @skip_ready_screen
+      :javascript
+        $(function() {
+          $('#get_ready_trigger').click();
+        });
+  - elsif @relation # && request.env["HTTP_USER_AGENT"] !~ /facebookexternalhit/
+    :javascript
+      $(function() {
+        $('#ui_dialog').dialog('option', { width: 500, height: 240, title: 'Sign in' }).html('#{raw escape_javascript(render('quizzes/popups/accept_invite_dialog'))}').dialog('open');
+      });
+
+- content_for :header do
+  = render :partial => "shared/header"
+  = render 'shared/popup_welcome' if signed_in? && current_user.has_played_one_quiz? && current_user.leader.nil?
+  / - if signed_in?
+  /   = render 'shared/facebook_invites_dialog'
+  /   = render 'shared/email_invites_dialog'
+  /   = render 'shared/invites_were_sent_dialog'
+  /   = render 'shared/nudge_friend_dialog'
+
+#quiz_page
+  - if !signed_in? || current_user.has_played_one_quiz?
+    = render 'quizzes/popups/scorer_popup'
+    = render 'quizzes/popups/stats_popup'
+    = render 'quizzes/popups/pass_popup'
+  .column1
+    = render 'quizzes/blocks/stats'
+  .column2
+    #quiz_question.active
+      #hourglass
+        .text
+          Question
+          %span.number
+        %br
+        = image_tag 'quiz/hourglass.png', :width => 40, :height => 60
+      .question_top
+        .question_number.fl
+          Question 
+          %span.number
+        .fr
+          %a#pass_button{:href => '#'}
+            PASS
+            .passes_left
+              %span.number
+                = current_tournament.passes
+              LEFT
+        .clear
+      .question
+        .text
+          Are you ready ?
+      .answers
+        %a#get_ready_trigger{:href => quiz_quiz_path}
+          .answer
+            .wrapper
+              Play game
+        - 3.times do |i|
+          %a{:id => "answer_container#{i + 1}"}
+            .answer{:id => "answer#{i + 1}"}
+              .wrapper
+      .question_bottom
+    &nbsp;
+  .column3
+    = render 'quizzes/blocks/scorer'
+  .clear
+
+  = render 'shared/copyright'
+
+#game_over_screen.hidden
+#game_over_container.hidden
+  #game_over
+    #game_over_results

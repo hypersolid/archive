@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %title GameShow
+
+    = javascript_include_tag :all, :cache => true
+    = stylesheet_link_tag "application", "header", "pages"
+
+    = javascript_include_tag "http://use.typekit.com/znx6azl.js"
+    :javascript
+      try{Typekit.load();}catch(e){}
+
+  %body
+    #background
+      = render "shared/header"
+      = yield
+      .footer
+        %span
+          = render "shared/copyright_full"

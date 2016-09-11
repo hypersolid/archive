@@ -1,0 +1,34 @@
+- content_for :head do
+  = javascript_include_tag "jquery-jvectormap-1.1.1.min", "jquery-jvectormap-world-mill-en", "mainpage"
+  %script
+    var the_cities = #{raw @cities.map{|c| {:latLng => c.latlon,:name => c.name}}.to_json};
+    var the_cities_public = #{raw @cities.select(&:public).map{|c| {:latLng => c.latlon,:name => c.name}}.to_json};
+    var availableTags = #{raw @cities.map(&:name).to_json};
+
+- content_for :top do
+  .autocomplete
+    %input#ac{:value => "New York, London, Paris, etc.", :tabindex => 1}
+      
+  - if SOCIAL
+    #like-panel-horizontal
+      .item
+        <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="trebuchet ms"></div>
+      .item
+        <g:plusone size="medium"></g:plusone>
+      .item
+        <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+      .cl
+    .cl
+
+.mainpage
+  .map
+    Click on your city to see subway map:
+    #worldmap
+    
+- content_for :footer do
+  - @cities[0,8].each do |c|
+    .popular.fl
+      = link_to c.city_name, c.city_name, :title => "View map of #{c.metro_name}"
+  .all.fr
+    = link_to 'Show list', '/all', :title => "Full list of available subway/metro maps"
+  .cl

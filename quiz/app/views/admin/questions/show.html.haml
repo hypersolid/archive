@@ -1,0 +1,19 @@
+%h1 Questions Admin
+%p
+  = link_to t('back'), admin_questions_path
+  = link_to t('edit'), edit_admin_question_path(@question)
+
+%dl
+  %dt= Question.human_attribute_name :id
+  %dd= @question.id
+  %dt= Question.human_attribute_name :category
+  %dd= @question.category.name
+  %dt= Question.human_attribute_name :difficulty
+  %dd= @question.difficulty
+  %dt= Question.human_attribute_name :question
+  %dd= @question.question
+  %dt= Question.human_attribute_name :correct_answer
+  %dd= @question.correct_answer
+  %dt= Question.human_attribute_name :wrong_answers
+  %dd= raw(@question.wrong_answers_html)
+

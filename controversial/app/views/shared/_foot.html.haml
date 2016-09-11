@@ -1,0 +1,18 @@
+- if @fight
+  - cache "footer#{@fight.id}" do
+    #footer-outer
+      #footer-inner
+        .floatleft
+          %h2 
+            =@fight.short_title
+          #infoblock
+            =raw(@fight.full_description)
+        .clearboth
+        .bottom
+          .floatright
+            Copyright 
+            %strong
+              %a{:href => "http://s74.org",:rel=>"nofollow"} 
+                &#963;74 solutions
+            2011
+          .clearboth

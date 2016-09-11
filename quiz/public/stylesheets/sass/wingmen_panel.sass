@@ -1,0 +1,180 @@
+/* ----- Wingmen shared panel -----
+
+/* Basic layout
+
+#wingmen_panel, #wingmen_panel_overlay
+  font-size: 13pt
+  text-shadow: 1px 1px 2px #373737
+  padding-top: 10px
+  width: 470px
+  -moz-border-radius: 3px
+  -webkit-border-radius: 3px
+  border-radius: 3px
+  //behavior: url('/PIE.htc')
+  margin-bottom: 5px
+
+#wingmen_panel a, #wingmen_panel_overlay
+  color: white
+  text-shadow: 1px 1px 2px #373737
+
+#wingmen_panel
+  .wingmen_column1, .wingmen_column2, .wingmen_column3, .wingmen_column4, .wingmen_column23
+    float: left
+    text-align: center
+
+#wingmen_panel_overlay
+  .wingmen_column1, .wingmen_column2, .wingmen_column3, .wingmen_column4, .wingmen_column23
+    float: left
+    text-align: center
+
+#wingmen_panel .wingmen_column1, #wingmen_panel_overlay .wingmen_column1
+  margin-left: 15px
+  width: 115px
+
+#wingmen_panel
+  .wingmen_column2, .wingmen_column3
+    margin-left: 24px
+    width: 94px
+
+#wingmen_panel_overlay
+  .wingmen_column2, .wingmen_column3
+    margin-left: 28px
+    width: 84px
+
+#wingmen_panel .wingmen_column23, #wingmen_panel_overlay .wingmen_column23
+  margin-left: 28px
+  width: 196px
+  text-align: center
+
+#wingmen_panel .wingmen_column3, #wingmen_panel_overlay .wingmen_column3
+  margin-left: 10px
+
+#wingmen_panel .wingmen_column4
+  margin-left: 23px
+  width: 80px
+
+#wingmen_panel_overlay .wingmen_column4
+  margin-left: 36px
+  width: 80px
+
+#wingmen_panel.ladder .photos .wingmen_column4, #wingmen_panel_overlay .photos .wingmen_column4
+  margin-left: 15px
+
+#wingmen_panel.ladder .stats .wingmen_column4, #wingmen_panel_overlay .stats .wingmen_column4
+  font-size: 15pt
+  margin-top: -3px
+
+#wingmen_panel.ladder .buttons .wingmen_column4, #wingmen_panel_overlay .buttons .wingmen_column4
+  font-size: 12pt
+  margin-top: -4px
+
+#wingmen_panel.ladder .buttons .wingmen_column4 .pounds, #wingmen_panel_overlay .buttons .wingmen_column4 .pounds
+  font-size: 15pt
+
+#wingmen_panel.ladder
+  background: url(/images/ladder_right/bg_wingmen_panel.png) no-repeat
+  .buttons .wingmen_column1 .add_picture
+    height: 20px
+  .wingmen_column4
+    .note
+      margin: 30px 0px 0px -10px
+      font-size: 10pt
+      width: 100px
+
+/* Ladders page
+#wingmen_panel #playnow_ladders
+  font-size: 9pt
+  padding-top: 8px
+  margin: 7px 0px 0px 17px
+  background: url(/images/shared/bn_playnow_small.png) no-repeat
+
+/* Quiz page
+
+#wingmen_highlight.ladder
+  top: -328px
+  left: 148px
+  width: 208px
+  height: 323px
+
+#wingmen_panel.quiz
+  .wingmen_column1
+    margin-left: 17px
+    width: 87px
+  .wingmen_column2
+    margin-left: 30px
+  .wingmen_column3
+    margin-left: 18px
+  .wingmen_column4
+    margin-left: 33px
+  .stats
+    background: url(/images/quiz/bg_stats.png) no-repeat
+  .playnow
+    width: 79px
+    height: 65px
+    background: url(/images/shared/bn_playnow_medium.png) no-repeat
+    margin-left: 3px
+    padding-top: 4px
+    font-size: 16pt
+    cursor: pointer
+    text-align: center
+  .total
+    margin-top: 30px
+    font-size: 14pt
+
+#wingmen_highlight.quiz
+  top: -350px
+  left: 123px
+  width: 224px
+  height: 345px
+
+#wingmen_panel
+  &.quiz
+    height: 335px
+    background: url(/images/quiz/bg_wingmen_panel.png) repeat-y
+    text-align: center
+  .stats
+    background: url(/images/ladder_right/bg_stats.png) no-repeat
+    height: 28px
+    margin-top: 12px
+    margin-bottom: 12px
+    padding-top: 5px
+    font-size: 12pt
+
+/* Misc
+
+#wingmen_panel_overlay .stats
+  background: url(/images/ladder_right/bg_stats.png) no-repeat
+  height: 28px
+  margin-top: 12px
+  margin-bottom: 12px
+  padding-top: 5px
+  font-size: 12pt
+
+#wingmen_panel
+  .buttons
+    font-size: 9.5pt
+  .caption
+    margin: -10px 0px 10px 0px
+  .button
+    display: block
+    width: 84px
+    height: 22px
+    background: url(/images/shared/bn_gray.png)
+    font-size: 8pt
+    text-align: center
+    padding-top: 9px
+    font-weight: bolder
+    cursor: pointer
+  .buttons
+    padding-bottom: 5px
+
+#wingmen_highlight
+  position: absolute
+  background-color: #FFFF33
+  opacity: 0.6
+  filter: alpha(opacity = 60)
+  display: none
+
+#wingmen_panel .blob_medium .white_label, #wingmen_panel_overlay .blob_medium .white_label
+  text-shadow: none
+  font-size: 9pt

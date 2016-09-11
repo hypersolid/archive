@@ -1,0 +1,181 @@
+- content_for :head do
+  :javascript
+    $(function(){
+      init_ladders_page();
+
+      // Pusher bindings
+      var pusher = new Pusher('#{Pusher.key}');
+      var ladderChannel = pusher.subscribe('ladder-#{Rails.env}');
+      ladderChannel.bind('ladder-update', updateLadders);
+      ladderChannel.bind('wingmen-update', updateWingmen);
+    });
+
+  - if params[:filter] == '2' #user wants to see wingman's ladder
+    :javascript
+      $(function(){
+        if ($('#sign_in_dialog').length) {
+          $('#sign_in_dialog .sign_in_tab').click();
+          $('#sign_in_dialog').dialog('open');
+        };
+      });
+
+  - if @show_nudge_popup
+    :javascript
+      $(function(){
+        setTimeout("show_yellow_popup('ladders_nudge')", 1000);
+      });
+
+- content_for :header do
+  = render :partial => "shared/header"
+  
+- if @game_over
+  - content_for :head do
+    :javascript
+      $(function(){
+        window.onkeyup = function (event) {
+          if (event.keyCode == 27) {
+            if ($("#game_over_screen").is(":visible")){
+              $("#game_over_screen").hide();
+              $("#game_over_container").hide();
+            };
+          };
+        };
+        $("#game_over_close").click(function(){
+          $("#game_over_screen").hide();
+          $("#game_over_container").hide();
+        });
+      });
+    - if current_user.show_popup_invite?
+      :javascript
+        $(function(){
+          setTimeout("show_yellow_popup('ladders_wingmen')", 1000);
+        });
+  #game_over_screen
+  #game_over_container
+    #game_over
+      .relative
+        = render 'ladders/popups/wingmen' if current_user.show_popup_invite?
+      #game_over_close
+        = image_tag 'shared/popup_close_green.png'
+      #game_over_results
+        = render 'ladders/blocks/game_over'
+
+
+.ladder
+  .left
+    %h1
+      The #{pounds(current_tournament.prizes.first.amount) unless current_tournament.prizes.empty?} Ladder
+    .tabs
+      .content
+        .empty
+        .tab.first{:class => ('selected' if @filter == 1), :filter => 1}
+          All
+        - if signed_in?
+          .tab{:class => ('selected' if @filter == 2), :filter => 2}
+            My Friends
+        .tab.last{:class => ('selected' if @filter == 3), :filter => 3}
+          Top 10
+    .empty
+    .content
+      - unless @ladders
+        .row
+          .empty_ladder
+            .valign
+              Ladder is empty
+      - else
+        - for current_filter in 1..3 do
+          %div{ :id => "ladder_rows_#{current_filter}", :class => ('hidden' unless current_filter == @filter)}
+            - if current_filter == @filter
+              = render 'list_ladders'
+
+  .right
+    = render "ladder_right"
+    - if signed_in?
+      #wingmen_panel_wall
+        Write something on your wall:
+        = render "ladders/blocks/wall", :user => current_user
+  .clear
+
+.footer
+  %span
+    = render "shared/copyright_full"
+
+- content_for :js_adds do
+  :javascript
+    function init_perpetual_scroller(){
+      if ($('#ladders_scroller .scroller').length > 0) {
+        // Perpetual scroll
+        ladders_scroller.init({
+          root: '#ladders_scroller .scroller',
+          up:   '#ladders_scroller .bt_show_more_up',
+          down: '#ladders_scroller .bt_show_more_down',
+          start: #{signed_in?.to_s},
+          step: 5,
+          cache_multiplier: 5,
+          ladders_count: #{Ladder.count},
+        });
+      };
+    };
+
+    $(function() {
+      if(#{!!params[:token]}){
+        $('#ui_dialog').dialog('option', { width: 508, height: 240 }).load("#{wait_quiz_url}").dialog('open');
+
+        // Periodical updater for payment
+        $.PeriodicalUpdater('/quiz/paystatus', {
+            method: 'get',
+            data: '',
+            minTimeout: 2000,
+            maxTimeout: 2000,
+            multiplier: 1,
+            type: 'script',
+            maxCalls: 0,
+            autoStop: 30
+          },
+          // callback
+          function(remoteData, success, xhr, handle){
+            if(remoteData.length > 1){ handle.stop();}
+          },
+          // autostop callback
+          function(){
+            $('#ui_dialog').dialog('option', { width: 508, height: 240 }).load("#{error_quiz_url}")
+          }
+        );
+      }
+
+      // ------ Filter Links -------------
+      $('.tab').live("click", function(e){
+        var $this = $(this);
+        var lf = $(this).attr('filter');
+
+        if (!$this.hasClass('selected')){
+          $("#ladder_rows_" + lf).load("/ladders/list_ladders?filter=" + lf, function(){
+            $('.tab').removeClass('selected');
+            $this.addClass('selected');
+
+            if (lf=='1') init_perpetual_scroller();
+            init_edit_in_place();
+
+            $('[id^="ladder_rows_"]').hide();
+            $('#ladder_rows_' + lf).show();
+          });
+        };
+
+        e.preventDefault();
+      });
+
+      init_perpetual_scroller();
+      init_edit_in_place();
+      
+      // Preload images
+      $.preLoadImages(
+         '/images/loading.gif',
+         '/images/ladder_left/ladder_info_pointer.png',
+         '/images/ladder_left/ladder_row_bg_selected.jpg',
+         '/images/ladder_right/bg_overlay_header.png',
+         '/images/ladder_right/bg_overlay.png', 
+         '/images/ladder_right/bg_wingmen_panel.png',
+         '/images/shared/anybody.jpg',
+         '/images/ladder_right/bullet.png'
+      );
+    });

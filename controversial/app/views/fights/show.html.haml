@@ -1,0 +1,56 @@
+- content_for :head do
+  %meta{:property=>"og:type",:content=>"article"}
+  %meta{:property=>"og:url",:content=>request.url}
+  %meta{:property=>"og:title",:content=>"#{@fight.full_title}"}
+  - if @brand
+    %meta{:property=>"og:image",:content=>@brand.picture(:medium)}
+    %meta{:property=>"og:description",:content=>"I vote for #{@brand.humanize_verb}."}
+  - else
+    %meta{:property=>"og:image",:content=>@fight.brand1.picture(:medium)}
+    
+- content_for :description do
+  #{@fight.full_title}, #{@fight.full_votes}
+- content_for :keywords do
+  = "#{@fight.short_title}, #{@fight.short_title} #{@fight.brand1.humanize_verb}, #{@fight.short_title} #{@fight.brand2.humanize_verb}, #{@fight.full_votes}"
+
+- content_for :title do
+  #{@fight.full_title} - #{@fight.full_votes}
+     
+- cache "title#{@fight.id}" do
+  #title
+    .floatleft
+      - if @fight_prev
+        %a.arrow{:href => @fight_prev.url}= image_tag MEDIA_HOST+'/images/design/arrow_left.png'
+    
+    .arrow.floatright
+      - if @fight_next
+        %a.arrow{:href => @fight_next.url}= image_tag MEDIA_HOST+'/images/design/arrow_right.png'
+    %h1
+      =@fight.full_title
+    .clearboth 
+
+- if false
+  #piles
+    .floatleft
+      =render 'pile', :n=>1
+    .floatright
+      =render 'pile', :n=>2
+    .clearboth
+
+
+= render 'voting'
+
+.floatleft      
+  = render 'ads/left'
+.floatright
+  = render 'ads/right'
+
+- cache "comments#{@fight.id}" do
+  #comments    
+    #comments1.floatleft
+      =render 'comment', :n=>1, :brand=>@fight.brand1
+    #comments2.floatright
+      =render 'comment', :n=>2, :brand=>@fight.brand2
+    .clearboth
+    
+=render 'shared/suggestions'

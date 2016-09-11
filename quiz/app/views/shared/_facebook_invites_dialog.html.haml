@@ -1,0 +1,14 @@
+#facebook_invites_dialog.hidden
+  %p
+    %b Invite your facebook friends and you’ll get:
+    %ul
+      %li 2 free credits straight away for doing this
+      %li 2 more credits each time a friend clicks the link in the invitation (up to maximum 50 free credits)
+      %li The score of the first two to play, added to yours, moving you up the ladder!
+
+  The more friends you invite on the next screen, the more credits you’ll get!
+
+  .invite_button
+    = link_to image_tag('ladder_right/bt_facebook_invite.png'), '#', :id => 'facebook_invites_button'
+  or invite friends via 
+  = link_to 'email', '#', :id => 'email_invite_link'

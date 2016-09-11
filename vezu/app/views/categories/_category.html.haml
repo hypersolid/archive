@@ -1,0 +1,25 @@
+- cache("category-tab-#{category.id}-#{@firm.id}", :expires_in => 1.day) do
+  %div{:id => "tab-#{category.id}"}
+    %ul
+      - if @firm.count_subcategories_in_category(category) > 1
+        - category.subcategories.by_hits.each do |sc|
+          - unless @firm.items_by_subcategory(sc).empty?
+            %li
+              %a{:href=>"#tab-#{category.id}-#{sc.id}", :rel=>'nofollow'}=sc.name
+      .cl
+    - if @firm.count_subcategories_in_category(@category) > 1
+      .border-dashed
+    
+    - category.subcategories.each do |sc|
+      - unless @firm.items_by_subcategory(sc).empty?
+        .items{:id => "tab-#{category.id}-#{sc.id}"}
+          - counter = 0
+          - @firm.items_by_subcategory(sc).each do |i|
+            = render i
+            - counter += 1
+            - if counter % 4 == 0
+              .cl
+          .cl
+          
+  %script
+    $("#tab-#{category.id}").tabs();

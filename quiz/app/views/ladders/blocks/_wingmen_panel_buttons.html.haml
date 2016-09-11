@@ -1,0 +1,33 @@
+- if user_signed_in? && current_user == @ladder.user && current_tournament.active?
+  - if wingman.is_a? User
+    .blob_medium
+      .white_label{:class => blob_label_class(wingman)}
+        = wingman.name
+      .avatar_results
+        = image_tag user_foto_url(wingman)
+    %p.average_score_panel
+      %a.nudge_friend_button{:href => "#", 'data-id' => wingman.id.to_s, 'data-title' => wingman.name} Send this friend a credit
+      so they can improve their score for you
+    = link_to 'SEND CREDITS', '#', :class => 'button nudge_friend_button', 'data-id' => wingman.id.to_s, 'data-title' => wingman.name
+    / - if current_user.get_wingmen(:active, :pending).count >= 2 && current_user.can_send_invites?
+    /   .additional_invite
+    /     = link_to 'INVITE MORE', '#', :class => 'button invite_friend_button'
+
+  - elsif wingman.is_a? Relation
+    .blob_medium.pending
+      .white_label{:class => blob_label_class(wingman)}
+        = wingman.name || wingman.email
+    = link_to 'REMOVE', remove_wingman_ladders_path(:id => wingman.id, :page => 'ladders'), :class => 'button', :remote => true
+
+    / - if current_user.get_wingmen(:active, :pending).count.in?(2..24)
+    /   .additional_invite
+    /     = link_to 'INVITE MORE', '#', :class => 'button invite_friend_button'
+    
+  - else
+    .blob_medium{:class => (current_tournament.deploy_average_scoring ? 'avg' : '')}
+      .avatar_results
+    %p.average_score_panel= invite_msg
+    = link_to 'INVITE', '#', :class => 'button invite_friend_button'
+- else
+  .avatar_medium
+    = image_tag user_foto_url(wingman)

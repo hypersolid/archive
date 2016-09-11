@@ -1,0 +1,27 @@
+2012-07-03 20:59:48,078 - START ANT
+2012-07-03 21:00:12,405 - START ANT
+2012-07-03 21:00:12,421 - C:\ant\lib\registration.py - function:login_node - line:29 - > This machine is known as node #126.
+2012-07-03 21:08:40,842 - START ANT
+2012-07-03 21:08:40,858 - C:\ant\lib\registration.py - function:login_node - line:29 - > This machine is known as node #126.
+2012-07-03 21:10:48,608 - START ANT
+2012-07-03 21:10:48,608 - C:\ant\lib\registration.py - function:login_node - line:29 - > This machine is known as node #126.
+2012-07-03 21:20:08,625 - START ANT
+2012-07-03 21:20:08,625 - C:\ant\lib\registration.py - function:login_node - line:29 - > This machine is known as node #126.
+2012-07-03 21:20:39,467 - START ANT
+2012-07-03 21:20:39,467 - C:\ant\lib\registration.py - function:login_node - line:29 - > This machine is known as node #126.
+2012-07-03 21:23:40,062 - C:\ant\lib\tasks.py - function:store_unit - line:129 - ~ Upload error.
+2012-07-03 21:25:16,562 - START ANT
+2012-07-03 21:25:16,562 - C:\ant\lib\registration.py - function:login_node - line:29 - > This machine is known as node #126.
+2012-07-03 21:27:35,921 - START ANT
+2012-07-03 21:27:35,921 - C:\ant\lib\registration.py - function:login_node - line:29 - > This machine is known as node #126.
+2012-07-03 21:28:31,655 - START ANT
+2012-07-03 21:28:31,655 - C:\ant\lib\registration.py - function:login_node - line:29 - > This machine is known as node #126.
+2012-07-03 21:29:12,562 - START ANT
+2012-07-03 21:29:12,578 - C:\ant\lib\registration.py - function:login_node - line:29 - > This machine is known as node #126.
+2012-07-03 21:29:27,092 - START ANT
+2012-07-03 21:29:27,092 - C:\ant\lib\registration.py - function:login_node - line:29 - > This machine is known as node #126.
+2012-07-03 21:29:36,483 - START ANT
+2012-07-03 21:29:36,500 - C:\ant\lib\registration.py - function:login_node - line:29 - > This machine is known as node #126.
+2012-07-03 21:33:24,733 - START ANT
+2012-07-03 21:33:24,750 - C:\ant\lib\registration.py - function:login_node - line:29 - > This machine is known as node #126.
+2012-07-03 21:37:32,155 - C:\ant\lib\tasks.py - function:store_unit - line:124 - ~ Completed unit

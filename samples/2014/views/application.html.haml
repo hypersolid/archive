@@ -1,0 +1,134 @@
+!!!
+%html{:'ng-app' => (yield(:ng_app).presence || 'LuxFix') }
+  %head
+    %meta{content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0", name: "viewport"}
+
+    = csrf_meta_tag
+
+    - cache custom_cache_key(:meta) do
+      - @meta_source = persist_meta_data
+      %title
+        = meta_title(@meta_source)
+      %meta{content: meta_description(@meta_source), name: "description"}
+      %meta{content: meta_keywords(@meta_source), name: "keywords"}
+
+    %meta{content: current_domain_name, property: "og:site_name"}
+    %meta{content: og_image_url, property: "og:image"}
+    %link{rel: "apple-touch-icon", href: image_path("branding/logo_white_on_blank.png")}
+
+    %link{href: URI.parse(stylesheet_path('chameleon/chameleon')).path, media: "screen", rel: "stylesheet", type: "text/css"}
+    = javascript_include_tag 'vendor/html5shiv'
+
+    - cache custom_cache_key(:uv), :expires_in => 1.day do
+      %script{type: "text/javascript"}
+        = render partial: 'layouts/uv', formats: [:js]
+
+    = javascript_include_tag 'application'
+    - unless Rails.env.test?
+      %script{src: "//use.typekit.net/rjk4bwl.js", type: "text/javascript"}
+      :javascript
+        try{Typekit.load();}catch(e){}
+
+    - if Rails.env.production?
+      %script{async: "", defer: "defer", src: "//d3c3cq33003psk.cloudfront.net/opentag-77284-#{qubit_tag_selector}.js"}
+
+  %body{ "data-display_sign_up_lightbox" => (!user_signed_in? && display_sign_up_lightbox?).to_s,
+         "data-user-email" => current_user.try(:email),
+         "data-env" => Rails.env,
+         :class => (checkout_zone? ? 'checkout' : current_domain) + '' }
+    #fb-root
+    - unless Rails.env.test?
+      :javascript
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=160290417496845";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+
+    - if false
+      #header
+        = render "layouts/headers/#{checkout_zone? ? 'shopping' : current_domain}"
+
+    - unless checkout_zone?
+      %div{'ng-controller' => "NavigationController", 'ng-init' => "showMobileMenu=false"}<
+        #navigation-wrapper
+          #navigation-root
+            #navigation
+              - cache custom_cache_key(:menu) do
+                = render "shared/navigation"
+            #navigation-account
+              = render "shared/navigation_account"
+        #navigation-mobile{'ng-show' => 'showMobileMenu'}
+          = render "shared/navigation_mobile"
+
+    #ajax-status
+    - if notice.present?
+      %p.flash.notice= notice
+    - if alert.present?
+      %p.flash.alert= alert
+
+    #content
+      .container.clearfix
+        = yield
+
+    - cache custom_cache_key(:footer) do
+      #footer
+        .container
+          .thin-grey-line
+          #main-social-panel
+            = link_to image_tag('icons/social/1.png'), 'https://www.facebook.com/LUXFIX', :target => "_blank"
+            = link_to image_tag('icons/social/2.png'), 'https://twitter.com/luxfix', :target => "_blank"
+            = link_to image_tag('icons/social/3.png'), 'http://pinterest.com/luxfix/', :target => "_blank"
+            = link_to image_tag('icons/social/4.png'), 'http://www.youtube.com/user/LUXFIXtv', :target => "_blank"
+          .column_8
+            %ul.list.misc-nav
+              %li
+                = nav_link_to 'About', '/about-us'
+              - unless es_domain? || independent_domain?
+                %li
+                  = nav_link_to 'Press', 'http://news.lux-fix.com', :target => "_blank"
+                %li
+                  = nav_link_to 'Blog', 'http://blog.lux-fix.com', :target => '_blank'
+              %li
+                = link_to 'Contact', '/contact-us'
+              %li
+                = link_to raw('Delivery & Returns'), '/delivery-and-returns'
+              %li
+                = link_to '/terms-and-conditions' do
+                  %abbr{title: "Terms and Conditions"} T&Cs
+              %li
+                = link_to 'Privacy Policy', '/privacy-policy'
+          - unless luxfix_domain?
+            #powered-by-luxfix
+              = link_to 'powered by lux-fix.com', 'http://lux-fix.com'
+    %hr.clear/
+
+    = render 'layouts/lightboxes' unless current_user
+
+    = content_for :additional_javascripts
+
+    :javascript
+      (function(d){
+      var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+      p.type = 'text/javascript';
+      p.async = true;
+      p.src = '//assets.pinterest.com/js/pinit.js';
+      f.parentNode.insertBefore(p, f);
+      }(document));
+
+    - if params[:signed_up]
+      / Google Code for Registrations Conversion Page
+      :javascript
+        var google_conversion_id = 943582872;
+        var google_conversion_language = "en";
+        var google_conversion_format = "2";
+        var google_conversion_color = "ffffff";
+        var google_conversion_label = "W6vGCOCSlAQQmN33wQM";
+        var google_conversion_value = 1;
+        var google_remarketing_only = false;
+      %script{src: "//www.googleadservices.com/pagead/conversion.js", type: "text/javascript"}
+      %noscript
+        %div{style: "display:inline;"}
+          %img{alt: "", height: "1", src: "//www.googleadservices.com/pagead/conversion/943582872/?value=1&label=W6vGCOCSlAQQmN33wQM&guid=ON&script=0", style: "border-style:none;", width: "1"}

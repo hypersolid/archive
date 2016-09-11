@@ -1,0 +1,10 @@
+- if wingman
+  - if wingman.is_a? User
+    = link_to 'SEND CREDITS', '#', :class => 'button nudge_friend_button', 'data-id' => wingman.id.to_s, 'data-title' => wingman.name
+    = link_to 'Send this friend a credit', '#', :class => 'underline nudge_friend_button', 'data-id' => wingman.id.to_s, 'data-title' => wingman.name
+    so they can improve their score for you
+  - else
+    = link_to 'REMOVE', remove_wingman_ladders_path(:id => wingman.id, :page => 'quizzes'), :class => 'button', :remote => true
+- else 
+  = link_to 'INVITE FRIEND', '#', :class => 'button invite_friend_button'
+  %p.average_score_panel= invite_msg

@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <script type="text/javascript">
+  function updateBannerStats()
+  {
+      $('#bannerstats').load('/ajax/banner/stats');
+  }
+  function updateBannerFlops()
+  {
+      $('#bannerflops').load('/ajax/banner/flops');
+  }
+  $(document).ready(function() {
+  updateBannerStats();
+  updateBannerFlops();
+  setInterval( "updateBannerStats()", 10000 );
+  setInterval( "updateBannerFlops()", 2500 );
+  });
+  </script>
+{% endblock %}
+
+
+{% block content %}
+  <div id="banner">
+  
+  <div class="fl" id="bannerstats"></div>
+  <div class="fl" id="bannerflops"></div>
+  <div class="c"></div>
+  
+  </div>
+  <div class="post">
+  <h3 class="title">About project</h3>
+  				<div class="entry">
+  				<p>
+  				An artificial neural network (ANN), usually called "neural network" (NN), is a mathematical model or computational model that tries to simulate the structure and/or functional aspects of biological neural networks. It consists of an interconnected group of artificial neurons and processes information using a connectionist approach to computation. 				</p>
+  				<p>
+  				</p>
+  				</div>
+  			</div>
+{% endblock %}
+
+
+{% block sidebar %}
+<li>
+          <h3>Login system</h3>
+          <form method="post" action="/login" class="entrance_form">
+            {% csrf_token %}
+            <input type="text" name="email" tabindex="1" />
+            <span class="lightgray">
+            << Email</span>
+            <br/>
+            <input type="password" name="password" tabindex="2" />
+            <span class="lightgray">
+            << Password
+            </span>
+            <br/>
+            <div class="center">
+              <input type="submit" value="Login" tabindex="3"/>
+            </div> 
+          </form>
+          
+          <h3>Registration</h3>
+          <form method="post" action="/register" class="entrance_form">
+            {% csrf_token %}
+            <input type="text" name="name" tabindex="4" />
+            <span class="lightgray">
+            << Name
+            </span>
+            <input type="text" name="organization" tabindex="5" />
+            <span class="lightgray">
+            <<&nbsp;Organization
+            </span>
+            <input type="text" name="email" tabindex="6" />
+            <span class="lightgray">&lt;&lt; Email</span> <br/>
+            <input type="password" name="password" tabindex="7" />
+            <span class="lightgray">&lt;&lt; Password</span><br/>
+            <div class="center">
+              <input type="submit" value="Create" tabindex="8"/>
+            </div> 
+          </form></li>
+{% endblock %}			
+			
+			

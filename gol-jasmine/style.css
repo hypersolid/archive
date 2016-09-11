@@ -1,0 +1,22 @@
+body {
+    background: grey;
+}
+
+div {
+  background-color: black;
+  float: left;
+  width: 5px;
+  height: 5px;
+  margin: 1px;
+}
+
+div.active {
+  background-color: red;
+}
+
+div.cl {
+  width: 0px;
+  height: 0px;
+  margin: 0px;
+  clear: both;
+}

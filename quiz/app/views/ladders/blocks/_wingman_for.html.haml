@@ -1,0 +1,6 @@
+- if leader = current_user.leader
+  #ladder_wingman_for
+    = image_tag 'ladder_right/wing_left.png'
+    You are the wingman for 
+    = link_to leader.name, overlay_ladder_path(leader.ladder), :id => 'leader_link'
+    = image_tag 'ladder_right/wing_right.png'

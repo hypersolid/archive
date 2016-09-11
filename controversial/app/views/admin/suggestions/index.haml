@@ -1,0 +1,11 @@
+= render 'admin/shared/menu'
+
+%table
+  - @items.each do |i|
+    %tr
+      %td
+        =i.created_at.to_date
+      %td
+        =i.text
+        
+= render 'admin/shared/menu'

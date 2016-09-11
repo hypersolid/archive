@@ -1,0 +1,36 @@
+- cache "header" do
+  #header-top
+    #header
+      #logo.floatleft
+        %a{:href=>"/"}
+          %img{:src => "#{MEDIA_HOST}/images/design/logo.png", :alt=>'Controversial matters, issues and topics to discuss'}
+      #gplus.floatleft
+        - if AD  
+          %g:plusone{:size=>"medium", :annotation=>"inline", :href=>"http://controversialmatter.com/"}
+        - else
+          %img{:src => "#{MEDIA_HOST}/images/google-plus.png"}
+      #gthanks.floatleft.hidden
+        Thank you! We appreciate you support. 
+      #menu.floatright
+        %a{:href=>"#",:class=>'menu_trigger'}='menu'
+      .clearboth
+         
+  #header-options
+    %ul#carousel
+      #trends
+        - if @fights_top
+          - @fights_top.each do |fight|
+            %li.floatleft
+              =render :partial=>'fights/thumb',:locals=>{:fight=>fight}
+          .clearboth
+      #fullmenu.hidden
+        - Tag.all.each do |tag|
+          - fights = Fight.find_tagged_with(tag)
+          - unless fights.empty? 
+            %li.floatleft
+              %h4
+                =tag.name
+              - fights.each do |fight|
+                %p
+                  =link_to "#{fight.title} (#{fight.votes})", fight.url 
+      .clearboth

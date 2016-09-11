@@ -1,0 +1,12 @@
+#welcome_dialog.hidden
+  %ul
+    %li The best way to learn about <b>GameShow</b> is to get stuck in and start playing
+  .blue_box
+    We give you #{pluralize(Tournament.current.new_user_credits, 'credit')} to try the game out for FREE
+  .text
+    Start playing the general knowledge quiz now to get points and go straight into our prize ladder
+  .links
+    / = link_to 'Take the tour', '#', :id => 'take_tour_link'
+    / and look around first or
+    .start_playing_button
+      = link_to image_tag('shared/bt_start_playing.png'), '#', :id => 'start_playing_button'

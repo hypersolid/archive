@@ -1,0 +1,187 @@
+/UNITS,SI
+*AFUN,DEG
+
+!**** TITLE & CONSTANTS *****************************************************
+/title, Crack in coated layer
+
+FORCE=20
+TimeStep=1e-5
+TimeForce=5e-5
+TimeTicks=100e-5
+Damping=1e-5
+
+!**** PARAMETERS ************************************************************
+
+! comment out following lines in batch mode
+!WIDTH=3
+!HEIGHT=0.5
+!LHEIGHT=0.05
+!CDEPTH=0.25
+!CSIZE=0.207894736842
+!CPOSITION=1.5
+!NN=55
+
+! Variables
+CWIDTH=CSIZE/500
+CENTER=WIDTH/2
+DIVISIONS=100
+
+! Base
+ex1=70e9
+nu1=.34
+dens1=2700
+
+! Coating
+ex2=210e9
+nu2=.28
+dens2=7700
+
+!**** MATERIAL PROPERTIES *****************************************************
+/prep7 
+
+ET,1,PLANE183
+ET,2,PLANE183
+
+MPTEMP,1,1
+
+MPDATA,EX,1,,ex1
+MPDATA,PRXY,1,,nu1
+mp,dens,1,dens1 
+
+MPDATA,EX,2,,ex2
+MPDATA,PRXY,2,,nu2
+mp,dens,2,dens2
+
+MP,DAMP,1,Damping
+MP,DAMP,2,Damping
+
+!*** GEOMETRY *****************************************************************
+!keypoints
+k,1,-CENTER,LHEIGHT
+k,2,CENTER,LHEIGHT
+k,3,CENTER, 0
+k,4,-CENTER, 0
+
+k,11,-CENTER, -HEIGHT
+k,12,CENTER, -HEIGHT
+
+k,101,CPOSITION-CENTER,-CDEPTH+CSIZE/2
+k,102,CPOSITION-CENTER+CWIDTH,-CDEPTH+CSIZE/2-CWIDTH*20
+k,103,CPOSITION-CENTER+CWIDTH,-CDEPTH-CSIZE/2+CWIDTH*20
+k,104,CPOSITION-CENTER,-CDEPTH-CSIZE/2
+k,105,CPOSITION-CENTER-CWIDTH,-CDEPTH-CSIZE/2+CWIDTH*20
+k,106,CPOSITION-CENTER-CWIDTH,-CDEPTH+CSIZE/2-CWIDTH*20
+
+!lines
+lstr,1,2
+lstr,2,3
+lstr,3,4
+lstr,4,1
+
+lstr,4,11
+lstr,11,12
+lstr,12,3
+
+lstr,101,102
+lstr,102,103
+lstr,103,104
+lstr,104,105
+lstr,105,106
+lstr,106,101
+
+AL,1,2,3,4
+AL,3,5,6,7
+AL,8,9,10,11,12,13
+
+ASBA,2,3
+
+!*** MESHING *****************************************************************                
+
+asel,s,area,,1
+aatt,2
+asel,s,area,,4
+aatt,1
+asel,all
+
+lesize,1,,,DIVISIONS
+lesize,3,,,DIVISIONS
+lesize,6,,,10
+lesize,9,,,5
+lesize,12,,,5
+
+MSHAPE,1,2D
+AMESH,4
+
+KSEL,S,,,101
+KSEL,A,,,104
+NSLK,S
+NREFINE,ALL
+
+MSHAPE,0,2D
+AMESH,1
+
+! Get the target node number
+NSEL,S,LOC,Y,LHEIGHT
+NSEL,R,LOC,X,WIDTH/DIVISIONS*NN-CENTER
+NCURRENT = ndnext(0)
+
+!*** LOADS ******************************************************************** 
+LSEL,S,,,6
+NSLL,S
+D,ALL,ALL
+
+!***SOLUTION***************************************************************************************************               
+/SOLU           
+ANTYPE,TRANS
+TRNOPT,REDUC
+NSEL,ALL
+M,ALL,UY
+
+DELTIM,TimeStep
+
+!step by step problem definition
+TIME,0
+F,NCURRENT,FY,-FORCE
+LSWRITE,1
+
+TIME,TimeForce
+NSEL,S,NODE,,NCURRENT
+FDELE,NCURRENT,ALL
+NSEL,ALL
+LSWRITE,2
+
+TIME,TimeTicks
+LSWRITE,3
+
+LSSOLVE,1,3,1
+FINISH
+
+!***POSTPROCESSING***************************************************************************************************               
+/POST26
+NUMVAR,200
+FILE,'file','rdsp','.'  
+
+NSOL,2,NCURRENT,U,Y,S1
+DERIV,3,2,1,,S2
+DERIV,4,3,1,,S3
+!STORE,MERGE
+
+!***EXPORTING********************************************************************************************************               
+*GET,size,VARI,,NSETS 
+
+*dim,A1,array,size
+*dim,A2,array,size
+*dim,A3,array,size
+*dim,A4,array,size
+
+VGET,A1(1),1
+VGET,A2(1),2
+VGET,A3(1),3
+VGET,A4(1),4
+
+*VOPER,A2(1),A2(1),MULT,1e6
+
+*CFOPEN,data,dat
+*VWRITE,A2(1),A3(1),A4(1)       ! Write array in given format to file ".dat"
+(f20.8,f20.8,f20.8)
+*CFCLOSE

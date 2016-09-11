@@ -1,0 +1,131 @@
+source 'http://rubygems.org'
+
+#gem 'bundler', '1.2.0'
+gem 'rails', '3.2.18'
+gem 'rake', '0.9.2'
+gem 'mysql2', '~> 0.3.15'
+# gem 'pg', '~> 0.11.0', :group => :production
+gem 'haml'
+gem 'coffee-rails', "~> 3.2.2"
+
+# Redis
+gem 'redis', '~> 3.0.7'
+gem 'sidekiq', '~> 2.17.1'
+
+gem 'redis-store', '~> 1.1.4'
+gem 'redis-rails', '~> 3.2.4'
+gem 'redis-rack-cache'
+
+# Search
+gem 'thinking-sphinx', '~> 3.0.6'
+gem 'ts-sidekiq-delta', github: 'pat/ts-resque-delta', branch: 'sidekiq'
+
+# Mailchimp
+gem 'feralchimp', github: 'envygeeks/feralchimp'
+
+gem 'tilt'
+
+group :assets do
+  gem 'sass-rails', "  ~> 3.2.6"
+  gem 'compass-rails'
+  gem 'jquery-rails', '~> 2.3.0'
+  gem 'json'
+  gem 'uglifier', '~> 2.3.0'
+  gem 'libv8', '~> 3.11.8.17'
+end
+
+gem 'utf8-cleaner', '0.0.9'
+gem 'fastimage'
+gem 'activemerchant',    '1.33.0'
+gem 'braintree'
+gem 'big_decimal_price', '0.1.1'
+gem 'carmen', '0.2.13'
+gem 'carrierwave', '~> 0.9.0'
+gem 'configurable_engine', '0.2.9'
+gem 'decent_exposure', '2.1.0'
+gem 'devise', '~> 2.2.8'
+gem 'exceptional'
+gem 'fog', '~> 1.19.0'
+gem 'friendly_id', '4.0.10.1'
+gem 'git'
+gem 'omniauth', '~> 1.1.0'
+gem 'omniauth-facebook'
+gem 'postmark', '~> 1.2.0'
+gem 'postmark-rails', '~> 0.5.2'
+gem 'mini_magick'
+gem 'rdiscount'
+gem 'sitemap_generator', '3.1.1'
+gem 'url_field'
+gem 'will_paginate', '3.0.5'
+gem 'acts-as-tree-with-dotted-ids'
+gem 'newrelic_rpm', '>=3.5.3'
+gem 'simple-rss'
+gem 'rails3_acts_as_paranoid', '0.1.4', :path => 'vendor/gems/rails3_acts_as_paranoid-0.1.4'
+gem 'whenever', :require => false
+gem 'rack-rewrite', '~> 1.4.01'
+gem 'money', '~> 5.1.1'
+gem 'currency-in-words', '~> 0.1.3'
+gem 'jscrollpane-rails', '~> 2.0.17.3'
+gem 'i18n-js', '~> 2.1.2'
+
+# models
+gem 'acts_as_list', '~> 0.3.0'
+gem 'state_machine', '~> 1.2.0'
+gem 'acts-as-taggable-on', '~> 2.4.1'
+
+gem 'mutations', github: 'cypriss/mutations'
+gem 'ckeditor', '~> 4.0.6'
+gem 'rails_autolink', '~> 1.1.5'
+gem 'inherited_resources', '= 1.4.0'
+gem 'paper_trail', '~> 3.0.0'
+gem 'strong_parameters', '~> 0.2.2'
+gem 'draper', '~> 1.3'
+
+gem "writeexcel_on_rails", "~> 0.0.1"
+
+# mobile
+gem 'mobile-fu', '~> 1.3.1'
+
+group :development do
+  gem 'thin'
+  gem 'foreman', '~> 0.67.0'
+  gem 'quiet_assets'
+  gem 'annotate', '>=2.5.0'
+  gem 'g'
+  gem 'terminal-notifier'
+  gem 'highline'
+  gem 'mailcatcher', '~> 0.5.12'
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'capistrano_colors'
+  gem 'rvm-capistrano'
+  gem 'pry-rails'
+  gem 'rack-mini-profiler', '~> 0.9.0'
+  gem 'benchmark-ips'
+  gem 'bullet', '~> 4.6.0'
+  gem 'colored'
+end
+
+group :production, :staging, :assets, :development do
+  gem 'therubyracer', '~> 0.11.4', :require => 'v8'
+end
+
+group :test do
+  gem 'rspec-rails',      '~> 2.14.2'
+  gem 'capybara',         '2.2.1'
+  gem 'capybara-webkit',  '1.1.0'
+  gem 'cucumber-rails',   '~> 1.4.0', :require => false
+  gem 'database_cleaner', '~> 1.2.0'
+  gem 'email_spec',       '~> 1.5.0'
+  gem 'fakeweb',          '1.3.0'
+  gem 'fakeweb-matcher',  '1.2.2', :require => 'fakeweb_matcher'
+  gem 'launchy',          '2.4.2'
+  gem 'machinist',        '2.0.0.beta2'
+  gem 'pry'
+  gem 'timecop',          '0.3.5'
+  gem 'vcr',              '1.11.3'
+  gem 'shoulda', '~> 3.5.0'
+  gem 'test_after_commit', '~> 0.2.3'
+  gem 'fuubar', '~> 1.3.2'
+  gem 'chronic'
+end

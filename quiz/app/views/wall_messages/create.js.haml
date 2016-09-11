@@ -1,0 +1,5 @@
+- if @message && @message.persisted?
+  $('#wall#{@message.recipient_id}').prepend('#{escape_javascript(render(@message))}');
+$('.wall_form input[type="text"]').removeClass("enter");
+$('.wall_form input[type="text"]').val("");
+  

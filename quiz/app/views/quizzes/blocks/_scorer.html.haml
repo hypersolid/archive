@@ -1,0 +1,22 @@
+#quiz_scorer
+  #points_left
+  #scorer
+    #seconds_left= current_tournament.time_limit
+    .top#scorer_top
+    .bottom
+      #scorer_indicator
+        #bubble
+          .platform= current_tournament.points_total
+
+  #bonus1.hidden
+    .platform
+      .split.hidden
+        +#{current_tournament.best_time_bonus}
+      .merge.hidden
+        +#{current_tournament.best_time_bonus + current_tournament.avg_time_bonus}
+      &nbsp;points
+  #bonus2.hidden
+    .platform
+      +#{current_tournament.avg_time_bonus}
+      %br
+      &nbsp;points

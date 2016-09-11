@@ -1,0 +1,31 @@
+<table>
+<tr>
+<td>
+<a href="/files/blank.doc"><img src="/files/doc.jpg"></a><br>
+</td>
+<td>
+<a href="/files/blank.doc">Microsoft Word</a><br>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/files/blank.xls"><img src="/files/xls.jpg"></a><br>
+</td>
+<td>
+<a href="/files/blank.xls">Microsoft Excel</a><br>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/files/blank.ppt"><img src="/files/ppt.jpg"></a><br>
+</td>
+<td>
+<a href="/files/blank.ppt">Microsoft Power Point</a><br>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/files/blank.mdb"><img src="/files/mdb.jpg">Microsoft Access</a><br>
+</td>
+</tr>
+</table>

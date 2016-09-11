@@ -1,0 +1,32 @@
+- if signed_in?
+  var params = {
+  total_time: #{current_tournament.time_limit},
+  best_time: #{current_question.best_time || current_tournament.time_limit},
+  avg_time: #{current_question.avg_time || current_tournament.time_limit},
+  merge_bonuses: #{quiz_merge_bonuses},
+  passes_left: #{current_quiz.passes_left},
+  
+  ! answers: [#{current_question.randomised_answers.map{|a| "'" + rq(a) + "'"}.join(', ')}],
+  
+  view: { 
+  ! '.question div': '#{q current_question.question + quiz_correct_answer}',
+  '.passes_left .number, #quiz_pass_popup .number': #{current_quiz.passes_left},
+  '.question_number .number, #hourglass .number': #{current_quiz.question_number},
+  
+  '#round_score': #{session[:points]},
+  '#wingmen_score': #{current_user.ladder.wingmen_score},
+  '#total_score': #{current_user.ladder.wingmen_score + session[:points]},
+  
+  - if current_user.ladder.next_prize_ladder
+    '#next_prize_amount': '#{pounds current_user.ladder.next_prize.amount}',
+    '#next_prize_at': '#{score current_user.ladder.next_prize_ladder.combined_score}',
+  
+  - if current_user.ladder.next_ladder
+    '#next_friend_photo': '#{rq image_tag(user_foto_url(current_user.ladder.next_ladder.user))}',
+    '#next_friend_name': '#{q current_user.ladder.next_ladder.user.name}',
+    '#next_friend_at': '#{score current_user.ladder.next_ladder.combined_score}',
+  },
+  
+  view_next_prize: #{(!!current_user.ladder.next_prize).to_s},
+  view_next_friend: #{(!!current_user.ladder.next_ladder).to_s},
+  };

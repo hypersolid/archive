@@ -1,0 +1,29 @@
+- unless @sent.empty?
+  %p
+    Invites were sent to:
+    .sent
+      - @sent.each do |relation|
+        = relation.name || relation.email
+        %br
+    You need them to play in this tournament
+    so make sure they know they need to play sometime before #{current_tournament.ends_at.strftime("%I:%M%p")}
+    on the #{current_tournament.ends_at.day.ordinalize} #{current_tournament.ends_at.strftime('of %B.')}
+
+- unless @taken.empty?
+  %p
+    .taken
+      - @taken.each do |user|
+        = user.name
+        %br
+    - if @taken.count == 1 
+      has been already invited by other user. 
+    - else
+      have been already invited by other users. 
+
+- if current_user.can_send_invites?
+  %p
+    %a.invite_another{:href => "#"} Invite
+    another wingman, get more credits.
+.fr
+  = link_to 'Close window', '#', :id => 'invites_were_sent_close'
+.clear

@@ -1,0 +1,93 @@
+- content_for :head do
+  :javascript
+    $(document).ready(
+      function() {
+      $('.inputBox').focus(function() {$(this).parent().addClass('infocus')});
+      $('.inputBox').blur(function() {$(this).parent().removeClass('infocus')});
+      }
+    );
+
+- content_for :header do
+  = render :partial => "shared/header"
+
+.container.profile
+  %h2.titlePage Edit profile
+  = form_for @user, :url => user_path(@user), :html => { :method => 'put', :multipart => true } do |f|
+    .content
+      %p{:style => 'color:red'}
+        - @user.errors.full_messages.each do |message|
+          = message
+          %br
+      .profileInfo
+        - if email_signed_in?
+          .profileImgW
+            .profileImg
+              = image_tag user_foto_url(current_user)
+            .upload
+              = f.label :avatar, 'Profile picture'
+              .fileW
+                = f.file_field :avatar, :value => "Upload a new image", :class => 'file'
+        .mainInfo.jNice
+          .fl
+            .oneLine
+              = f.label :name, 'Name'
+              .input
+                = f.text_field :name, :class => 'inputBox futura'
+            .oneLine
+              = f.label :email, 'Email'
+              .input
+                = f.text_field :email, :class => 'inputBox futura'
+          - if email_signed_in?
+            .fr
+              .oneLine
+                = f.label :password, 'New password'
+                .input
+                  = f.text_field :password, :class => 'inputBox futura'
+              .oneLine
+                = f.label :password_confirmation, 'Confirm password'
+                .input
+                  = f.text_field :password_confirmation, :class => 'inputBox futura'
+        .winBox.jNice
+          .fl.info
+            %p Winnings are paid in no more than 3 working days following the end of a tournament.
+            %p Winnings can only be paid by cheque via post to UK residents.
+            %p Please fill out your full postal address.
+            .arrow
+          .fr
+            .oneLine
+              = f.label :real_name, 'Your real name'
+              .input
+                = f.text_field :real_name, :class => 'inputBox futura'
+            .oneLine
+              = f.label :address, 'Address'
+              .input
+                = f.text_field :address, :class => 'inputBox futura'
+            .oneLine
+              = f.label :post_code, 'Post code'
+              .input
+                = f.text_field :post_code, :class => 'inputBox futura'
+        .checkboxBox
+          %span.smallTitle Email me when:
+          .fl
+            .oneline
+              = f.check_box :email_movement
+              = f.label :email_movement, 'when you move up the ladder'
+            .oneline
+              = f.check_box :email_overtaken
+              = f.label :email_overtaken, 'when your Facebook friends overtake you'
+            .oneline
+              = f.check_box :email_wingman_request_accepted
+              = f.label :email_wingman_request_accepted, 'when my wingman requests are accepted'
+          .fl
+            .oneline
+              = f.check_box :email_final_summary
+              = f.label :email_final_summary, 'when the game is over'
+            .oneline
+              = f.check_box :email_wall_message
+              = f.label :email_wall_message, 'when someone writes on your wall'
+
+        = f.submit "Save changes", :class => 'save futura'
+    
+.footer
+  %span
+    = render "shared/copyright_full"

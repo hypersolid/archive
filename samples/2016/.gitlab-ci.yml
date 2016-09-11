@@ -1,0 +1,84 @@
+# NOTE: We splitted all jobs into two parts.
+# # The main reason for this is disable slack notification for failed buildes
+# # for custom branches. All main branches such as develop, master and
+# # hotfix branches must notify slack channel in order to do immediate fix
+types:
+  - prepare
+  - test
+  - deploy
+
+branch_check_versions:
+  type: prepare
+  script: &check_script
+    - export
+    - rbenv --version
+    - rbenv exec ruby --version
+    - rbenv exec bundle --version
+  except: &main_branches
+    - develop
+    - master
+    - /^hotfix.*$/
+  allow_failure: true
+
+upstream_check_versions:
+  type: prepare
+  script: *check_script
+  only: *main_branches
+
+# Prepare DB configuration
+
+branch_prepare_db:
+  type: prepare
+  script: &prepare_script
+    - export DATABASE_URL=postgres://gazeta@ci.pg.ruby.rambler.ru:5432/gazeta_front_test
+    - export RAILS_ENV=test
+    - rbenv exec bundle install
+    - rbenv exec bundle exec rake db:create db:migrate
+    - rbenv exec bundle exec rake spec:prepare
+    - rbenv exec bundle exec rake db:seed
+  except: *main_branches
+  allow_failure: true
+
+upstream_prepare_db:
+  type: prepare
+  script: *prepare_script
+  only: *main_branches
+
+# Rspec configuration
+
+branch_specs:
+  type: test
+  script: &rspec_script
+    - export DATABASE_URL=postgres://gazeta@ci.pg.ruby.rambler.ru:5432/gazeta_front_test
+    - rbenv exec bundle exec rake spec
+  except: *main_branches
+  allow_failure: true
+
+upstream_specs:
+  type: test
+  script: *rspec_script
+  only: *main_branches
+
+# Rubocop configuration
+
+branch_rubocop:
+  type: test
+  script: &rubocop_script
+    - rbenv exec bundle exec rubocop --display-cop-names --display-style-guide
+  except: *main_branches
+  allow_failure: true
+
+upstream_rubocop:
+  type: test
+  script: *rubocop_script
+  only: *main_branches
+
+staging1:
+  type: deploy
+  script:
+    - eval "$(ssh-agent)"
+    - ssh-add
+    - rbenv exec bundle exec cap staging1 deploy
+    - ssh-agent -k
+  only:
+    - develop

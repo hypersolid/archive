@@ -1,0 +1,217 @@
+@import compass/css3/border-radius
+@import compass/css3/box-shadow
+@import compass/css3/text-shadow
+@import compass/css3/opacity
+
+$i: "/images/sign_up/"
+
+#sign_in_dialog
+  z-index: 100000
+  background: url($i + "wrapperSignBg.png") repeat-x
+  width: 100%
+  height: 100%
+  position: absolute
+  width: 510px
+  position: relative
+  +border-radius(5px)
+  behavior: url(/PIE.htc)
+  .sign
+    width: 510px
+    height: 330px
+    background: #fff
+    +border-radius(3px)
+    behavior: url(/PIE.htc)
+    overflow: hidden
+    ul
+      height: 57px
+      background: #eaeaea
+      border-bottom: 2px solid #dfdfdf
+      list-style-type: none
+      list-style: none
+      padding: 0px
+      li
+        width: 107px
+        border-right: 2px solid #e0dfdf
+        border-left: 2px solid #e0dfdf
+        float: left
+        line-height: 54px
+        text-align: center
+        height: 54px
+        cursor: pointer
+        color: #010101
+        font-size: 20px
+        text-align: center
+        width: 106px
+        line-height: 57px
+      .close
+        width: 18px
+        height: 18px
+        float: right
+        background: url($i + "singInClose.png") no-repeat
+        border: none
+        margin: 19px 20px 0 0
+        cursor: pointer
+      .active
+        background: #fff
+        border-right: none
+        border-left: none
+        border-bottom: 2px solid #fff
+    form
+      width: 595px
+      height: 191px
+      @extend .flw
+      margin: 21px 0 0 14px
+      .floatLeft
+        width: 266px
+        height: 185px
+        padding: 17px 15px 20px
+        border-right: 1px solid #f1f4f7
+      .label
+        font-size: 13px
+        color: #323232
+        float: left
+        padding-left: 10px
+        line-height: 35px
+        background: url($i + "labelCircleBlack.png") no-repeat left center
+      .oneLine
+        width: 451px
+        height: 35px
+        @extend .flw
+        margin-bottom: 5px
+      .text
+        width: 287px
+        height: 18px
+        line-height: 21px
+        float: right
+        border: 1px solid #c2c2c2
+        +border-radius(3px)
+        +box-shadow(0 0 3px 3px #f4f4f4)
+        behavior: url(/PIE.htc)
+        padding: 5px 10px 10px
+        background: url($i + "signInutBg.png") repeat-x
+        input
+          border: none
+          background: none
+          outline: none
+          color: #707070
+          font-size: 14px
+          width: 287px
+      .checkbox
+        margin: 10px 0 6px 142px
+        width: 190px
+        height: 13px
+        input
+          float: left
+          margin-right: 5px
+        .checkboxLabel
+          float: left
+          color: #010101
+          float: left
+          font-size: 13px
+          line-height: 10px
+          height: 18px
+      .link
+        margin-left: 127px
+        a
+          color: #a5a5a5
+          font-size: 13px
+          display: block
+          text-decoration: underline
+          width: 150px
+      .submit
+        display: block
+        height: 33px
+        width: 200px
+        color: #fff
+        font-size: 13px
+        line-height: 33px
+        +border-radius(3px)
+        +text-shadow(1px 1px 0px #002853)
+        //behavior: url(/PIE.htc)
+        border: 1px solid #ededed
+        float: left
+        //padding: 0 81px 0 66px
+        background: url($i + "signUpSubmitGreen.png") repeat-x
+        height: 34px
+        cursor: pointer
+    .or
+      background: url($i + "orBg.png") no-repeat
+      width: 40px
+      height: 40px
+      font-size: 20px
+      color: #010101
+      +text-shadow(1px 1px 0px white)
+      position: absolute
+      top: -4px
+      left: 183px
+      text-align: center
+      line-height: 40px
+    .validation-error
+      height: 22px
+      width: 470px
+      margin-bottom: 5px
+      font-size: 11pt
+    .signIn
+      padding-top: 12px
+    .signUp
+      padding: 20px
+      width: 451px
+      .message_to_wingman
+        position: absolute
+        color: red
+        font-size: 10pt
+        margin-top: -13px
+      form
+        width: 451px
+        height: 207px
+        margin: 0
+        .oneLine
+          width: 451px
+          span
+            color: #010101
+            font-size: 13px
+            display: block
+            float: left
+            line-height: 55px
+            margin-left: 9px
+            a
+              text-decoration: underline
+              color: #010101
+              margin-left: 5px
+    .signUpSubmit
+      @extend .flw
+      margin: 18px 0 0 32px
+      width: 415px
+      position: relative
+    .signInSubmit
+      margin: 39px 0 0 38px
+      width: 415px
+      position: relative
+    .signFacebook
+      width: 202px
+      height: 32px
+      border: 1px solid #e5e5e5
+      +border-radius(3px)
+      //behavior: url(/PIE.htc)
+      background: url($i + "signFacebookBg.png") repeat-x
+      margin-left: 0
+      cursor: pointer
+      float: left
+      .iconFacebook
+        width: 48px
+        height: 32px
+        border-right: 1px solid #7db7e4
+        background: url($i + "iconFacebook.png") repeat-x
+        float: left
+      .button
+        float: left
+        +text-shadow(1px 1px 0px #002853)
+        color: #fff
+        font-size: 13px
+        line-height: 32px
+        background: none
+        border: none
+        height: 32px
+        cursor: pointer
+        text-decoration: none
+        width: 147px

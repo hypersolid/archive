@@ -1,0 +1,24 @@
+.item.fl{'data-id'=>item.id,'data-name'=>item.name,'data-price'=>(item.price ? item.price : 0), :class => (item.firm.opened ? 'clickable' : '')}
+  .image
+    - if item.img
+      = image_tag(item.img(:medium), :alt=>item.name)
+  .price.font
+    #{item.price}
+    %del Р
+  .name.font
+    =item.name
+    - if item.weight && item.weight.to_i > 0 
+      (#{item.weight}&nbsp;г.)
+  .desc
+    =item.description
+  - if item.similar.count > 0
+    .similar
+      - item.similar.each do |i|
+        от 
+        =link_to i.firm.name, '/'+i.subcategory.category.name+'/'+i.firm.name, :title => "Заказать #{i.subcategory.category.downcase} в #{i.firm.name}"     
+        - if i.weight
+          (#{i.weight} г.)
+        за #{i.price} 
+        %del P
+        %br
+      

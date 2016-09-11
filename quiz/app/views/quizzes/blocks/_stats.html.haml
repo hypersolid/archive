@@ -1,0 +1,39 @@
+#quiz_stats
+  .table
+    .fl.avatar_small
+      = image_tag user_foto_url(current_user)
+    .name.fl
+      = current_user ? current_user.name : 'You'
+    .clear
+    .score1.fl
+      Round score
+    #round_score.number.fr
+    .clear
+    .score2.fl
+      Wingmen bonus
+    #wingmen_score.number.fr
+    .clear
+    .score3.fl
+      Total score
+    #total_score.number.fr
+    .clear
+
+  .prize.hidden
+    Next prize
+    .clear
+    .next.fl
+      %span#next_prize_amount
+      .points
+        at
+        %span#next_prize_at
+    .clear
+
+  .friend.hidden
+    Next friend
+    .clear
+    .fl.avatar_small#next_friend_photo
+    .next.fl
+      %span#next_friend_name
+      .points
+        at
+        %span#next_friend_at 

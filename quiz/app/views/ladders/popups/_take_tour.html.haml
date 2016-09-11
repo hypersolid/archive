@@ -1,0 +1,35 @@
+#take_tour_popup.popup
+  .wrapper
+    .pointer.right
+    .tabs
+      .step
+        Step 1
+        .step_active.hidden
+          .shadow
+          Step 1
+      .step
+        Step 2
+        .step_active
+          .shadow
+          Step 2
+      .step
+        Step 3
+        .step_active.hidden
+          .shadow
+          Step 3
+      .step
+        Step 4
+        .step_active.hidden
+          .shadow
+          Step 4
+      .clear
+    .content
+      %h3 Home profile
+      %p This is your home base profile. This shows your score and how much 'friend bonus' you'll be getting.
+      %p Initially we just give you 2 average scores, but you can replace those with other friends and increase your score.
+      %p To get back to this home base screen, simply click the 'Home' button top left.
+      
+      %a.next_step{:href => '#'}
+        Next step
+      .clear
+        

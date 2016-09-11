@@ -1,0 +1,5 @@
+$("#wingmen_panel.ladder").html('#{raw escape_javascript(render('/ladders/blocks/wingmen_panel'))}');
+$("#wingmen_panel.quiz").html('#{raw escape_javascript(render('/ladders/blocks/game_over_wingmen_panel'))}');
+$('#user_variables').data('invites_left', #{current_user.invites_left});
+- unless current_user.can_get_bonus?
+  $("#email_invites_dialog #can_get_bonus").hide();

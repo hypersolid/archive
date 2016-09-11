@@ -1,0 +1,8 @@
+.accept_invite
+  You're moments away from taking part in the Game Show,
+  and helping #{@relation.user.name} move up the ladder.
+  Sign in here and let the games begin!
+  %br
+  %br
+  %a{:href => user_omniauth_authorize_path(:facebook)}
+    %image{:src => "/images/shared/facebook_signin.png", :width => 150, :height => 23}

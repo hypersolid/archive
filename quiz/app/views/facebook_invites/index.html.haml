@@ -1,0 +1,24 @@
+%style= render :partial => "styles"
+
+%br
+.fbbody
+  - if @relations.empty?
+    .fbinfobox
+      Your invites are already expired. Please click
+      %a{:href => "http://www.gameshow.co.uk", :target => "_blank"} here
+      to open the GameShow page!
+
+  - elsif @relations.size == 1
+    %script
+      top.location.href="http://www.gameshow.co.uk";
+
+  - else # @requests.size > 1
+    .fbinfobox
+      Please accept the requests by clicking the buttons below:
+    %br
+    - for r in @relations
+      .reqname{:style => "width: 200px; float: left;"}
+        = r.user.name
+      %a{:href => "?request_ids=" + r.request_id.gsub(/\_\d+/, "")  + "&signed_request=" + params[:signed_request]} ACCEPT
+      %br
+      %br

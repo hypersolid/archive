@@ -1,0 +1,9 @@
+ <html>
+  <body>
+  <form method="POST" action="search2">
+    <input type="text" name="name">
+    <br>
+    <input type="submit" name="okbutton" value="Искать">
+  </form>
+  </body>
+  </html>

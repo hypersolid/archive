@@ -1,0 +1,31 @@
+%a{:href => '/' + @category.name + '/' + firm.name, :title => "Заказать #{@category.downcase} в #{firm.name}"}
+  .firm{:class=>(firm.closed ? 'closed' : '')}
+    .fl.image
+      = image_tag(firm.img(:thumb), :alt => firm.name)
+    .fl
+      - if SOCIAL
+        .social
+          - if firm.closed
+            .fl
+              = image_tag '/design/closed.jpg', :alt => 'Ресторан закрыт'
+          .fl
+            .vklike{:id => "vk_like#{firm.id}"}
+            %script{:type=>"text/javascript"}
+              VK.Widgets.Like("#{"vk_like#{firm.id}"}", {type: "button", width: 160}, #{firm.id});
+          - if false
+            .fl
+              <div class="fb-like" data-href="#{HOST}#{firm.url}" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false"></div>
+          - ap = firm.average_price(@category)
+          - if ap
+            .average-cost.fr
+              = ap.round(2)
+              рубля за грамм
+            .cl
+    .cl
+    .items
+      - firm.top(@category,4).each do |i|
+        .item
+          = image_tag(i.img(:thumb), :alt => i.name)
+          .price.font
+            = i.price
+            %del P

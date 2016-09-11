@@ -1,0 +1,8 @@
+- content_for :header do
+  Got new payment:
+
+Amount: #{pounds(@payment.amount)}
+%br
+Credits assigned: #{@payment.credits}
+%br
+From: #{@payment.user.name} (#{@payment.user.email})

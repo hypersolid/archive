@@ -1,0 +1,18 @@
+development:
+  sn: GSWT
+  login: sa7eveDaw7
+  adminPwd: 2HetRa2HubRerUZe
+  merchAuthPhrase: meWr288qEBrUPhuT2U53fE9aStEthE
+
+production:
+  sn: GSWP
+  login: sa7eveDaw7
+  adminPwd: 2HetRa2HubRerUZe
+  merchAuthPhrase: meWr288qEBrUPhuT2U53fE9aStEthE
+
+test:
+  sn: GSWT
+  login: sa7eveDaw7
+  adminPwd: 2HetRa2HubRerUZe
+  merchAuthPhrase: meWr288qEBrUPhuT2U53fE9aStEthE
+  

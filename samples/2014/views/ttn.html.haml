@@ -1,0 +1,104 @@
+%html
+  %head
+    %title CMR #{ @transfer.number }
+    = stylesheet_link_tag "transfers_print", :media => "all"
+
+  %body.invoice-type-ttn
+
+    .page1
+      = image_tag 'invoices/ttn-1.svg'
+
+      .number= @transfer.number
+
+      .created_at
+        %span.day= l @transfer.created_at, format: '%d'
+        %span.month= l @transfer.created_at, format: '%m'
+        %span.year= l @transfer.created_at, format: '%Y'
+
+      .shipper
+        - @transfer.source.address.tap do |address|
+          = address.company
+          = address.zip_code
+          = address
+          = Carmen::Country.coded(address.country).name
+
+      .consignee
+        - @transfer.destination.address.tap do |address|
+          = address.company
+          = address.zip_code
+          = address
+          = Carmen::Country.coded(address.country).name
+
+      .orders
+        - @transfer.orders.each do |order|
+          .order
+            %span.tracking-number= order.tracking_number
+            %span.price= currency_format order.price
+            %span.name #{ order.name }, #{ order.volume }
+            %span.weight= order.weight
+            %span.total-price= currency_format order.price
+
+      .orders-count= RuPropisju.propisju @transfer.orders.count, 1
+
+      .net-weight-in-words= RuPropisju.propisju @transfer.weight, 1
+      .net-weight= @transfer.weight
+
+      .gross-weight-in-words= RuPropisju.propisju @transfer.weight, 1
+      .gross-weight= @transfer.weight
+
+      .total-pay= currency_format @transfer.total_charge
+
+      .total-charge= RuPropisju.propisju @transfer.total_charge.to_i, 1
+      .total-charge-cents= currency_format(@transfer.total_charge).to_s.split('.').last
+
+      .shipped-at
+        %span.day= l @transfer.departure, format: '%-d'
+        %span.month= l @transfer.departure, format: '%B'
+        %span.year= l @transfer.departure, format: '%Y'
+
+    .page2
+      = image_tag 'invoices/ttn-2.svg'
+
+      .arrived-at
+        %span.day= l @transfer.arrival, format: '%-d'
+        %span.month= l @transfer.arrival, format: '%B'
+        %span.year= l @transfer.arrival, format: '%Y'
+
+      .shipper
+        - @transfer.source.address.tap do |address|
+          = address.company
+          = address.to_s(:short)
+          = Carmen::Country.coded(address.country).name
+
+      .consignee
+        - @transfer.destination.address.tap do |address|
+          = address.company
+          = address.zip_code
+          = address.to_s(:short)
+          = Carmen::Country.coded(address.country).name
+          - unless address.phone.blank?
+            = "#{ t('views.transfer.invoices.phone') }: #{ address.phone }"
+
+      .shipping-point
+        - @transfer.source.address.tap do |address|
+          = address.to_s(:short)
+          - unless address.phone.blank?
+            = "#{ t('views.transfer.invoices.phone') }: #{ address.phone }"
+
+      .consignee-point
+        - @transfer.destination.address.tap do |address|
+          = address.to_s(:short)
+          - unless address.phone.blank?
+            = "#{ t('views.transfer.invoices.phone') }: #{ address.phone }"
+
+      .orders
+        - @transfer.orders.each do |order|
+          .order
+            %span.name= order.name
+            %span.tracking-number= order.tracking_number
+            %span.weight= order.weight
+
+
+      .total-weight= @transfer.weight
+
+      .gross-weight= RuPropisju.propisju @transfer.weight, 2

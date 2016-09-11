@@ -1,0 +1,205 @@
+@import compass/css3/border-radius
+@import compass/css3/box-shadow
+@import compass/css3/text-shadow
+@import compass/css3/opacity
+
+$i: "/images/profile/"
+
+.profile
+  width: 990px
+  margin: 8px auto 0
+  .titlePage
+    color: #fefefe
+    font-size: 19px
+    display: block
+    width: 950px
+    height: 54px
+    line-height: 55px
+    padding-left: 30px
+    background: url($i + "titlePageBg.png") repeat
+    +border-radius(3px 3px 0 0)
+    //behavior: url(/PIE.htc)
+  form
+    @extend .flw
+  .content
+    width: 922px
+    padding: 16px 29px
+    height: 100%
+    background: url($i + "profileWBg.png") repeat
+    .profileInfo
+      width: 100%
+      @extend .flw
+      .profileImgW
+        height: 107px
+        float: none
+        clear: both
+        margin-bottom: 23px
+        .profileImg
+          width: 97px
+          height: 97px
+          +border-radius(5px)
+          +box-shadow(0 1px 2px 0 black)
+          //behavior: url(/PIE.htc)
+          background: url($i + "profileImgWBg.png") repeat-x
+          padding: 5px
+          float: left
+        img
+          width: 97px
+          height: 97px
+        .upload
+          float: left
+          height: 107px
+          width: 180px
+          margin-left: 21px
+          label
+            font-size: 18px
+            color: #fefefe
+            float: none
+            display: block
+            margin-top: -4px
+          .fileW
+            font-size: 13px
+            +border-radius(3px)
+            +text-shadow(0 1px 0 #363d43)
+            //behavior: url(/PIE.htc)
+            width: 161px
+            height: 32px
+            line-height: 32px
+            background: url($i + "buttonFileBg.png") repeat-x
+            margin-top: 9px
+            float: none
+            cursor: pointer
+            position: relative
+            .file
+              cursor: pointer
+              font-size: 8px
+              height: 32px
+              +opacity(0)
+              //behavior: url(/PIE.htc)
+              position: absolute
+              right: 0
+              top: 0
+      .mainInfo
+        width: 100%
+        @extend .flw
+        .fr
+          margin-right: 21px
+      .winBox
+        width: 950px
+        @extend .flw
+        float: none
+        margin-top: 44px
+        background: url($i + "winBoxMainBg.png") repeat
+        padding: 20px 0 20px 30px
+        margin-left: -30px
+        .info
+          width: 437px
+          height: 84px
+          background: url($i + "winBoxBg.png") repeat-x
+          padding: 16px 12px
+          position: relative
+          @extend .flw
+          p
+            line-height: 16px
+            font-size: 14px
+            color: #fff
+            margin-bottom: 8px
+          .arrow
+            position: absolute
+            width: 12px
+            height: 24px
+            background: url($i + "winBoxArrow.png") no-repeat
+            right: -12px
+            top: 46px
+        .fr
+          margin-right: 21px
+          .oneLine
+            width: 409px
+            label
+              line-height: 36px
+              background-position: 0 15px
+      .save
+        float: none
+        clear: both
+        height: 32px
+        padding: 0 20px 0 22px
+        +border-radius(3px)
+        +text-shadow(0 1px 0 #363d43)
+        //behavior: url(/PIE.htc)
+        background: url($i + "saveBg.png") repeat-x
+        color: #fff
+        font-size: 13px
+        border: none
+        margin: 33px 0 30px 397px
+        display: block
+        @extend .flw
+        cursor: pointer
+      .checkboxBox
+        width: 980px
+        margin: 11px 0
+        @extend .flw
+        .floatLeft
+          width: 490px
+        .oneline
+          width: 400px
+        .smallTitle
+          display: block
+          margin-bottom: 5px
+          font-size: 14px
+          color: #fefefe
+        .oneline
+          margin-bottom: 2px
+        label
+          font-size: 12px
+          color: #fefefe
+          margin-left: 5px
+  .oneLine
+    height: 35px
+    margin-bottom: 5px
+    float: none
+    width: 410px
+    label
+      font-size: 13px
+      color: #fefefe
+      float: left
+      padding-left: 10px
+      line-height: 35px
+      background: url($i + "labelCircle.png") no-repeat 0 15px
+    .input
+      float: right
+      height: 33px
+      width: 285px
+      border: 1px solid #bbbbbb
+      background: url($i + "inputBg.png") repeat-x
+      +border-radius(3px)
+      +box-shadow(0 1px 0 0 #1c2c41)
+      //behavior: url(/PIE.htc)
+      input
+        border: none
+        outline: none
+        height: 20px
+        line-height: 20px
+        font-size: 18px
+        color: #717274
+        width: 266px
+        border: none
+        outline: none
+        background: none
+        margin: 5px 0 0 10px
+    .infocus
+      background: url($i + "inputBgFocus.png") repeat-x
+
+.push
+  height: 50px
+
+.flw:after
+  display: block
+  content: "."
+  clear: both
+  font-size: 0
+  line-height: 0
+  height: 0
+  overflow: hidden
+
+.noBorder
+  border: none !important
